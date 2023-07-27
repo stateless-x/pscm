@@ -1,0 +1,53 @@
+.container{
+  background-image: url("../assets/landing-bg2.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  place-items: center;
+}
+
+.message-container{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    color: var(--neutral-light);
+    /* background-color: greenyellow; */
+    max-width: 729px;
+    height:334px;
+}
+
+.headings h1 {
+    /* fs64 */
+    font-size: 64px;
+    letter-spacing: -0.06em;
+    line-height: 120%;
+    font-weight: 700;
+    margin: 0;
+}
+
+.headings h3{
+    /* fs 24 */
+    font-size: 24px;
+    line-height: 135%;
+    letter-spacing: 0.03em;
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cta{
+ margin-top: 16px ;
+ margin-bottom: 36px;
+}
+
+.excellence{
+    max-width: 207px;
+    height:auto;
+}

@@ -63,7 +63,9 @@ function NavBar() {
   return (
     <nav className="navbar-container">
       <div className="navbar-content">
-        <NavLink to="/"><img src={pscmLogoLight} alt="PSCM Logo" className="logo" /></NavLink>
+        <NavLink to="/">
+          <img src={pscmLogoLight} alt="PSCM Logo" className="logo" />
+        </NavLink>
         <HamburgerMenu
           isOpen={isOpen}
           handleClick={handleClick}

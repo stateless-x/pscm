@@ -1,11 +1,9 @@
-import NavBar from "../components/NavBar";
 import Button from "../components/Button";
 import "../styles/home.css";
 import excellence from "../assets/excellence.svg";
 function Home() {
   return (
     <>
-      <NavBar />
       <div className="container">
         <div className="heading-container">
           <div className="headings-text">

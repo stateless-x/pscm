@@ -1,53 +1,115 @@
-.container{
-  background-image: url("../assets/landing-bg2.jpg"); 
+.container {
+  background-image: url("../assets/landing-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns:repeat(2, 1fr);
-  /* grid-template-rows: repeat(3, 1fr); */
-  place-items: center;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
 }
 
-.message-container{
-    display: flex;
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--neutral-light);
+  max-width: 728px;
+  margin: 0 80px;
+}
+
+.headings-text h1 {
+  font-size: 4rem;
+  letter-spacing: -0.06em;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.headings-text h3 {
+  font-size: 1.5rem;
+  line-height: 135%;
+  letter-spacing: 0.03em;
+  margin-top: 1rem;
+}
+
+.headings-text {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.cta {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta > :nth-child(2) {
+  max-width: 265px;
+  min-width: 170px;
+  margin-top: 2rem;
+}
+
+.excellence {
+  max-width: 224px;
+  height: auto;
+}
+
+/* ipad */
+@media (max-width: 768px) {
+  .container {
+    background-image: url("../assets/landing-bg.jpg");
+    justify-content: center;
     flex-direction: column;
-    justify-self: center;
-    color: var(--neutral-light);
-    /* background-color: greenyellow; */
-    max-width: 729px;
-    height:334px;
+    /* min-height: 0vh; */
+  }
+
+  .heading-container {
+    width: 80%;
+  }
+
+  .heading-container h1 {
+    font-size: 3rem;
+  }
+
+  .heading-container h3 {
+    font-size: 1.25rem;
+  }
+
+  .excellence {
+    max-width: 200px;
+  }
 }
 
-.headings h1 {
-    /* fs64 */
-    font-size: 64px;
-    letter-spacing: -0.06em;
-    line-height: 120%;
-    font-weight: 700;
-    margin: 0;
-}
+/* mobile */
+@media (max-width: 480px) {
+  .container {
+    min-height: 90vh;
+  }
 
-.headings h3{
-    /* fs 24 */
-    font-size: 24px;
-    line-height: 135%;
-    letter-spacing: 0.03em;
-}
+  .heading-container {
+    width: 90%;
+  }
 
-.headings {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+  .heading-container h1 {
+    font-size: 2rem;
+  }
 
-.cta{
- margin-top: 16px ;
- margin-bottom: 36px;
-}
+  .heading-container h3 {
+    font-size: 1rem;
+  }
 
-.excellence{
-    max-width: 207px;
-    height:auto;
+  .excellence {
+    max-width: 140px;
+  }
+
+  .cta {
+    margin-top: 0;
+  }
+
+  /* button */
+  .cta > :nth-child(2) {
+    max-width: 138px;
+    margin-top: 1rem;
+  }
 }

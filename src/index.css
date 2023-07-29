@@ -61,7 +61,7 @@ table {
   --base-font-size: 16px;
 }
 
-body {
+body, html {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
 }

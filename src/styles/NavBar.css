@@ -1,29 +1,26 @@
 .navbar-container {
   height: 80px;
-  width: 100%;
+  min-width: 100%;
   background-color: var(--neutral-dark);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 99;
 }
 
 .navbar-content {
   height: 80px;
-  padding: 0 64px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  height: 78px;
-  width: auto;
+  height: 68px;
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-between;
-  width: auto;
   min-width: 500px;
   padding-left: 80px;
   min-height: 100%;
@@ -37,11 +34,12 @@
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  flex-grow: 1;
+  padding: 0 24px;
 }
 
 .nav-link:hover {
-  background-color: var(--highlight);
+  background-color: var(--primary-color);
+  transition: background-color 0.75s;
 }
 
 .menu-icon {
@@ -73,6 +71,7 @@
   .nav-link {
     font-weight: 700;
     min-width: 100%;
+    padding: 0;
   }
 
   .navbar-content {

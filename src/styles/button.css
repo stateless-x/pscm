@@ -1,0 +1,39 @@
+.btn {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 600;
+  border: 3px solid transparent;
+}
+
+.btn:active {
+  border: 3px solid var(--highlight);
+  transition: background-color 0.25s, color 0.25s, border 0.25s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--neutral-light);
+}
+
+.btn-primary:active {
+  background-color: var(--neutral-light);
+  color: var(--highlight);
+}
+
+.btn-secondary {
+  background-color: var(--neutral-light);
+  color: var(--highlight);
+  border: 3px solid var(--highlight);
+}
+
+.btn-secondary:active {
+  background-color: var(--highlight);
+  color: var(--neutral-light);
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}

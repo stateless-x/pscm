@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import pscmLogoLight from "../assets/pscm-logo-light.png";
-import "../styles/NavBar.css";
+import "../styles/navBar.css";
 import { useState, useLayoutEffect } from "react";
 // import pscmLogoDark from '../assets/pscm-logo-dark.png'
 

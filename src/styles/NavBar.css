@@ -16,7 +16,7 @@
 }
 
 .logo {
-  height: 68px;
+  max-height: 68px;
 }
 
 .nav-links {
@@ -59,8 +59,7 @@
 
 @media (max-width: 768px) {
   .logo {
-    height: 64px;
-    width: auto;
+    min-height: 64px;
   }
 
   .nav-links a.active {

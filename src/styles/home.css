@@ -99,8 +99,7 @@
 .highlighted-item-container{
   display: flex;
   gap: 6.25rem;
-  padding: 3rem 3rem;
-  margin: 2rem 6rem ;
+  padding: 3rem 10rem;
   border: 1px solid rgba(0, 0, 0, 0.20);
 }
 
@@ -130,6 +129,7 @@
   .highlighted-item-container img{
     max-width: 40vw;
   }
+
 /* ipad */
 @media (max-width: 1024px) {
   .hero-container {
@@ -165,6 +165,7 @@
   .highlighted-item-container{
     gap: 2rem;
     margin: 2rem 1rem;
+    padding: 2rem 4rem;
   }
 }
 

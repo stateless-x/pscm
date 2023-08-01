@@ -167,6 +167,10 @@ h3 {
   font-weight: 400;
 }
 
+h5{
+  font-size: clamp(0.75,0.8rem, 0.85rem);
+}
+
 section {
   padding: 4rem 0;
 }

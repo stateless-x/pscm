@@ -17,7 +17,7 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  /* min-height: 22vh; */
+  min-height: 12rem;
   padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
@@ -40,7 +40,7 @@
     max-width: 1.5rem;
   }
   .text-container {
-    min-height: 14vh;
+    min-height: 10rem;
   }
 }
 
@@ -56,5 +56,9 @@
   .card-container p {
     font-size: 1rem;
     letter-spacing: 0.025em;
+  }
+
+  .text-container {
+    min-height: 8rem;
   }
 }

@@ -40,7 +40,7 @@
     max-width: 1.5rem;
   }
   .text-container {
-    min-height: 18vh;
+    min-height: 14vh;
   }
 }
 
@@ -55,6 +55,6 @@
 
   .card-container p {
     font-size: 1rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
   }
 }

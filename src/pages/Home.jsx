@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import ServiceCard from "../components/ServiceCard";
 import "../styles/home.css";
-import excellence from "../assets/excellence.svg";
+import excellence from "../assets/excellence.png";
 import Helmet from "react-helmet";
 import img1 from "../assets/service-1.jpg";
 import img2 from "../assets/service-2.jpg";

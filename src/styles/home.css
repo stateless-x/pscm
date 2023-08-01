@@ -22,7 +22,7 @@
 
 .headings-text h3 {
   line-height: 135%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   margin: 1rem 0;
 }
 
@@ -47,7 +47,6 @@
   display: flex;
   background-color: var(--neutral-light);
   margin: 0 5rem;
-  /* min-height: 30vh ; */
 }
 
 .why-us-container h2 {

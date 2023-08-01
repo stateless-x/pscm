@@ -16,14 +16,13 @@ function Home() {
           content="Specializing in ceramic machinery like ball mills, repairs, spare parts, and custom builds in Thailand. Trusted by industry leaders for over 35 years. Get your free quote today!"
         />
         <title>
-          Thailand's Best Ceramic Machinery Provider: 35+ Years of Excellence |
-          PSCM
+          PSCM | The Best Ceramic Machinery Provider in Thailand with 35+ Years
+          of Excellence
         </title>
       </Helmet>
       <Hero />
       <WhyUs />
       <OurServices />
-      <h1>lorem</h1>
     </>
   );
 }
@@ -80,7 +79,6 @@ function OurServices() {
     <>
       <div className="container our-services-container">
         <h2>What We Offer</h2>
-        {/* Cards */}
         <div className="card-list-container">
           <ServiceCard
             title="Custom Manufacturing"

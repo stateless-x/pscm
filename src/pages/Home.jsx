@@ -1,7 +1,11 @@
 import Button from "../components/Button";
+import ServiceCard from "../components/ServiceCard";
 import "../styles/home.css";
 import excellence from "../assets/excellence.svg";
 import Helmet from "react-helmet";
+import img1 from "../assets/service-1.jpg";
+import img2 from "../assets/service-2.jpg";
+import img3 from "../assets/service-3.jpg";
 
 function Home() {
   return (
@@ -18,6 +22,8 @@ function Home() {
       </Helmet>
       <Hero />
       <WhyUs />
+      <OurServices />
+      <h1>lorem</h1>
     </>
   );
 }
@@ -53,7 +59,7 @@ function Hero() {
 
 function WhyUs() {
   return (
-    <section>
+    <>
       <div className="container why-us-container">
         <h2>Why Choose Us For The Best Ceramic Solutions</h2>
         <div className="why-us-description-container flex-column">
@@ -65,7 +71,35 @@ function WhyUs() {
           <Button aria-label="" message="Learn More" color="secondary" />
         </div>
       </div>
-    </section>
+    </>
+  );
+}
+
+function OurServices() {
+  return (
+    <>
+      <div className="container our-services-container">
+        <h2>What We Offer</h2>
+        {/* Cards */}
+        <div className="card-list-container">
+          <ServiceCard
+            title="Custom Manufacturing"
+            desc="Crafting unique machinery solutions. Precision meets your production needs."
+            image={img1}
+          />
+          <ServiceCard
+            title="Reliable Repairs"
+            desc="Keeping your operations smooth. We ensure minimal downtime."
+            image={img2}
+          />
+          <ServiceCard
+            title="Essential Parts Supply"
+            desc="Quality parts on demand. Optimizing your production uptime."
+            image={img3}
+          />
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -57,7 +57,7 @@
   transition: all 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logo {
     min-height: 64px;
   }

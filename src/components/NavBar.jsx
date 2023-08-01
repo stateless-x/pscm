@@ -45,7 +45,7 @@ function HamburgerMenu({ isOpen, handleClick, isDesktop }) {
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
 
   function updateMedia() {
     setIsDesktop(window.innerWidth > 768);

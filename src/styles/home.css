@@ -68,7 +68,7 @@
 
 .our-services-container {
   background-color: var(--neutral-dark);
-  min-height: 60vh;
+  min-height: 30vh;
   color:var(--neutral-light);
   display: flex;
   flex-direction: column;

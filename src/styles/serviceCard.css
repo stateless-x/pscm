@@ -1,7 +1,7 @@
 .card-container {
   color: var(--neutral-dark);
   background-color: var(--neutral-light);
-  max-width: 18rem;
+  max-width: 14rem;
   width: 100%;
   position: relative;
 }
@@ -17,7 +17,7 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  min-height: 15vh;
+  min-height: 22vh;
   padding: 2rem 1.5rem;
 }
 

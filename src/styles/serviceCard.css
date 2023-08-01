@@ -1,14 +1,14 @@
 .card-container {
   color: var(--neutral-dark);
   background-color: var(--neutral-light);
-  max-width: 14rem;
+  max-width: 18rem;
   width: 100%;
   position: relative;
 }
 
 .action-icon {
   position: absolute;
-  top: 24.5rem;
+  top: 28rem;
   right: 1rem;
   max-width: 2rem;
   cursor: pointer;

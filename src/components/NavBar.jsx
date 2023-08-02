@@ -1,8 +1,35 @@
 import { NavLink } from "react-router-dom";
 import pscmLogoLight from "../assets/pscm-logo-light.png";
 import "../styles/navBar.css";
-import { useState, useLayoutEffect } from "react";
+import { useState, useContext } from "react";
+import {ScreenSizeContext} from '../util/ScreenSizeContext'
 // import pscmLogoDark from '../assets/pscm-logo-dark.png'
+
+function NavBar() {
+  const { isDesktop} = useContext(ScreenSizeContext);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleClick() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <nav className="navbar-container">
+      <div className="navbar-content">
+        <NavLink to="/">
+          <img src={pscmLogoLight} alt="PSCM Logo" className="logo" />
+        </NavLink>
+        <HamburgerMenu
+          isOpen={isOpen}
+          handleClick={handleClick}
+          isDesktop={isDesktop}
+        />
+        {isDesktop && <NavLinks isOpen={isOpen} />}
+      </div>
+      {!isDesktop && <NavLinks isOpen={isOpen} />}
+    </nav>
+  );
+}
 
 function NavLinks({ isOpen }) {
   const NavLinksClassName = isOpen ? "nav-links open" : "nav-links";
@@ -40,41 +67,6 @@ function HamburgerMenu({ isOpen, handleClick, isDesktop }) {
         </>
       )}
     </div>
-  );
-}
-
-function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
-
-  function updateMedia() {
-    setIsDesktop(window.innerWidth > 768);
-  }
-
-  function handleClick() {
-    setIsOpen(!isOpen);
-  }
-
-  useLayoutEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
-  return (
-    <nav className="navbar-container">
-      <div className="navbar-content">
-        <NavLink to="/">
-          <img src={pscmLogoLight} alt="PSCM Logo" className="logo" />
-        </NavLink>
-        <HamburgerMenu
-          isOpen={isOpen}
-          handleClick={handleClick}
-          isDesktop={isDesktop}
-        />
-        {isDesktop && <NavLinks isOpen={isOpen} />}
-      </div>
-      {!isDesktop && <NavLinks isOpen={isOpen} />}
-    </nav>
   );
 }
 

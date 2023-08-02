@@ -22,7 +22,7 @@
 
 .headings-text h3 {
   line-height: 135%;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.025em;
   margin: 1rem 0;
 }
 
@@ -56,7 +56,7 @@
 
 .why-us-description-container {
   align-self: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   margin-left: 6rem;
 }
 
@@ -65,8 +65,78 @@
   margin-top: 1rem;
 }
 
+.our-services-container {
+  background-color: var(--neutral-dark);
+  min-height: 30vh;
+  color:var(--neutral-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-services-container h2{
+  margin: 0 5rem;
+}
+
+.card-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:4rem;
+  margin:3rem 6rem;
+  justify-content: center;
+}
+
+.highlight-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1.5rem;
+  margin:0 6rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.highlighted-item-container{
+  display: flex;
+  gap: 6.25rem;
+  padding: 3rem 10rem;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  border-bottom: none
+}
+
+.highlighted-item-container:last-child{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+  .highlighted-item-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .highlighted-item-description h3{
+    font-weight: 700;
+  }
+
+  .highlighted-item-description h5{
+    margin-bottom:1rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    
+  }
+
+  .highlighted-item-description button{
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+  }
+
+  .highlighted-item-container img{
+    max-width: 40vw;
+  }
+
 /* ipad */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-container {
     background-image: url("../assets/landing-bg.jpg");
     justify-content: center;
@@ -96,6 +166,12 @@
   .why-us-description-container > :nth-child(2) {
     font-size: 1rem;
   }
+  
+  .highlighted-item-container{
+    gap: 2rem;
+    /* margin: 2rem 1rem; */
+    padding: 2rem 4rem;
+  }
 }
 
 /* mobile */
@@ -114,7 +190,24 @@
     font-size: 1rem;
   }
 
+  .our-services-container h2{
+    margin: 0 2rem;
+  }
   .why-us-container {
-    margin: 0 1rem;
+    margin: 0;
+  }
+
+  .highlight-header{
+   margin:0 1rem;
+   gap: 0.5rem;
+  }
+
+  .highlighted-item-container{
+    flex-direction: column-reverse;
+    padding:1rem 1rem;
+  }
+
+  .highlighted-item-container img{
+    max-width: 100%;
   }
 }

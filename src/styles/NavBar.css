@@ -44,11 +44,8 @@
 
 .menu-icon {
   cursor: pointer;
-  width: 32px;
-  height: 28px;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
+
 }
 
 .hamburger-line {
@@ -57,7 +54,7 @@
   transition: all 0.3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logo {
     min-height: 64px;
   }
@@ -107,6 +104,10 @@
 
   .menu-icon {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 28px;
   }
 
   .icon-x {

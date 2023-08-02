@@ -5,7 +5,7 @@ function ServiceCard({ title, desc, image}) {
   return (
     <>
       <div className="card-container">
-        <img src={image} alt={title} />
+        <img src={image} alt={title} loading="lazy" />
         <div className="text-container">
           <h3>{title}</h3>
           <p>{desc}</p>

@@ -126,7 +126,7 @@ function HighlightedItem() {
         </p>
         <Button aria-label="" message="Get More Details" color="primary" />
       </div>
-      <img src={testImg1} alt="" />
+      <img src={testImg1} alt="" loading="lazy"/>
     </div>
   );
 }

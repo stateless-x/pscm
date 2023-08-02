@@ -101,6 +101,11 @@
   gap: 6.25rem;
   padding: 3rem 10rem;
   border: 1px solid rgba(0, 0, 0, 0.20);
+  border-bottom: none
+}
+
+.highlighted-item-container:last-child{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
   .highlighted-item-description {
@@ -164,7 +169,7 @@
   
   .highlighted-item-container{
     gap: 2rem;
-    margin: 2rem 1rem;
+    /* margin: 2rem 1rem; */
     padding: 2rem 4rem;
   }
 }

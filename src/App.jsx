@@ -32,7 +32,7 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           {/* <Route path='*' element={<NotFound/>} /> */}
         </Routes>
-        {/* <Footer/> */}
+        <Footer/>
       </ScreenSizeContext.Provider>
     </>
   );

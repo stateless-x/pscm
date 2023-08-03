@@ -1,5 +1,9 @@
 import "../styles/footer.css";
 import logo from "../assets/pscm-logo-light.png";
+import fb from "../assets/fb.svg"
+import ig from "../assets/ig.svg"
+import yt from "../assets/yt.svg"
+
 function Footer() {
   return (
     <footer>
@@ -8,7 +12,7 @@ function Footer() {
           <div className="image">
             <img src={logo} alt="" />
           </div>
-          <div className="service">
+          <div className="footer-head">
             <h5>Our Services</h5>
             <ul>
               <li>Products</li>
@@ -16,7 +20,7 @@ function Footer() {
               <li>Terms and Conditions</li>
             </ul>
           </div>
-          <div className="content">
+          <div className="footer-head">
             <h5>Contents</h5>
             <ul>
               <li>Products</li>
@@ -24,7 +28,7 @@ function Footer() {
               <li>Terms and Conditions</li>
             </ul>
           </div>
-          <div className="contact">
+          <div className="footer-head">
             <h5>Contact</h5>
             <ul>
               <li>Products</li>
@@ -33,9 +37,13 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div>social media</div>
-        <div>
-          <p>copyright</p>
+        <div className="footer-social">
+          <img src={fb} alt="" />
+          <img src={ig} alt="" />
+          <img src={yt} alt="" />
+        </div>
+        <div className="right-reserved">
+          <p>© 2023 Petkasem Ceramic Machine Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

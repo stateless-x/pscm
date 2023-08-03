@@ -1,7 +1,7 @@
 import "../styles/serviceCard.css";
 import { useState } from "react";
-import ArrowIcon from '../assets/right-arrow.svg';
-function ServiceCard({ title, desc, image}) {
+import ArrowIcon from "../assets/right-arrow.svg";
+function ServiceCard({ title, desc, image }) {
   return (
     <>
       <div className="card-container">
@@ -9,10 +9,7 @@ function ServiceCard({ title, desc, image}) {
         <div className="text-container">
           <h3>{title}</h3>
           <p>{desc}</p>
-          <img  
-            src={ArrowIcon}
-            className="action-icon"
-          />
+          <img src={ArrowIcon} className="action-icon" />
         </div>
       </div>
     </>

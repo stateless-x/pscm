@@ -1,0 +1,29 @@
+footer{
+    color: var(--neutral-light);
+    background-color: var(--neutral-dark);
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.footer-links img{
+    max-width: 160px;
+}
+
+h5 {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    font-size: 0.5rem;
+    line-height: 1rem;
+}

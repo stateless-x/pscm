@@ -6,9 +6,8 @@ import Helmet from "react-helmet";
 import img1 from "../assets/service-1.jpg";
 import img2 from "../assets/service-2.jpg";
 import img3 from "../assets/service-3.jpg";
-import testImg1 from '../assets/test-img1.png';
-import testImg2 from '../assets/test-img2.jpg';
-
+import testImg1 from "../assets/test-img1.png";
+import testImg2 from "../assets/test-img2.jpg";
 
 function Home() {
   return (
@@ -102,18 +101,19 @@ function OurServices() {
 
 function Highlight() {
   return (
-    <div className="container">
+    <div>
       <div className="highlight-header">
         <h2>Highlighting Key Solutions</h2>
         <h3>A Glimpse into Our Extensive Offerings</h3>
       </div>
-      <HighlightedItem />
-      <HighlightedItem />
+      <HighlightedItem image={testImg1} />
+      <HighlightedItem image={testImg2} />
+      <HighlightedItem image={testImg1} />
     </div>
   );
 }
 
-function HighlightedItem() {
+function HighlightedItem({ image }) {
   return (
     <div className="highlighted-item-container">
       <div className="highlighted-item-description">
@@ -126,7 +126,7 @@ function HighlightedItem() {
         </p>
         <Button aria-label="" message="Get More Details" color="primary" />
       </div>
-      <img src={testImg1} alt="" loading="lazy"/>
+      <img src={image} alt="" loading="lazy" />
     </div>
   );
 }

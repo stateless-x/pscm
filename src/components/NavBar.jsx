@@ -41,7 +41,7 @@ function NavLinks({ isOpen }) {
       <NavLink to="/products" className="nav-link">
         <li>Products</li>
       </NavLink>
-      <NavLink to="/about" className="nav-link">
+      <NavLink to="/about-us" className="nav-link">
         <li>About Us</li>
       </NavLink>
       <NavLink to="/industries" className="nav-link">

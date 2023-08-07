@@ -4,6 +4,10 @@ import logo from "../assets/pscm-logo-light.png";
 import fb from "../assets/fb.svg";
 import ig from "../assets/ig.svg";
 import yt from "../assets/yt.svg";
+import locationIcon from "../assets/location-icon.svg";
+import mailIcon from "../assets/mail-icon.svg";
+import phoneIcon from "../assets/phone-icon.svg";
+import clockIcon from "../assets/clock-icon.svg";
 
 function Footer() {
   return (
@@ -11,7 +15,9 @@ function Footer() {
       <div className="container footer-container">
         <div className="footer-links">
           <div className="image">
-            <img src={logo} alt="" />
+            <NavLink to="/">
+              <img src={logo} alt="" />
+            </NavLink>
           </div>
           <div className="footer-head">
             <h5>Our Services</h5>
@@ -33,17 +39,32 @@ function Footer() {
           <div className="footer-head">
             <h5>Contents</h5>
             <ul>
-              <li>Products</li>
-              <li>About Us</li>
-              <li>Terms and Conditions</li>
+              <NavLink to="/blog">
+                <li>Blog</li>
+              </NavLink>
             </ul>
           </div>
           <div className="footer-head">
             <h5>Contact</h5>
             <ul>
-              <li>Products</li>
-              <li>About Us</li>
-              <li>Terms and Conditions</li>
+              <li className="address-icon">
+                <img src={locationIcon} alt="location-icon" />
+                <NavLink to="https://goo.gl/maps/paaZ2CnYCLcAYygUA">
+                  <li>Visit us</li>
+                </NavLink>
+              </li>
+              <li className="address-icon">
+                <img src={mailIcon} alt="adderss-icon" />
+                <li>pscm73@hotmail.com</li>
+              </li>
+              <li className="address-icon">
+                <img src={phoneIcon} alt="phone-icon" />
+                <li>(+66) 02-431-2100</li>
+              </li>
+              <li className="address-icon">
+                <img src={clockIcon} alt="clock-icon" />
+                <li>Hours: Mon-Fri, 9AM-5PM (UTC+7)</li>
+              </li>
             </ul>
           </div>
         </div>

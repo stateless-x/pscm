@@ -43,10 +43,27 @@ footer {
     width: 25px;
   }
 
-
 .right-reserved{
     display: flex;
     justify-content: center;
+}
+
+.footer-head ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-head ul a:visited {
+  color: inherit;
+}
+
+.address-icon{
+  display: flex;
+}
+
+.address-icon img{
+  width: 15px;
+  margin: 0.25rem;
 }
 
 @media(max-width: 480px){

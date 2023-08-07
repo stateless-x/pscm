@@ -145,7 +145,7 @@ body,
 html {
   font-family: var(--font-family);
   font-size: var(--base-font-size);
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 img {

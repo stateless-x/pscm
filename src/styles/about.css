@@ -28,12 +28,47 @@
   color: var(--highlight);
   font-weight: 600;
 }
-.history-description > p{
-    line-height: 1.25rem;
+.history-description > p {
+  line-height: 1.25rem;
 }
 
 .history-description > * {
   padding-bottom: 0.75rem;
+}
+
+.core-header {
+  text-align: center;
+  color: #0d47a1;
+  padding: 2rem 0;
+  /* border-top:1px solid rgb(148, 148, 148) */
+}
+.core-header h3 {
+  font-weight: 700;
+}
+
+.core-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.core-content > * {
+  max-width: 26rem;
+}
+
+.core-content img {
+  width: 75px;
+  height: 70px;
+}
+
+.core-content h5 {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.core-content p {
+  line-height: 1.25rem;
 }
 
 @media (max-width: 1024px) {

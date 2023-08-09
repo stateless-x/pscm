@@ -3,6 +3,7 @@ import HistoryImage from "../assets/history-image.png";
 import lightBulb from "../assets/light-bulb.svg";
 import mousey from "../assets/mousey.svg";
 import shield from "../assets/shield.svg";
+import Button from "../components/Button";
 
 function About() {
   return (
@@ -56,6 +57,18 @@ function About() {
               support, and innovation cater to Thai businesses and international
               clients.
             </p>
+          </div>
+        </div>
+        <div className="join-us-content">
+          <h2>Join Us in<br/> Shaping Success</h2>
+          <div className="join-us-description">
+            <p>
+              Explore PSCM's long history of success in ceramic machinery. Our
+              legacy, commitment to quality, repair services, and innovative
+              solutions await you. Contact us today and let PSCM elevate your
+              business.
+            </p>
+            <Button color="primary" message="Get More Details"/>
           </div>
         </div>
       </div>

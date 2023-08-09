@@ -50,7 +50,7 @@
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-  padding: 1rem;
+  padding: 5rem;
 }
 
 .core-content > * {
@@ -69,6 +69,27 @@
 
 .core-content p {
   line-height: 1.25rem;
+}
+
+.join-us-content {
+  display: flex;
+  padding: 2rem 5rem;
+  gap: 6rem;
+  justify-content: space-around;
+}
+
+.join-us-content h2 {
+  font-weight: 700;
+  max-width: 32.5rem;
+}
+
+.join-us-description {
+  max-width: 46.25rem;
+}
+
+.join-us-description button {
+  max-width: 15rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1024px) {

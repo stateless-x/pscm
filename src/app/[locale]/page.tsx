@@ -56,6 +56,7 @@ export default async function HomePage({
       <TrustBar />
 
       <Section
+        number="01"
         eyebrow={t("featuredEyebrow")}
         title={t("featuredTitle")}
         subtitle={t("featuredSub")}
@@ -83,21 +84,31 @@ export default async function HomePage({
       </Section>
 
       <Section
+        number="02"
         eyebrow={t("servicesEyebrow")}
         title={t("servicesTitle")}
         variant="alt"
       >
-        <div className="grid gap-5 md:grid-cols-3">
-          {SERVICES.map((s) => (
+        <div className="grid divide-y divide-line md:grid-cols-3 md:divide-y-0 md:divide-x">
+          {SERVICES.map((s, i) => (
             <div
               key={s.titleKey}
-              className="flex flex-col gap-3 border border-line bg-paper p-6"
+              className="flex flex-col gap-4 py-8 md:py-2 md:px-8 md:first:pl-0 md:last:pr-0"
             >
-              <s.icon size={28} className="text-amber-strong" aria-hidden="true" />
-              <h3 className="text-lg font-semibold text-text">
+              <div className="flex items-baseline justify-between">
+                <s.icon
+                  size={32}
+                  className="text-amber-strong"
+                  aria-hidden="true"
+                />
+                <span className="mono text-[10px] uppercase tracking-[0.22em] text-text-muted">
+                  {String(i + 1).padStart(2, "0")} / 03
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold leading-tight text-text">
                 {t(s.titleKey)}
               </h3>
-              <p className="text-sm leading-relaxed text-text-muted">
+              <p className="text-[15px] leading-relaxed text-text-muted">
                 {t(s.bodyKey)}
               </p>
             </div>

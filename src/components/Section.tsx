@@ -2,6 +2,7 @@ import { cn } from "@/lib/cn";
 import { Container } from "./Container";
 
 export function Section({
+  number,
   eyebrow,
   title,
   subtitle,
@@ -11,6 +12,8 @@ export function Section({
   variant = "light",
   id,
 }: {
+  /** Numbered prefix shown before eyebrow, e.g. "01". Renders as "§ 01 — …". */
+  number?: string;
   eyebrow?: string;
   title?: string;
   subtitle?: string;
@@ -27,42 +30,48 @@ export function Section({
       ? "bg-bg text-text-invert"
       : "bg-paper";
 
+  const muted =
+    variant === "dark" ? "text-text-invert-muted" : "text-text-muted";
+  const main = variant === "dark" ? "text-text-invert" : "text-text";
+
   return (
-    <section id={id} className={cn("py-16 md:py-24", bg, className)}>
+    <section
+      id={id}
+      className={cn("py-20 md:py-28 lg:py-32", bg, className)}
+    >
       <Container className={containerClassName}>
-        {eyebrow && (
-          <p
+        {(number || eyebrow) && (
+          <div
             className={cn(
-              "eyebrow",
-              variant === "dark" ? "text-text-invert-muted" : "text-text-muted",
+              "section-no flex items-center gap-3",
+              variant === "dark" ? "text-amber/90" : "text-amber-strong",
             )}
           >
-            {eyebrow}
-          </p>
+            {number && <span>§ {number}</span>}
+            {number && eyebrow && (
+              <span className={cn("h-px w-8", muted, "bg-current opacity-40")} />
+            )}
+            {eyebrow && <span className={muted}>{eyebrow}</span>}
+          </div>
         )}
         {title && (
-          <h2
-            className={cn(
-              "mt-3 text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-tight",
-              variant === "dark" ? "text-text-invert" : "text-text",
-            )}
-          >
-            {title}
-          </h2>
+          <h2 className={cn("display-h2 mt-5", main)}>{title}</h2>
         )}
         {subtitle && (
           <p
             className={cn(
-              "mt-4 max-w-2xl text-base md:text-lg leading-relaxed",
-              variant === "dark"
-                ? "text-text-invert/80"
-                : "text-text-muted",
+              "mt-5 max-w-2xl text-base md:text-lg leading-relaxed",
+              variant === "dark" ? "text-text-invert/80" : muted,
             )}
           >
             {subtitle}
           </p>
         )}
-        {children && <div className={cn(title ? "mt-10 md:mt-12" : "")}>{children}</div>}
+        {children && (
+          <div className={cn(title || eyebrow ? "mt-12 md:mt-16" : "")}>
+            {children}
+          </div>
+        )}
       </Container>
     </section>
   );

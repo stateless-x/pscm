@@ -71,6 +71,33 @@ body {
   border-radius: 2px;
 }
 
+/* Display headline — for hero + major spreads.
+   Tight leading, big scale, weight 700. Thai sits comfortably at this
+   scale because Plex Sans Thai has the proportions for display use. */
+.display-h1 {
+  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.display-h2 {
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+/* Numbered section label — § 01 — Trust */
+.section-no {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
 /* Eyebrow utility — small uppercase mono label */
 .eyebrow {
   font-family: var(--font-mono), monospace;
@@ -161,6 +188,24 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Nameplate stamp-in — quick scale + settle, like a plate being riveted on */
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.995);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.stamp-in {
+  animation: stamp-in 0.36s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 .rise-in {
   animation: rise-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;

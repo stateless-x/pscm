@@ -17,6 +17,11 @@
     "close": "Close",
     "openMenu": "Open menu"
   },
+  "devBanner": {
+    "label": "Site under development",
+    "body": "Some product photos aren't up yet. Reach out and we'll send you real shots.",
+    "cta": "Contact us"
+  },
   "common": {
     "madeInThailand": "MADE IN THAILAND",
     "since": "Since 1986",

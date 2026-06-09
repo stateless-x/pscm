@@ -1,0 +1,957 @@
+// All machine data lives here. Add a machine = add one object.
+// Spec §7. Bilingual fields rendered per active locale; never both stacked.
+
+export type Locale = "th" | "en";
+export type Bi = Record<Locale, string>;
+export type BiList = Record<Locale, string[]>;
+
+export type MachineStatus = "available" | "made_to_order" | "on_request";
+
+export type Stage =
+  | "crushing"
+  | "grinding"
+  | "mixing"
+  | "filtering"
+  | "purification"
+  | "forming"
+  | "pressing"
+  | "glazing"
+  | "drying"
+  | "firing"
+  | "material-handling";
+
+export interface Machine {
+  slug: string;
+  model?: string;
+  name: Bi;
+  category: Bi;
+  stage: Stage;
+  status: MachineStatus;
+  order: number;
+  featured?: boolean;
+  tags: string[];
+  industries: BiList;
+  short: Bi;
+  process: Bi;
+  description?: Bi;
+  features: BiList;
+  seoKeywords: BiList;
+  images: string[];
+}
+
+export const machines: Machine[] = [
+  // ——— CORE ———
+  {
+    slug: "ball-mill",
+    model: "PSCM-BM",
+    stage: "grinding",
+    status: "available",
+    order: 1,
+    featured: true,
+    name: { th: "หม้อบด", en: "Ball Mill" },
+    category: { th: "การบดวัตถุดิบ", en: "Raw Material Grinding" },
+    tags: [
+      "ceramic-machinery",
+      "ball-mill",
+      "grinding",
+      "mining",
+      "pigment",
+      "chemical",
+      "battery-materials",
+    ],
+    industries: {
+      th: ["เซรามิก", "สี/เม็ดสี", "เคมีภัณฑ์", "เหมืองแร่", "วัสดุแบตเตอรี่"],
+      en: [
+        "Ceramics",
+        "Paint & Pigment",
+        "Chemical",
+        "Mining",
+        "Battery materials",
+      ],
+    },
+    short: {
+      th: "บดและผสมวัตถุดิบ น้ำดิน และน้ำเคลือบ ให้ละเอียดสม่ำเสมอ",
+      en: "Grinds and blends raw materials, slip, and glaze to a uniform fineness.",
+    },
+    process: {
+      th: "หัวใจของการเตรียมวัตถุดิบ ความละเอียดที่สม่ำเสมอจากหม้อบดส่งผลโดยตรงต่อคุณภาพชิ้นงานสุดท้ายและของเสียในไลน์",
+      en: "The heart of material prep — consistent fineness here directly decides final-piece quality and line scrap.",
+    },
+    features: {
+      th: [
+        "ผลิตได้หลายขนาดตามกำลังการผลิตจริงของโรงงาน",
+        "โครงสร้างแข็งแรง รองรับการเดินเครื่องหนักต่อเนื่อง",
+        "บดละเอียดสม่ำเสมอ ลดของเสียในกระบวนการ",
+        "ออกแบบให้ดูแลรักษาง่าย พร้อมอะไหล่และบริการซ่อมจากเราเอง",
+      ],
+      en: [
+        "Built in any size to match your real throughput",
+        "Heavy-duty build for continuous hard-running operation",
+        "Uniform fineness that cuts process scrap",
+        "Easy to maintain — parts and repair handled in-house by us",
+      ],
+    },
+    seoKeywords: {
+      th: ["หม้อบด", "หม้อบดบอลมิล", "เครื่องบดน้ำเคลือบ", "ball mill เซรามิก"],
+      en: [
+        "ball mill",
+        "ceramic ball mill",
+        "glaze ball mill",
+        "grinding mill Thailand",
+      ],
+    },
+    images: [],
+  },
+  {
+    slug: "filter-press",
+    model: "PSCM-FP",
+    stage: "filtering",
+    status: "available",
+    order: 2,
+    featured: true,
+    name: { th: "เครื่องอัดกรอง", en: "Filter Press" },
+    category: { th: "การรีดน้ำ/กรอง", en: "Dewatering & Filtration" },
+    tags: [
+      "ceramic-machinery",
+      "filter-press",
+      "filtering",
+      "wastewater",
+      "mining",
+      "chemical",
+      "food",
+    ],
+    industries: {
+      th: ["เซรามิก", "บำบัดน้ำเสีย", "เหมืองแร่", "เคมีภัณฑ์", "อาหาร"],
+      en: ["Ceramics", "Wastewater", "Mining", "Chemical", "Food"],
+    },
+    short: {
+      th: "รีดน้ำออกจากน้ำดิน ให้ได้แผ่นเนื้อดินพร้อมขึ้นรูป",
+      en: "Presses water out of slip to produce ready-to-form clay cake.",
+    },
+    process: {
+      th: "เปลี่ยนน้ำดินเหลวเป็นเนื้อดินความชื้นคงที่ ทำให้ไลน์ขึ้นรูปเดินต่อได้ลื่นและคุณภาพนิ่ง",
+      en: "Turns liquid slip into consistent-moisture cake so forming runs smoothly with stable quality.",
+    },
+    features: {
+      th: [
+        "รีดน้ำมีประสิทธิภาพ ได้ความชื้นสม่ำเสมอทุกแผ่น",
+        "โครงสร้างทนแรงดันสูง ใช้งานได้ยาวนาน",
+        "ผลิตตามจำนวนแผ่นและขนาดที่โรงงานต้องการ",
+        "อะไหล่หาง่าย ซ่อมบำรุงได้ตลอดอายุการใช้งาน",
+      ],
+      en: [
+        "Efficient dewatering with even moisture across every cake",
+        "High-pressure build for a long service life",
+        "Plate count and size made to your spec",
+        "Serviceable for life — parts always available",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องอัดกรอง", "ฟิลเตอร์เพรส", "เครื่องรีดน้ำดิน", "filter press เซรามิก"],
+      en: [
+        "filter press",
+        "ceramic filter press",
+        "slip dewatering",
+        "filter press Thailand",
+      ],
+    },
+    images: [],
+  },
+  {
+    slug: "grinder",
+    model: "PSCM-GR",
+    stage: "grinding",
+    status: "available",
+    order: 3,
+    featured: true,
+    name: { th: "เครื่องบด", en: "Grinder" },
+    category: { th: "การบดย่อยวัตถุดิบ", en: "Material Size Reduction" },
+    tags: ["ceramic-machinery", "grinding", "crusher", "mining", "chemical"],
+    industries: {
+      th: ["เซรามิก", "เคมีภัณฑ์", "เหมืองแร่"],
+      en: ["Ceramics", "Chemical", "Mining"],
+    },
+    short: {
+      th: "บดย่อยวัตถุดิบเซรามิกให้ได้ขนาดตามต้องการ",
+      en: "Reduces ceramic raw materials to the size you need.",
+    },
+    process: {
+      th: "เตรียมวัตถุดิบให้ได้ขนาดเหมาะสมก่อนเข้ากระบวนการต่อไป รองรับการใช้งานหนักในโรงงาน",
+      en: "Sizes raw material correctly before the next stage — built for hard factory use.",
+    },
+    features: {
+      th: [
+        "บดต่อเนื่อง รองรับงานหนัก",
+        "ปรับขนาดและกำลังตามชนิดวัตถุดิบ",
+        "โครงสร้างแข็งแรง บำรุงรักษาง่าย",
+      ],
+      en: [
+        "Continuous, heavy-duty grinding",
+        "Sized and powered to your material",
+        "Robust and easy to maintain",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องบดเซรามิก", "เครื่องบดวัตถุดิบ", "grinder เซรามิก"],
+      en: ["ceramic grinder", "material grinder", "grinding machine Thailand"],
+    },
+    images: [],
+  },
+  {
+    slug: "magnetic-sieve",
+    model: "PSCM-MS",
+    stage: "purification",
+    status: "available",
+    order: 4,
+    featured: true,
+    name: { th: "ตะแกรงแม่เหล็ก", en: "Magnetic Sieve" },
+    category: { th: "การคัดแยกสิ่งปนเปื้อน", en: "Contaminant Separation" },
+    tags: [
+      "ceramic-machinery",
+      "magnetic-separator",
+      "purification",
+      "food",
+      "recycling",
+      "mining",
+    ],
+    industries: {
+      th: ["เซรามิก", "อาหาร", "รีไซเคิล", "เหมืองแร่"],
+      en: ["Ceramics", "Food", "Recycling", "Mining"],
+    },
+    short: {
+      th: "แยกเศษเหล็กและสิ่งปนเปื้อนออกจากน้ำดินและน้ำเคลือบ",
+      en: "Removes iron particles and contaminants from slip and glaze.",
+    },
+    process: {
+      th: "เศษเหล็กคือสาเหตุของจุดด่างและของเสีย ตะแกรงแม่เหล็กช่วยคุมคุณภาพให้เนื้อดินและเคลือบสะอาด คงที่",
+      en: "Iron specks cause blemishes and scrap — this keeps slip and glaze clean and quality stable.",
+    },
+    features: {
+      th: [
+        "แยกเศษเหล็กได้มีประสิทธิภาพ ลดของเสีย",
+        "ช่วยคุมคุณภาพชิ้นงานให้สม่ำเสมอ",
+        "ออกแบบให้ทำความสะอาดและบำรุงรักษาง่าย",
+      ],
+      en: [
+        "Effective iron removal that cuts scrap",
+        "Keeps finished-piece quality consistent",
+        "Designed for easy cleaning and upkeep",
+      ],
+    },
+    seoKeywords: {
+      th: ["ตะแกรงแม่เหล็ก", "เครื่องแยกเหล็กน้ำดิน", "magnetic sieve"],
+      en: [
+        "magnetic sieve",
+        "magnetic separator ceramic",
+        "iron separator slip",
+      ],
+    },
+    images: [],
+  },
+
+  // ——— CROSS-INDUSTRY HERO ———
+  {
+    slug: "hydraulic-press",
+    model: "PSCM-HP",
+    stage: "pressing",
+    status: "made_to_order",
+    order: 5,
+    featured: true,
+    name: { th: "เครื่องอัดไฮดรอลิก", en: "Hydraulic Press" },
+    category: { th: "การอัดขึ้นรูป", en: "Pressing & Forming" },
+    tags: [
+      "hydraulic-press",
+      "pressing",
+      "ceramic-machinery",
+      "refractory",
+      "brick",
+      "abrasive",
+      "metalworking",
+      "automotive",
+    ],
+    industries: {
+      th: [
+        "เซรามิก",
+        "วัสดุทนไฟ",
+        "อิฐ/บล็อก",
+        "วัสดุขัด",
+        "งานโลหะ",
+        "ยานยนต์",
+      ],
+      en: [
+        "Ceramics",
+        "Refractory",
+        "Brick & block",
+        "Abrasives",
+        "Metalworking",
+        "Automotive",
+      ],
+    },
+    short: {
+      th: "อัดขึ้นรูปชิ้นงานหนาแน่น แรงกดสม่ำเสมอ ปรับใช้ได้หลายอุตสาหกรรม",
+      en: "Forms dense parts with consistent force — useful well beyond ceramics.",
+    },
+    process: {
+      th: "ให้แรงกดสูงและคงที่สำหรับการอัดขึ้นรูป ใช้ได้ทั้งงานเซรามิก วัสดุทนไฟ อิฐ วัสดุขัด ไปจนถึงงานโลหะ",
+      en: "Delivers high, steady force for forming — ceramics, refractory, brick, abrasives, even metal work.",
+    },
+    features: {
+      th: [
+        "แรงกดสูงและคงที่ ชิ้นงานแน่นสม่ำเสมอ",
+        "ออกแบบกำลังอัดและขนาดโต๊ะตามงาน",
+        "ใช้ข้ามอุตสาหกรรมได้ ไม่จำกัดแค่เซรามิก",
+        "ระบบไฮดรอลิกที่เราดูแลและซ่อมเองได้",
+      ],
+      en: [
+        "High, consistent pressing force for dense parts",
+        "Tonnage and bed size engineered to the job",
+        "Cross-industry, not ceramic-only",
+        "Hydraulic system we service and repair ourselves",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องอัดไฮดรอลิก", "ไฮดรอลิคเพรส", "เครื่องอัดขึ้นรูป"],
+      en: ["hydraulic press", "hydraulic press Thailand", "forming press"],
+    },
+    images: [],
+  },
+
+  // ——— MADE-TO-ORDER & ON-REQUEST (expanded per spec build note) ———
+  {
+    slug: "pug-mill",
+    model: "PSCM-PM",
+    stage: "forming",
+    status: "made_to_order",
+    order: 6,
+    featured: true,
+    name: { th: "เครื่องรีดดิน (สุญญากาศ)", en: "De-airing Pug Mill" },
+    category: { th: "การนวด/รีดดิน", en: "Clay Extrusion & De-airing" },
+    tags: ["pug-mill", "extruder", "forming", "ceramic-machinery", "brick"],
+    industries: {
+      th: ["เซรามิก", "อิฐ/ดินเผา", "งานปั้นสตูดิโอ"],
+      en: ["Ceramics", "Brick & terracotta", "Studio pottery"],
+    },
+    short: {
+      th: "นวดและรีดเนื้อดินให้เนียน ไล่ฟองอากาศ พร้อมขึ้นรูป",
+      en: "Kneads and extrudes clay, removing air for ready-to-form bodies.",
+    },
+    process: {
+      th: "ไล่ฟองอากาศและทำให้เนื้อดินสม่ำเสมอ ลดการแตกร้าวตอนเผา",
+      en: "De-airs and homogenises clay to reduce firing cracks.",
+    },
+    features: {
+      th: [
+        "ระบบสุญญากาศไล่อากาศได้สะอาด ลดการแตกร้าวที่หน้าเตา",
+        "เนื้อดินสม่ำเสมอตลอดแท่ง พร้อมส่งเข้าขึ้นรูปทันที",
+        "ผลิตขนาดและกำลังตามไลน์ของคุณ",
+      ],
+      en: [
+        "Vacuum system fully de-airs the body — far fewer kiln cracks",
+        "Even consistency along the whole pug, ready to feed forming",
+        "Sized and powered to your line",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องรีดดิน", "เครื่องนวดดิน", "pug mill"],
+      en: ["pug mill", "de-airing pug mill", "clay extruder"],
+    },
+    images: [],
+  },
+  {
+    slug: "blunger",
+    model: "PSCM-BL",
+    stage: "mixing",
+    status: "made_to_order",
+    order: 7,
+    name: { th: "เครื่องกวนน้ำดิน", en: "Blunger / Slip Mixer" },
+    category: { th: "การผสมน้ำดิน", en: "Slip Mixing" },
+    tags: ["blunger", "mixer", "mixing", "ceramic-machinery"],
+    industries: {
+      th: ["เซรามิก", "เคมีภัณฑ์"],
+      en: ["Ceramics", "Chemical"],
+    },
+    short: {
+      th: "กวนผสมน้ำดินให้เป็นเนื้อเดียวกัน พร้อมส่งต่อกระบวนการ",
+      en: "Agitates slip into a uniform mix for the next stage.",
+    },
+    process: {
+      th: "ผสมวัตถุดิบกับน้ำให้เนียนสม่ำเสมอก่อนกรองหรือบด",
+      en: "Blends material and water evenly before filtering or milling.",
+    },
+    features: {
+      th: [
+        "ใบกวนออกแบบให้ผสมได้ทั่วถึงทั้งถัง ไม่มีจุดอับ",
+        "ความจุและกำลังมอเตอร์เลือกได้ตามแบทช์",
+        "โครงสร้างทนการกัดกร่อนจากน้ำดินยาวนาน",
+      ],
+      en: [
+        "Impeller designed to mix the whole tank — no dead zones",
+        "Capacity and motor sized to your batch",
+        "Corrosion-resistant build for long life with slip",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องกวนน้ำดิน", "เครื่องผสมน้ำดิน", "blunger"],
+      en: ["blunger", "slip mixer", "slip agitator"],
+    },
+    images: [],
+  },
+  {
+    slug: "jigger-roller",
+    model: "PSCM-JR",
+    stage: "forming",
+    status: "made_to_order",
+    order: 8,
+    name: {
+      th: "เครื่องขึ้นรูปจิกเกอร์/โรลเลอร์",
+      en: "Jigger / Roller-Head Machine",
+    },
+    category: { th: "การขึ้นรูป", en: "Shaping & Forming" },
+    tags: ["jigger", "roller-head", "forming", "ceramic-machinery"],
+    industries: {
+      th: ["เซรามิก (ถ้วยชาม จาน)"],
+      en: ["Ceramics (tableware)"],
+    },
+    short: {
+      th: "ขึ้นรูปจาน ชาม และภาชนะกลม ได้รวดเร็วและสม่ำเสมอ",
+      en: "Forms plates, bowls, and round ware quickly and consistently.",
+    },
+    process: {
+      th: "เพิ่มกำลังผลิตงานขึ้นรูปทรงกลมให้ได้มาตรฐานเดียวกันทุกชิ้น",
+      en: "Scales round-ware forming with piece-to-piece consistency.",
+    },
+    features: {
+      th: [
+        "ขึ้นรูปได้รวดเร็ว เหมาะกับการผลิตจำนวนมาก",
+        "ปรับตั้งหัวโรลเลอร์ได้แม่นยำ ชิ้นงานหนาเท่ากันทุกใบ",
+        "รองรับงานแบบต่าง ๆ ตามแม่พิมพ์ที่โรงงานใช้",
+      ],
+      en: [
+        "Fast cycle time, suited to volume production",
+        "Precise roller setup — uniform wall thickness piece to piece",
+        "Works with the moulds your factory already uses",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องขึ้นรูปจิกเกอร์", "เครื่องขึ้นรูปจาน", "jigger machine"],
+      en: ["jigger machine", "roller head machine", "plate forming machine"],
+    },
+    images: [],
+  },
+  {
+    slug: "ram-press",
+    model: "PSCM-RP",
+    stage: "pressing",
+    status: "made_to_order",
+    order: 9,
+    name: { th: "เครื่องอัดขึ้นรูปแรมเพรส", en: "Ram Press" },
+    category: { th: "การอัดขึ้นรูป", en: "Pressing & Forming" },
+    tags: [
+      "ram-press",
+      "pressing",
+      "hydraulic-press",
+      "forming",
+      "ceramic-machinery",
+      "refractory",
+    ],
+    industries: {
+      th: ["เซรามิก", "วัสดุทนไฟ"],
+      en: ["Ceramics", "Refractory"],
+    },
+    short: {
+      th: "อัดขึ้นรูปชิ้นงานทรงไม่กลม เช่น จานเหลี่ยมและงานหนา",
+      en: "Presses non-round and thicker shapes from clay.",
+    },
+    process: {
+      th: "ขึ้นรูปงานที่จิกเกอร์ทำไม่ได้ ด้วยแม่พิมพ์และแรงอัด",
+      en: "Forms shapes a jigger can't, using a die and press force.",
+    },
+    features: {
+      th: [
+        "เหมาะกับงานเหลี่ยมหรือทรงพิเศษที่จิกเกอร์ทำไม่ได้",
+        "แรงอัดสม่ำเสมอ ชิ้นงานเนื้อแน่นเท่ากันทุกชิ้น",
+        "ออกแบบกำลังอัดและขนาดโต๊ะตามแบบที่ใช้",
+      ],
+      en: [
+        "Right for square or special shapes a jigger can't form",
+        "Steady press force — even body density every piece",
+        "Tonnage and bed sized to your die",
+      ],
+    },
+    seoKeywords: {
+      th: ["แรมเพรส", "เครื่องอัดขึ้นรูปเซรามิก", "ram press"],
+      en: ["ram press", "ceramic ram press", "clay press"],
+    },
+    images: [],
+  },
+  {
+    slug: "vibrating-screen",
+    model: "PSCM-VS",
+    stage: "purification",
+    status: "made_to_order",
+    order: 10,
+    name: { th: "ตะแกรงสั่นคัดแยก", en: "Vibrating Screen" },
+    category: { th: "การร่อน/คัดขนาด", en: "Screening & Sizing" },
+    tags: [
+      "vibrating-screen",
+      "purification",
+      "ceramic-machinery",
+      "food",
+      "mining",
+    ],
+    industries: {
+      th: ["เซรามิก", "อาหาร", "เหมืองแร่"],
+      en: ["Ceramics", "Food", "Mining"],
+    },
+    short: {
+      th: "ร่อนและคัดแยกขนาดน้ำดินหรือผงวัตถุดิบ",
+      en: "Sieves and grades slip or powder by particle size.",
+    },
+    process: {
+      th: "กรองสิ่งตกค้างและคุมขนาดอนุภาคก่อนเข้ากระบวนการต่อไป",
+      en: "Filters residue and controls particle size before the next step.",
+    },
+    features: {
+      th: [
+        "การสั่นออกแบบให้ร่อนต่อเนื่องโดยไม่อุดตันง่าย",
+        "เปลี่ยนตะแกรงตามขนาดที่ต้องการได้ภายในนาที",
+        "ใช้ได้ทั้งน้ำดินและผงแห้ง",
+      ],
+      en: [
+        "Vibration tuned for continuous sieving without easy clogging",
+        "Swap to a different mesh size in minutes",
+        "Works for both slip and dry powder",
+      ],
+    },
+    seoKeywords: {
+      th: ["ตะแกรงสั่น", "เครื่องร่อนน้ำดิน", "vibrating screen"],
+      en: ["vibrating screen", "vibrating sieve", "particle screening"],
+    },
+    images: [],
+  },
+  {
+    slug: "mixer",
+    model: "PSCM-MX",
+    stage: "mixing",
+    status: "made_to_order",
+    order: 11,
+    name: { th: "เครื่องผสม", en: "Mixing Machine" },
+    category: { th: "การผสมวัตถุดิบ", en: "Material Mixing" },
+    tags: ["mixer", "mixing", "ceramic-machinery", "food", "chemical"],
+    industries: {
+      th: ["เซรามิก", "อาหาร", "เคมีภัณฑ์", "ก่อสร้าง"],
+      en: ["Ceramics", "Food", "Chemical", "Construction"],
+    },
+    short: {
+      th: "ผสมวัตถุดิบแห้งหรือเปียกให้เข้ากันสม่ำเสมอ",
+      en: "Blends dry or wet materials to an even mix.",
+    },
+    process: {
+      th: "คุมสัดส่วนและความสม่ำเสมอของส่วนผสมตามสูตรของโรงงาน",
+      en: "Holds your recipe's ratio and consistency batch to batch.",
+    },
+    features: {
+      th: [
+        "ผสมได้สม่ำเสมอทุกแบทช์ตามสูตรของคุณ",
+        "ออกแบบใบกวนและขนาดถังตามวัตถุดิบที่ใช้จริง",
+        "วัสดุภายในเลือกได้ตามชนิดงาน (เซรามิก อาหาร เคมี)",
+      ],
+      en: [
+        "Even mix batch after batch, true to your recipe",
+        "Impeller and tank sized to the real material you run",
+        "Contact materials selectable by industry (ceramic, food, chemical)",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องผสมวัตถุดิบ", "เครื่องผสมเซรามิก", "industrial mixer"],
+      en: ["industrial mixer", "material mixer", "ceramic mixer"],
+    },
+    images: [],
+  },
+  {
+    slug: "jaw-crusher",
+    model: "PSCM-JC",
+    stage: "crushing",
+    status: "made_to_order",
+    order: 12,
+    name: { th: "เครื่องบดกราม", en: "Jaw Crusher" },
+    category: { th: "การบดหยาบ", en: "Primary Crushing" },
+    tags: ["crusher", "crushing", "ceramic-machinery", "mining", "recycling"],
+    industries: {
+      th: ["เซรามิก", "เหมืองแร่", "รีไซเคิล"],
+      en: ["Ceramics", "Mining", "Recycling"],
+    },
+    short: {
+      th: "บดหยาบก้อนวัตถุดิบแข็งให้เล็กลงก่อนบดละเอียด",
+      en: "Coarse-crushes hard lumps before fine milling.",
+    },
+    process: {
+      th: "ขั้นแรกของการลดขนาด รองรับวัตถุดิบแข็งและงานหนัก",
+      en: "First size-reduction stage for hard material and heavy loads.",
+    },
+    features: {
+      th: [
+        "กรามและช่องป้อนวัตถุดิบออกแบบตามขนาดก้อนที่ใช้จริง",
+        "โครงสร้างหนักทน รับงานต่อเนื่องในโรงงาน",
+        "ปรับช่องระบายเพื่อคุมขนาดผลผลิตได้",
+      ],
+      en: [
+        "Jaw and feed opening sized to the lumps you actually run",
+        "Heavy-duty frame for continuous factory operation",
+        "Adjustable discharge gap for output-size control",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องบดกราม", "เครื่องบดหิน", "jaw crusher"],
+      en: ["jaw crusher", "primary crusher", "rock crusher"],
+    },
+    images: [],
+  },
+  {
+    slug: "hammer-mill",
+    model: "PSCM-HM",
+    stage: "crushing",
+    status: "made_to_order",
+    order: 13,
+    name: { th: "เครื่องบดแบบค้อน", en: "Hammer Mill" },
+    category: { th: "การบดย่อย", en: "Impact Milling" },
+    tags: [
+      "crusher",
+      "crushing",
+      "grinding",
+      "ceramic-machinery",
+      "chemical",
+      "food",
+    ],
+    industries: {
+      th: ["เซรามิก", "เคมีภัณฑ์", "อาหาร"],
+      en: ["Ceramics", "Chemical", "Food"],
+    },
+    short: {
+      th: "บดย่อยวัตถุดิบเปราะด้วยแรงกระแทกจากค้อน",
+      en: "Reduces brittle material by hammer impact.",
+    },
+    process: {
+      th: "ลดขนาดวัตถุดิบเปราะได้รวดเร็วก่อนขั้นตอนถัดไป",
+      en: "Fast size reduction of friable material before the next step.",
+    },
+    features: {
+      th: [
+        "บดได้ละเอียดและเร็ว เหมาะกับวัตถุดิบเปราะ",
+        "ค้อนถอดเปลี่ยนได้ ดูแลรักษาง่าย",
+        "ตะแกรงด้านล่างเลือกขนาดได้ตามผลผลิตที่ต้องการ",
+      ],
+      en: [
+        "Fine, fast reduction — right for brittle material",
+        "Replaceable hammers for simple upkeep",
+        "Bottom screen sized to your target output",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องบดค้อน", "เครื่องบดย่อย", "hammer mill"],
+      en: ["hammer mill", "impact mill", "crushing mill"],
+    },
+    images: [],
+  },
+  {
+    slug: "glaze-spray-booth",
+    model: "PSCM-GB",
+    stage: "glazing",
+    status: "made_to_order",
+    order: 14,
+    name: { th: "ตู้พ่นเคลือบ", en: "Glaze Spraying Booth" },
+    category: { th: "การเคลือบ", en: "Glazing" },
+    tags: ["glaze-line", "glazing", "ceramic-machinery"],
+    industries: { th: ["เซรามิก"], en: ["Ceramics"] },
+    short: {
+      th: "พ่นเคลือบชิ้นงานพร้อมระบบดักละอองและระบายอากาศ",
+      en: "Sprays glaze with overspray capture and extraction.",
+    },
+    process: {
+      th: "เคลือบได้สม่ำเสมอ พร้อมสภาพแวดล้อมทำงานที่สะอาดและปลอดภัย",
+      en: "Even glazing with a cleaner, safer work area.",
+    },
+    features: {
+      th: [
+        "ระบบดักละอองและกรองอากาศ ลดฝุ่นเคลือบในโรงงาน",
+        "พื้นที่พ่นออกแบบให้ทำงานได้สะดวก เคลือบเรียบ",
+        "ขนาดและกำลังดูดเลือกได้ตามชิ้นงาน",
+      ],
+      en: [
+        "Overspray capture and air filtration cut workshop dust",
+        "Spray area laid out for comfortable use and even coverage",
+        "Booth size and extraction power sized to your ware",
+      ],
+    },
+    seoKeywords: {
+      th: ["ตู้พ่นเคลือบ", "ตู้พ่นสีเซรามิก", "glaze booth"],
+      en: ["glaze spray booth", "glazing booth", "spray booth ceramic"],
+    },
+    images: [],
+  },
+  {
+    slug: "conveyor",
+    model: "PSCM-CV",
+    stage: "material-handling",
+    status: "made_to_order",
+    order: 15,
+    name: { th: "ระบบสายพานลำเลียง", en: "Conveyor System" },
+    category: { th: "การลำเลียง", en: "Material Handling" },
+    tags: ["conveyor", "material-handling", "ceramic-machinery", "food"],
+    industries: {
+      th: ["เซรามิก", "อาหาร", "คลังสินค้า"],
+      en: ["Ceramics", "Food", "Warehousing"],
+    },
+    short: {
+      th: "ลำเลียงชิ้นงานและวัตถุดิบเชื่อมต่อแต่ละสถานีการผลิต",
+      en: "Moves parts and material between production stations.",
+    },
+    process: {
+      th: "ออกแบบเส้นทางและความเร็วให้ไลน์ผลิตต่อเนื่องไม่สะดุด",
+      en: "Layout and speed engineered to keep the line flowing.",
+    },
+    features: {
+      th: [
+        "ออกแบบเส้นทางและความยาวให้พอดีโรงงาน",
+        "ความเร็วและกำลังโหลดปรับได้ตามไลน์ผลิต",
+        "วัสดุสายพานเลือกตามลักษณะของชิ้นงาน",
+      ],
+      en: [
+        "Path and length engineered to your floor",
+        "Adjustable speed and load capacity for your line",
+        "Belt material selected to suit the product",
+      ],
+    },
+    seoKeywords: {
+      th: ["สายพานลำเลียง", "ระบบลำเลียง", "conveyor"],
+      en: ["conveyor system", "belt conveyor", "material handling conveyor"],
+    },
+    images: [],
+  },
+  {
+    slug: "spray-dryer",
+    model: "PSCM-SD",
+    stage: "drying",
+    status: "on_request",
+    order: 16,
+    name: { th: "เครื่องอบพ่นฝอย", en: "Spray Dryer" },
+    category: { th: "การอบแห้ง", en: "Drying" },
+    tags: [
+      "spray-dryer",
+      "dryer",
+      "drying",
+      "ceramic-machinery",
+      "food",
+      "chemical",
+    ],
+    industries: {
+      th: ["เซรามิก", "อาหาร", "เคมีภัณฑ์"],
+      en: ["Ceramics", "Food", "Chemical"],
+    },
+    short: {
+      th: "เปลี่ยนน้ำดินเป็นผงพร้อมอัดขึ้นรูป (granulate)",
+      en: "Turns slip into press-ready granulated powder.",
+    },
+    process: {
+      th: "ผลิตผงที่ไหลตัวดีและความชื้นคงที่สำหรับการอัดแห้ง",
+      en: "Produces free-flowing, stable-moisture powder for dry pressing.",
+    },
+    features: {
+      th: [
+        "เม็ดผงไหลตัวดี ป้อนเข้าเครื่องอัดแห้งได้สม่ำเสมอ",
+        "คุมความชื้นปลายทางได้แม่นยำ",
+        "เป็นงานเฉพาะทาง โปรดสอบถามความเป็นไปได้ก่อนสั่งผลิต",
+      ],
+      en: [
+        "Free-flowing granules that feed dry-press lines evenly",
+        "Tight control of final moisture",
+        "Specialised — please ask about feasibility before ordering",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องอบพ่นฝอย", "สเปรย์ดรายเออร์", "spray dryer"],
+      en: ["spray dryer", "spray drying ceramic", "granulation dryer"],
+    },
+    images: [],
+  },
+  {
+    slug: "dryer-chamber",
+    model: "PSCM-DC",
+    stage: "drying",
+    status: "on_request",
+    order: 17,
+    name: { th: "ตู้อบ/ห้องอบแห้ง", en: "Drying Chamber" },
+    category: { th: "การอบแห้ง", en: "Drying" },
+    tags: ["dryer", "drying", "ceramic-machinery"],
+    industries: { th: ["เซรามิก"], en: ["Ceramics"] },
+    short: {
+      th: "อบไล่ความชื้นชิ้นงานก่อนเข้าเตาเผา",
+      en: "Dries pieces to the right moisture before firing.",
+    },
+    process: {
+      th: "คุมอุณหภูมิและความชื้นให้ชิ้นงานแห้งสม่ำเสมอ ลดการแตกร้าว",
+      en: "Controls heat and humidity for even drying and fewer cracks.",
+    },
+    features: {
+      th: [
+        "ระบบควบคุมอุณหภูมิและความชื้น ลดของเสียจากการแตกร้าว",
+        "ออกแบบขนาดและกำลังตามจำนวนชิ้นงานต่อรอบ",
+        "ปรึกษารายละเอียดและความเป็นไปได้ก่อนสั่งผลิต",
+      ],
+      en: [
+        "Temperature and humidity control to cut crack losses",
+        "Size and power engineered to your pieces-per-cycle",
+        "Discuss requirements and feasibility before ordering",
+      ],
+    },
+    seoKeywords: {
+      th: ["ตู้อบเซรามิก", "ห้องอบแห้ง", "ceramic dryer"],
+      en: ["drying chamber", "ceramic dryer", "industrial dryer"],
+    },
+    images: [],
+  },
+  {
+    slug: "dust-press",
+    model: "PSCM-DP",
+    stage: "pressing",
+    status: "on_request",
+    order: 18,
+    name: { th: "เครื่องอัดผงแห้ง", en: "Dry / Dust Press" },
+    category: { th: "การอัดแห้ง", en: "Dry Pressing" },
+    tags: [
+      "pressing",
+      "hydraulic-press",
+      "ceramic-machinery",
+      "refractory",
+      "abrasive",
+    ],
+    industries: {
+      th: ["เซรามิก (กระเบื้อง)", "วัสดุทนไฟ", "วัสดุขัด"],
+      en: ["Ceramics (tile)", "Refractory", "Abrasives"],
+    },
+    short: {
+      th: "อัดผงแห้งเป็นชิ้นงานหนาแน่น เช่น กระเบื้องและวัสดุทนไฟ",
+      en: "Compacts dry powder into dense parts like tile and refractory.",
+    },
+    process: {
+      th: "ขึ้นรูปจากผงด้วยแรงอัดสูง ได้ความหนาแน่นและขนาดคงที่",
+      en: "Forms from powder under high force for consistent density and size.",
+    },
+    features: {
+      th: [
+        "แรงอัดสูง ชิ้นงานแน่นและขนาดคงที่ทุกชิ้น",
+        "ออกแบบแม่พิมพ์และโต๊ะรับตามผลิตภัณฑ์",
+        "งานเฉพาะทาง โปรดปรึกษาความเป็นไปได้",
+      ],
+      en: [
+        "High force — consistent density and dimension every piece",
+        "Die and bed engineered to your product",
+        "Specialised — please discuss feasibility first",
+      ],
+    },
+    seoKeywords: {
+      th: ["เครื่องอัดผง", "เครื่องอัดกระเบื้อง", "dust press"],
+      en: ["dust press", "dry press", "tile press"],
+    },
+    images: [],
+  },
+  {
+    slug: "kiln",
+    model: "PSCM-KN",
+    stage: "firing",
+    status: "on_request",
+    order: 19,
+    name: { th: "เตาเผา", en: "Kiln" },
+    category: { th: "การเผา", en: "Firing" },
+    tags: ["kiln", "firing", "ceramic-machinery"],
+    industries: { th: ["เซรามิก"], en: ["Ceramics"] },
+    short: {
+      th: "เผาชิ้นงานเซรามิกตามรอบอุณหภูมิที่ต้องการ",
+      en: "Fires ceramic ware to the required temperature cycle.",
+    },
+    process: {
+      th: "ขั้นตอนชี้ขาดความแข็งแรงและคุณภาพผิวของชิ้นงานสุดท้าย",
+      en: "The decisive stage for final strength and surface quality.",
+    },
+    features: {
+      th: [
+        "ออกแบบรอบอุณหภูมิและขนาดห้องเผาตามชิ้นงานของคุณ",
+        "งานเฉพาะทางที่ต้องวางแผนร่วมกัน",
+        "ปรึกษาเราเพื่อประเมินความเป็นไปได้",
+      ],
+      en: [
+        "Firing cycle and chamber size designed around your ware",
+        "Specialised — needs joint planning",
+        "Talk to us to assess feasibility",
+      ],
+    },
+    seoKeywords: {
+      th: ["เตาเผาเซรามิก", "เตาเผา", "ceramic kiln"],
+      en: ["ceramic kiln", "industrial kiln", "shuttle kiln"],
+    },
+    images: [],
+  },
+  {
+    slug: "potters-wheel",
+    model: "PSCM-PW",
+    stage: "forming",
+    status: "on_request",
+    order: 20,
+    name: { th: "แป้นหมุนปั้น", en: "Potter's Wheel" },
+    category: { th: "การขึ้นรูปด้วยมือ", en: "Hand Forming" },
+    tags: ["potters-wheel", "forming", "ceramic-machinery"],
+    industries: {
+      th: ["งานปั้นสตูดิโอ", "การศึกษา/เซรามิก"],
+      en: ["Studio pottery", "Education / ceramics"],
+    },
+    short: {
+      th: "แป้นหมุนสำหรับงานปั้นมือ สตูดิโอ และสถานศึกษา",
+      en: "A throwing wheel for studios, schools, and hand work.",
+    },
+    process: {
+      th: "รองรับงานปั้นปริมาณน้อยถึงปานกลางและงานสอน",
+      en: "Suits small-to-medium throwing and teaching.",
+    },
+    features: {
+      th: [
+        "ความเร็วและทิศทางหมุนปรับได้ตามผู้ใช้",
+        "โครงสร้างมั่นคง เงียบ เหมาะกับห้องเรียนและสตูดิโอ",
+        "สอบถามรุ่นที่ผลิตอยู่ในขณะนั้น",
+      ],
+      en: [
+        "Adjustable speed and direction to suit the potter",
+        "Stable and quiet — right for classrooms and studios",
+        "Ask us which models we have running",
+      ],
+    },
+    seoKeywords: {
+      th: ["แป้นหมุนปั้น", "แป้นหมุนเซรามิก", "potters wheel"],
+      en: ["potters wheel", "pottery wheel", "throwing wheel"],
+    },
+    images: [],
+  },
+];
+
+export const featuredMachines = machines
+  .filter((m) => m.featured)
+  .sort((a, b) => a.order - b.order);
+
+export const machinesByStage = (stage: Stage) =>
+  machines.filter((m) => m.stage === stage).sort((a, b) => a.order - b.order);
+
+export const machineBySlug = (slug: string) =>
+  machines.find((m) => m.slug === slug);
+
+export const allStages: Stage[] = [
+  "crushing",
+  "grinding",
+  "mixing",
+  "filtering",
+  "purification",
+  "forming",
+  "pressing",
+  "glazing",
+  "drying",
+  "firing",
+  "material-handling",
+];

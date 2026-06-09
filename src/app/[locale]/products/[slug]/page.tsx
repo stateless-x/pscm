@@ -118,6 +118,17 @@ export default async function ProductDetailPage({
                 {machine.short[loc]}
               </p>
 
+              {machine.aliases && machine.aliases[loc].length > 0 && (
+                <p className="text-sm leading-relaxed text-text-muted">
+                  <span className="eyebrow mr-1.5 text-text-muted">
+                    {t("alsoKnownAs")}
+                  </span>
+                  <span className="italic">
+                    {machine.aliases[loc].join(" · ")}
+                  </span>
+                </p>
+              )}
+
               <div className="rule mt-2 pt-5">
                 <div className="eyebrow text-text-muted">{t("process")}</div>
                 <p className="mt-2 text-base leading-relaxed text-text">

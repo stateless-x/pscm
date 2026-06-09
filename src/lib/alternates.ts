@@ -3,8 +3,8 @@ import { routing } from "@/i18n/routing";
 
 // Build canonical + hreflang for a specific path under the configured
 // routing scheme. Centralised so every page agrees with sitemap.ts.
-// Paths should NOT include the locale segment or leading/trailing slashes —
-// pass "" for the locale root, "products" for /<locale>/products/, etc.
+// Paths should NOT include the locale segment or leading/trailing slashes.
+// Pass "" for the locale root, "products" for /<locale>/products/, etc.
 export function buildAlternates(
   locale: string,
   path: string = "",

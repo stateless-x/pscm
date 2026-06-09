@@ -86,7 +86,7 @@ export default async function ProductDetailPage({
         </Container>
       </div>
 
-      {/* Hero — nameplate + image + key info */}
+      {/* Hero: nameplate + image + key info */}
       <section className="bg-paper">
         <Container className="py-10 md:py-14">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
@@ -189,7 +189,7 @@ export default async function ProductDetailPage({
             </p>
           </div>
           <aside className="space-y-6">
-            <Info label={t("model")} value={machine.model ?? "—"} mono />
+            <Info label={t("model")} value={machine.model ?? "-"} mono />
             <Info label={t("category")} value={machine.category[loc]} />
             <Info label={t("stage")} value={tStage(machine.stage)} />
             <div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Foundation — graphite / steel */
+  /* Foundation: graphite / steel */
   --bg: #0f1113;
   --surface: #16191c;
   --surface-2: #1e2227;
@@ -17,7 +17,7 @@
   --text-invert: #eef1f4;
   --text-invert-muted: #9aa1a8;
 
-  /* Accent — industrial amber */
+  /* Accent: industrial amber */
   --amber: #e8a317;
   --amber-strong: #c8860b;
   --amber-soft: #fcefcf;
@@ -64,14 +64,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Focus — visible, never removed */
+/* Focus: visible, never removed */
 :focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 2px;
   border-radius: 2px;
 }
 
-/* Display headline — for hero + major spreads.
+/* Display headline: for hero + major spreads.
    Tight leading, big scale, weight 700. Thai sits comfortably at this
    scale because Plex Sans Thai has the proportions for display use. */
 .display-h1 {
@@ -88,7 +88,7 @@ body {
   font-weight: 600;
 }
 
-/* Numbered section label — § 01 — Trust */
+/* Numbered section label: § 01, Trust */
 .section-no {
   font-family: var(--font-mono), monospace;
   font-size: 0.75rem;
@@ -98,7 +98,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Eyebrow utility — small uppercase mono label */
+/* Eyebrow utility: small uppercase mono label */
 .eyebrow {
   font-family: var(--font-mono), monospace;
   font-size: 0.75rem;
@@ -190,7 +190,7 @@ body {
   }
 }
 
-/* Nameplate stamp-in — quick scale + settle, like a plate being riveted on */
+/* Nameplate stamp-in: quick scale + settle, like a plate being riveted on */
 @keyframes stamp-in {
   0% {
     opacity: 0;

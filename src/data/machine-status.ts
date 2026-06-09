@@ -1,7 +1,7 @@
 // Single source of truth for machine production status.
 // Owns the values, the UI mapping (badge colors + CTA wording key),
-// and the type. Anywhere that needs a status — the data file, badge
-// component, product page CTA — imports from here.
+// and the type. Anywhere that needs a status (the data file, badge
+// component, product page CTA) imports from here.
 //
 // Adding a new status = add one entry to MACHINE_STATUS and one Thai+
 // English translation to messages/{th,en}.json under "status".
@@ -12,7 +12,7 @@ export const MACHINE_STATUS = {
     labelKey: "available",
     /** i18n key under "common" for the product-page primary CTA */
     ctaKey: "enquire",
-    /** Tailwind classes for the badge — uses CSS var tokens from globals.css */
+    /** Tailwind classes for the badge: uses CSS var tokens from globals.css */
     badgeClass:
       "bg-[var(--status-available)]/15 text-[var(--status-available)] ring-[var(--status-available)]/30",
   },

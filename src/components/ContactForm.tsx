@@ -6,7 +6,7 @@ import { machineBySlug } from "@/data/machines";
 import { SITE } from "@/lib/site";
 import { Send } from "lucide-react";
 
-// No backend yet — form composes a mailto: with the body pre-filled.
+// No backend yet: form composes a mailto: with the body pre-filled.
 // Swap the action to a Web3Forms / Formspree endpoint when ready.
 export function ContactForm({ locale }: { locale: "th" | "en" }) {
   const t = useTranslations("contact");

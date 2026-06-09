@@ -1,50 +1,50 @@
-# TODO — open items before going live
+# TODO, open items before going live
 
 Mirrors spec §15. Each item lists the **single file** to edit.
 
 ## Must do
 
-1. **LINE Official Account URL** — `src/lib/site.ts` → `SITE.lineUrl`
+1. **LINE Official Account URL**, `src/lib/site.ts` → `SITE.lineUrl`
    Replace `https://line.me/R/ti/p/~` with the real LINE deep link
    (`https://lin.ee/<id>` or `https://line.me/R/ti/p/@<id>`). Used in
    Header, MobileNav, StickyMobileCTA, Hero, CTABand, Contact page,
    and every product page.
 
-2. **Production domain** — `src/lib/site.ts` → `SITE.url`
+2. **Production domain**, `src/lib/site.ts` → `SITE.url`
    Defaults to `https://pscmceramic.com`. Affects canonical URLs,
    sitemap, JSON-LD, and the root `index.html` redirect.
 
-3. **Machine statuses** — `src/data/machines.ts`
+3. **Machine statuses**, `src/data/machines.ts`
    Confirm each machine's `status` is one of `available` | `made_to_order`
    | `on_request` and matches what you actually build today. Status
    drives the badge colour and the product-page CTA wording.
 
-4. **Registered Thai spelling** — confirm "ซีรามิค" vs "เซรามิค"
+4. **Registered Thai spelling**, confirm "ซีรามิค" vs "เซรามิค"
    across `messages/th.json`, `src/lib/site.ts`, `src/data/machines.ts`.
    Currently uses **ซีรามิค** to match the spec / company filings.
 
 ## Should do
 
-5. **Logo / wordmark** — `src/components/Header.tsx`, `src/components/Footer.tsx`
+5. **Logo / wordmark**, `src/components/Header.tsx`, `src/components/Footer.tsx`
    Currently a typographic "P" tile + "Petkasem Ceramic Machine" wordmark.
    Drop a real logo into `public/` and replace the `<span>` in Header.
 
-6. **Photos and video** — `src/data/machines.ts` → each machine's `images: []`
+6. **Photos and video**, `src/data/machines.ts` → each machine's `images: []`
    Add image paths (place files under `public/machines/`). When `images[0]`
    exists, `MachineImage` swaps the placeholder for the real photo with no
    other code changes. Locked 4:3 aspect ratio.
 
-7. **Inquiry form endpoint** — `src/components/ContactForm.tsx`
+7. **Inquiry form endpoint**, `src/components/ContactForm.tsx`
    Currently composes a `mailto:` using `SITE.email`. To replace with a
    real handler, change the `<form action>` to a Web3Forms or Formspree
    endpoint (read from `process.env.NEXT_PUBLIC_FORM_ENDPOINT`).
 
-8. **Google Maps embed** — `src/lib/site.ts` → `SITE.mapEmbedSrc`
+8. **Google Maps embed**, `src/lib/site.ts` → `SITE.mapEmbedSrc`
    Currently a generic Sam Phran search. Replace with a real "share →
    embed map" URL pointing at the factory address.
 
-9. **Specs / dimensions per machine** — `src/data/machines.ts` and
-   `src/components/SpecsTable.tsx` (not yet built — `Machine` type has no
+9. **Specs / dimensions per machine**, `src/data/machines.ts` and
+   `src/components/SpecsTable.tsx` (not yet built, `Machine` type has no
    `specs[]` field). If you want real dimensions/tonnage shown on product
    pages: add `specs?: { label: Bi; value: Bi }[]` to the `Machine` type,
    build the component, render inside an accordion below Features.
@@ -54,7 +54,7 @@ Mirrors spec §15. Each item lists the **single file** to edit.
 - Default accent = industrial amber (per spec §3 + §15.8). One change in
   `src/app/globals.css` → `--amber` if you ever swap palettes.
 - Both locales scaffolded with full UI strings (`messages/th.json`,
-  `messages/en.json`) — fluent native copy, not machine-translated.
+  `messages/en.json`), fluent native copy, not machine-translated.
 - All 20 machines from §7.4 with Thai/English short, process, features,
   and SEO keywords.
 - Static export builds clean (`bun run build`) → 58 routes under `out/`.
@@ -66,7 +66,7 @@ Mirrors spec §15. Each item lists the **single file** to edit.
 - Routing: `localePrefix: 'always'`. Root `/` redirects to `/th/` via
   `out/index.html` written by `scripts/postbuild.mjs`. The spec's
   `as-needed` variant doesn't work under static export (it would need
-  middleware which export disables) — this is the advisor-sanctioned
+  middleware which export disables); this is the advisor-sanctioned
   fallback.
 - Phone numbers: displayed as local (`02-431-2100`) and dialled as
   international (`+6624312100`) per spec §14.

@@ -12,7 +12,7 @@ export function Section({
   variant = "light",
   id,
 }: {
-  /** Numbered prefix shown before eyebrow, e.g. "01". Renders as "§ 01 — …". */
+  /** Numbered prefix shown before eyebrow, e.g. "01". Renders as "§ 01, …". */
   number?: string;
   eyebrow?: string;
   title?: string;

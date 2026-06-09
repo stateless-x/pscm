@@ -5,7 +5,7 @@ import { StageIcon } from "./StageIcon";
 import { cn } from "@/lib/cn";
 
 // Locked 4:3 aspect ratio. If images[0] exists, render via next/image.
-// Otherwise, a typed placeholder — never collapses layout.
+// Otherwise, a typed placeholder, never collapses layout.
 export function MachineImage({
   machine,
   locale,
@@ -31,7 +31,7 @@ export function MachineImage({
       {hasImage ? (
         <Image
           src={machine.images[0]}
-          alt={`${name} — ${machine.short[locale]}`}
+          alt={`${name}, ${machine.short[locale]}`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover"

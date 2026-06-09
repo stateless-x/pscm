@@ -37,7 +37,7 @@ export interface Machine {
   description?: Bi;
   features: BiList;
   seoKeywords: BiList;
-  // Industry aliases / synonyms — both Thai transliterations (ทับศัพท์)
+  // Industry aliases / synonyms: both Thai transliterations (ทับศัพท์)
   // and descriptive Thai, plus English variants. Rendered visibly on the
   // product page so search engines index real on-page text, not just meta.
   aliases?: BiList;
@@ -45,7 +45,7 @@ export interface Machine {
 }
 
 export const machines: Machine[] = [
-  // ——— CORE ———
+  // === CORE ===
   {
     slug: "ball-mill",
     model: "PSCM-BM",
@@ -75,25 +75,25 @@ export const machines: Machine[] = [
       ],
     },
     short: {
-      th: "บดและผสมวัตถุดิบ น้ำดิน และน้ำเคลือบ ให้ละเอียดสม่ำเสมอ",
+      th: "บดและผสมวัตถุดิบ น้ำดิน น้ำเคลือบ ให้ละเอียดสม่ำเสมอ",
       en: "Grinds and blends raw materials, slip, and glaze to a uniform fineness.",
     },
     process: {
-      th: "หัวใจของการเตรียมวัตถุดิบ ความละเอียดที่สม่ำเสมอจากหม้อบดส่งผลโดยตรงต่อคุณภาพชิ้นงานสุดท้ายและของเสียในไลน์",
-      en: "The heart of material prep — consistent fineness here directly decides final-piece quality and line scrap.",
+      th: "เป็นหัวใจของขั้นเตรียมวัตถุดิบ ความละเอียดที่ได้จากหม้อบดเป็นตัวกำหนดคุณภาพชิ้นงานและของเสียในไลน์ตรงๆ",
+      en: "The heart of material prep. The fineness you get out of the mill decides final-piece quality and line scrap, directly.",
     },
     features: {
       th: [
-        "ผลิตได้หลายขนาดตามกำลังการผลิตจริงของโรงงาน",
-        "โครงสร้างแข็งแรง รองรับการเดินเครื่องหนักต่อเนื่อง",
-        "บดละเอียดสม่ำเสมอ ลดของเสียในกระบวนการ",
-        "ออกแบบให้ดูแลรักษาง่าย พร้อมอะไหล่และบริการซ่อมจากเราเอง",
+        "สั่งทำได้หลายขนาด ให้พอดีกับกำลังผลิตจริงของโรงงาน",
+        "โครงสร้างแน่น รันต่อเนื่องงานหนักได้",
+        "ความละเอียดนิ่งทุกแบทช์ ลดของเสียในไลน์",
+        "ดูแลรักษาง่าย อะไหล่และงานซ่อมเราทำเองในโรงงาน",
       ],
       en: [
-        "Built in any size to match your real throughput",
-        "Heavy-duty build for continuous hard-running operation",
-        "Uniform fineness that cuts process scrap",
-        "Easy to maintain — parts and repair handled in-house by us",
+        "Sized to match your real throughput, not a fixed catalogue spec",
+        "Heavy build for continuous, hard-running operation",
+        "Uniform fineness batch after batch, which cuts scrap on the line",
+        "Easy to maintain. Parts and repair handled in-house by us",
       ],
     },
     seoKeywords: {
@@ -134,25 +134,25 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Wastewater", "Mining", "Chemical", "Food"],
     },
     short: {
-      th: "รีดน้ำออกจากน้ำดิน ให้ได้แผ่นเนื้อดินพร้อมขึ้นรูป",
+      th: "รีดน้ำออกจากน้ำดิน ได้แผ่นเนื้อดินพร้อมขึ้นรูป",
       en: "Presses water out of slip to produce ready-to-form clay cake.",
     },
     process: {
-      th: "เปลี่ยนน้ำดินเหลวเป็นเนื้อดินความชื้นคงที่ ทำให้ไลน์ขึ้นรูปเดินต่อได้ลื่นและคุณภาพนิ่ง",
-      en: "Turns liquid slip into consistent-moisture cake so forming runs smoothly with stable quality.",
+      th: "เปลี่ยนน้ำดินเหลวให้เป็นเนื้อดินที่ความชื้นนิ่ง ไลน์ขึ้นรูปเดินต่อได้ลื่น คุณภาพคงที่",
+      en: "Turns liquid slip into consistent-moisture cake. The forming line keeps moving and quality stays stable.",
     },
     features: {
       th: [
-        "รีดน้ำมีประสิทธิภาพ ได้ความชื้นสม่ำเสมอทุกแผ่น",
-        "โครงสร้างทนแรงดันสูง ใช้งานได้ยาวนาน",
-        "ผลิตตามจำนวนแผ่นและขนาดที่โรงงานต้องการ",
-        "อะไหล่หาง่าย ซ่อมบำรุงได้ตลอดอายุการใช้งาน",
+        "รีดน้ำได้จริง ความชื้นเท่ากันทุกแผ่น",
+        "โครงสร้างทนแรงดันสูง ใช้งานได้ยาว",
+        "เลือกจำนวนแผ่นและขนาดได้ตามที่โรงงานต้องการ",
+        "อะไหล่หาง่าย ซ่อมได้ตลอดอายุเครื่อง",
       ],
       en: [
-        "Efficient dewatering with even moisture across every cake",
+        "Real dewatering, with even moisture across every cake",
         "High-pressure build for a long service life",
         "Plate count and size made to your spec",
-        "Serviceable for life — parts always available",
+        "Serviceable for life. Parts always on hand",
       ],
     },
     seoKeywords: {
@@ -185,23 +185,23 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Chemical", "Mining"],
     },
     short: {
-      th: "บดย่อยวัตถุดิบเซรามิกให้ได้ขนาดตามต้องการ",
+      th: "บดย่อยวัตถุดิบเซรามิกให้ได้ขนาดที่ต้องการ",
       en: "Reduces ceramic raw materials to the size you need.",
     },
     process: {
-      th: "เตรียมวัตถุดิบให้ได้ขนาดเหมาะสมก่อนเข้ากระบวนการต่อไป รองรับการใช้งานหนักในโรงงาน",
-      en: "Sizes raw material correctly before the next stage — built for hard factory use.",
+      th: "เตรียมขนาดวัตถุดิบให้พอดีก่อนเข้าขั้นถัดไป สร้างมาให้รับงานหนักในโรงงานจริง",
+      en: "Sizes raw material right before the next stage. Built for real hard factory use.",
     },
     features: {
       th: [
-        "บดต่อเนื่อง รองรับงานหนัก",
-        "ปรับขนาดและกำลังตามชนิดวัตถุดิบ",
-        "โครงสร้างแข็งแรง บำรุงรักษาง่าย",
+        "บดต่อเนื่อง รับงานหนักได้",
+        "ปรับขนาดและกำลังตามชนิดวัตถุดิบที่ใช้จริง",
+        "โครงสร้างแน่น ดูแลรักษาง่าย",
       ],
       en: [
         "Continuous, heavy-duty grinding",
-        "Sized and powered to your material",
-        "Robust and easy to maintain",
+        "Sized and powered to the material you actually run",
+        "Robust build, easy to maintain",
       ],
     },
     seoKeywords: {
@@ -236,21 +236,21 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Food", "Recycling", "Mining"],
     },
     short: {
-      th: "แยกเศษเหล็กและสิ่งปนเปื้อนออกจากน้ำดินและน้ำเคลือบ",
+      th: "แยกเศษเหล็กและสิ่งปนเปื้อนออกจากน้ำดินกับน้ำเคลือบ",
       en: "Removes iron particles and contaminants from slip and glaze.",
     },
     process: {
-      th: "เศษเหล็กคือสาเหตุของจุดด่างและของเสีย ตะแกรงแม่เหล็กช่วยคุมคุณภาพให้เนื้อดินและเคลือบสะอาด คงที่",
-      en: "Iron specks cause blemishes and scrap — this keeps slip and glaze clean and quality stable.",
+      th: "เศษเหล็กคือต้นเหตุของจุดด่างและของเสีย ตะแกรงแม่เหล็กดักไว้ก่อน ทำให้เนื้อดินและเคลือบสะอาด คุณภาพนิ่ง",
+      en: "Iron specks are what cause blemishes and scrap. This catches them upstream and keeps slip and glaze clean, with stable quality.",
     },
     features: {
       th: [
-        "แยกเศษเหล็กได้มีประสิทธิภาพ ลดของเสีย",
-        "ช่วยคุมคุณภาพชิ้นงานให้สม่ำเสมอ",
-        "ออกแบบให้ทำความสะอาดและบำรุงรักษาง่าย",
+        "ดักเศษเหล็กได้จริง ของเสียลด",
+        "คุมคุณภาพชิ้นงานให้สม่ำเสมอ",
+        "ออกแบบให้ล้างและบำรุงรักษาง่าย",
       ],
       en: [
-        "Effective iron removal that cuts scrap",
+        "Real iron removal that cuts scrap",
         "Keeps finished-piece quality consistent",
         "Designed for easy cleaning and upkeep",
       ],
@@ -270,7 +270,7 @@ export const machines: Machine[] = [
     images: [],
   },
 
-  // ——— CROSS-INDUSTRY HERO ———
+  // === CROSS-INDUSTRY HERO ===
   {
     slug: "hydraulic-press",
     model: "PSCM-HP",
@@ -309,19 +309,19 @@ export const machines: Machine[] = [
       ],
     },
     short: {
-      th: "อัดขึ้นรูปชิ้นงานหนาแน่น แรงกดสม่ำเสมอ ปรับใช้ได้หลายอุตสาหกรรม",
-      en: "Forms dense parts with consistent force — useful well beyond ceramics.",
+      th: "อัดขึ้นรูปชิ้นงานหนาแน่น แรงกดนิ่ง ใช้ได้หลายอุตสาหกรรม ไม่จำกัดแค่เซรามิก",
+      en: "Forms dense parts with steady force. Useful well beyond ceramics.",
     },
     process: {
-      th: "ให้แรงกดสูงและคงที่สำหรับการอัดขึ้นรูป ใช้ได้ทั้งงานเซรามิก วัสดุทนไฟ อิฐ วัสดุขัด ไปจนถึงงานโลหะ",
-      en: "Delivers high, steady force for forming — ceramics, refractory, brick, abrasives, even metal work.",
+      th: "ให้แรงกดสูงและคงที่สำหรับการอัดขึ้นรูป ใช้ได้ทั้งเซรามิก วัสดุทนไฟ อิฐ วัสดุขัด ไปจนถึงงานโลหะ",
+      en: "Delivers high, steady force for forming. Ceramics, refractory, brick, abrasives, even metal work.",
     },
     features: {
       th: [
-        "แรงกดสูงและคงที่ ชิ้นงานแน่นสม่ำเสมอ",
-        "ออกแบบกำลังอัดและขนาดโต๊ะตามงาน",
+        "แรงกดสูง คงที่ทุกจังหวะ ชิ้นงานแน่นเท่ากันทุกใบ",
+        "สั่งกำลังอัดและขนาดโต๊ะได้ตามงานจริง",
         "ใช้ข้ามอุตสาหกรรมได้ ไม่จำกัดแค่เซรามิก",
-        "ระบบไฮดรอลิกที่เราดูแลและซ่อมเองได้",
+        "ระบบไฮดรอลิกเราดูแลและซ่อมเองได้ทั้งหมด",
       ],
       en: [
         "High, consistent pressing force for dense parts",
@@ -341,7 +341,7 @@ export const machines: Machine[] = [
     images: [],
   },
 
-  // ——— MADE-TO-ORDER & ON-REQUEST (expanded per spec build note) ———
+  // === MADE-TO-ORDER & ON-REQUEST (expanded per spec build note) ===
   {
     slug: "pug-mill",
     model: "PSCM-PM",
@@ -357,21 +357,21 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Brick & terracotta", "Studio pottery"],
     },
     short: {
-      th: "นวดและรีดเนื้อดินให้เนียน ไล่ฟองอากาศ พร้อมขึ้นรูป",
+      th: "นวดและรีดเนื้อดินให้เนียน ไล่ฟองอากาศ ส่งเข้าขึ้นรูปได้เลย",
       en: "Kneads and extrudes clay, removing air for ready-to-form bodies.",
     },
     process: {
-      th: "ไล่ฟองอากาศและทำให้เนื้อดินสม่ำเสมอ ลดการแตกร้าวตอนเผา",
-      en: "De-airs and homogenises clay to reduce firing cracks.",
+      th: "ไล่ฟองอากาศและทำให้เนื้อดินสม่ำเสมอ ช่วยลดของเสียจากการแตกร้าวตอนเผา",
+      en: "De-airs and homogenises clay, which cuts firing cracks.",
     },
     features: {
       th: [
-        "ระบบสุญญากาศไล่อากาศได้สะอาด ลดการแตกร้าวที่หน้าเตา",
-        "เนื้อดินสม่ำเสมอตลอดแท่ง พร้อมส่งเข้าขึ้นรูปทันที",
-        "ผลิตขนาดและกำลังตามไลน์ของคุณ",
+        "ระบบสุญญากาศไล่อากาศได้เกลี้ยง ของเสียที่หน้าเตาน้อยลงมาก",
+        "เนื้อดินสม่ำเสมอตลอดแท่ง ป้อนเข้าขึ้นรูปได้ทันที",
+        "สั่งขนาดและกำลังได้ตามไลน์ของคุณ",
       ],
       en: [
-        "Vacuum system fully de-airs the body — far fewer kiln cracks",
+        "Vacuum system de-airs the body cleanly. Far fewer kiln cracks",
         "Even consistency along the whole pug, ready to feed forming",
         "Sized and powered to your line",
       ],
@@ -400,21 +400,21 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Chemical"],
     },
     short: {
-      th: "กวนผสมน้ำดินให้เป็นเนื้อเดียวกัน พร้อมส่งต่อกระบวนการ",
+      th: "กวนผสมน้ำดินให้เป็นเนื้อเดียวกัน ส่งต่อขั้นถัดไปได้เลย",
       en: "Agitates slip into a uniform mix for the next stage.",
     },
     process: {
-      th: "ผสมวัตถุดิบกับน้ำให้เนียนสม่ำเสมอก่อนกรองหรือบด",
+      th: "ผสมวัตถุดิบกับน้ำให้เนียนทั่วถัง ก่อนเข้ากรองหรือบด",
       en: "Blends material and water evenly before filtering or milling.",
     },
     features: {
       th: [
-        "ใบกวนออกแบบให้ผสมได้ทั่วถึงทั้งถัง ไม่มีจุดอับ",
-        "ความจุและกำลังมอเตอร์เลือกได้ตามแบทช์",
-        "โครงสร้างทนการกัดกร่อนจากน้ำดินยาวนาน",
+        "ใบกวนออกแบบให้หมุนทั่วถึงทั้งถัง ไม่มีจุดอับ",
+        "เลือกความจุและกำลังมอเตอร์ได้ตามแบทช์",
+        "วัสดุทนการกัดกร่อนจากน้ำดิน อยู่ได้ยาว",
       ],
       en: [
-        "Impeller designed to mix the whole tank — no dead zones",
+        "Impeller designed to reach the whole tank. No dead zones",
         "Capacity and motor sized to your batch",
         "Corrosion-resistant build for long life with slip",
       ],
@@ -446,22 +446,22 @@ export const machines: Machine[] = [
       en: ["Ceramics (tableware)"],
     },
     short: {
-      th: "ขึ้นรูปจาน ชาม และภาชนะกลม ได้รวดเร็วและสม่ำเสมอ",
+      th: "ขึ้นรูปจาน ชาม และภาชนะกลม ได้เร็วและคุณภาพเท่ากันทุกใบ",
       en: "Forms plates, bowls, and round ware quickly and consistently.",
     },
     process: {
-      th: "เพิ่มกำลังผลิตงานขึ้นรูปทรงกลมให้ได้มาตรฐานเดียวกันทุกชิ้น",
-      en: "Scales round-ware forming with piece-to-piece consistency.",
+      th: "เพิ่มกำลังผลิตงานทรงกลม ได้มาตรฐานเท่ากันทุกใบ ทุกแบทช์",
+      en: "Scales up round-ware forming, with piece-to-piece consistency.",
     },
     features: {
       th: [
-        "ขึ้นรูปได้รวดเร็ว เหมาะกับการผลิตจำนวนมาก",
-        "ปรับตั้งหัวโรลเลอร์ได้แม่นยำ ชิ้นงานหนาเท่ากันทุกใบ",
-        "รองรับงานแบบต่าง ๆ ตามแม่พิมพ์ที่โรงงานใช้",
+        "รอบเร็ว เหมาะกับการผลิตจำนวนมาก",
+        "ตั้งหัวโรลเลอร์ได้แม่นยำ ความหนาผนังเท่ากันทุกใบ",
+        "ใช้กับแม่พิมพ์เดิมที่โรงงานมีอยู่ได้",
       ],
       en: [
         "Fast cycle time, suited to volume production",
-        "Precise roller setup — uniform wall thickness piece to piece",
+        "Precise roller setup. Uniform wall thickness piece to piece",
         "Works with the moulds your factory already uses",
       ],
     },
@@ -496,22 +496,22 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Refractory"],
     },
     short: {
-      th: "อัดขึ้นรูปชิ้นงานทรงไม่กลม เช่น จานเหลี่ยมและงานหนา",
+      th: "อัดขึ้นรูปงานทรงไม่กลม เช่น จานเหลี่ยมและงานหนา",
       en: "Presses non-round and thicker shapes from clay.",
     },
     process: {
-      th: "ขึ้นรูปงานที่จิกเกอร์ทำไม่ได้ ด้วยแม่พิมพ์และแรงอัด",
+      th: "ขึ้นรูปงานที่จิกเกอร์ทำไม่ได้ ใช้แม่พิมพ์กับแรงอัดแทน",
       en: "Forms shapes a jigger can't, using a die and press force.",
     },
     features: {
       th: [
         "เหมาะกับงานเหลี่ยมหรือทรงพิเศษที่จิกเกอร์ทำไม่ได้",
-        "แรงอัดสม่ำเสมอ ชิ้นงานเนื้อแน่นเท่ากันทุกชิ้น",
-        "ออกแบบกำลังอัดและขนาดโต๊ะตามแบบที่ใช้",
+        "แรงอัดนิ่ง เนื้อแน่นเท่ากันทุกชิ้น",
+        "สั่งกำลังอัดและขนาดโต๊ะได้ตามแบบที่ใช้จริง",
       ],
       en: [
         "Right for square or special shapes a jigger can't form",
-        "Steady press force — even body density every piece",
+        "Steady press force. Even body density on every piece",
         "Tonnage and bed sized to your die",
       ],
     },
@@ -549,13 +549,13 @@ export const machines: Machine[] = [
       en: "Sieves and grades slip or powder by particle size.",
     },
     process: {
-      th: "กรองสิ่งตกค้างและคุมขนาดอนุภาคก่อนเข้ากระบวนการต่อไป",
+      th: "กรองสิ่งตกค้างและคุมขนาดอนุภาคก่อนเข้าขั้นถัดไป",
       en: "Filters residue and controls particle size before the next step.",
     },
     features: {
       th: [
-        "การสั่นออกแบบให้ร่อนต่อเนื่องโดยไม่อุดตันง่าย",
-        "เปลี่ยนตะแกรงตามขนาดที่ต้องการได้ภายในนาที",
+        "จังหวะการสั่นจูนให้ร่อนต่อเนื่อง ไม่อุดตันง่าย",
+        "เปลี่ยนเมชตามขนาดที่ต้องการได้ในไม่กี่นาที",
         "ใช้ได้ทั้งน้ำดินและผงแห้ง",
       ],
       en: [
@@ -588,22 +588,22 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Food", "Chemical", "Construction"],
     },
     short: {
-      th: "ผสมวัตถุดิบแห้งหรือเปียกให้เข้ากันสม่ำเสมอ",
+      th: "ผสมวัตถุดิบแห้งหรือเปียกให้เข้ากันเป็นเนื้อเดียว",
       en: "Blends dry or wet materials to an even mix.",
     },
     process: {
-      th: "คุมสัดส่วนและความสม่ำเสมอของส่วนผสมตามสูตรของโรงงาน",
-      en: "Holds your recipe's ratio and consistency batch to batch.",
+      th: "คุมสัดส่วนและความสม่ำเสมอตามสูตรของโรงงาน แบทช์ต่อแบทช์",
+      en: "Holds your recipe's ratio and consistency batch after batch.",
     },
     features: {
       th: [
-        "ผสมได้สม่ำเสมอทุกแบทช์ตามสูตรของคุณ",
-        "ออกแบบใบกวนและขนาดถังตามวัตถุดิบที่ใช้จริง",
+        "เข้ากันสนิททุกแบทช์ ตรงตามสูตรของคุณ",
+        "ออกแบบใบกวนและขนาดถังให้พอดีกับวัตถุดิบที่ใช้จริง",
         "วัสดุภายในเลือกได้ตามชนิดงาน (เซรามิก อาหาร เคมี)",
       ],
       en: [
         "Even mix batch after batch, true to your recipe",
-        "Impeller and tank sized to the real material you run",
+        "Impeller and tank sized to the material you actually run",
         "Contact materials selectable by industry (ceramic, food, chemical)",
       ],
     },
@@ -631,17 +631,17 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Mining", "Recycling"],
     },
     short: {
-      th: "บดหยาบก้อนวัตถุดิบแข็งให้เล็กลงก่อนบดละเอียด",
+      th: "บดหยาบก้อนวัตถุดิบแข็งให้เล็กลง ก่อนส่งเข้าบดละเอียด",
       en: "Coarse-crushes hard lumps before fine milling.",
     },
     process: {
-      th: "ขั้นแรกของการลดขนาด รองรับวัตถุดิบแข็งและงานหนัก",
-      en: "First size-reduction stage for hard material and heavy loads.",
+      th: "ขั้นแรกของการลดขนาด รับวัตถุดิบแข็งและงานหนักได้",
+      en: "First size-reduction stage. Built for hard material and heavy loads.",
     },
     features: {
       th: [
-        "กรามและช่องป้อนวัตถุดิบออกแบบตามขนาดก้อนที่ใช้จริง",
-        "โครงสร้างหนักทน รับงานต่อเนื่องในโรงงาน",
+        "กรามและช่องป้อนออกแบบตามขนาดก้อนที่ใช้จริงในโรงงาน",
+        "โครงหนัก รับงานต่อเนื่องได้",
         "ปรับช่องระบายเพื่อคุมขนาดผลผลิตได้",
       ],
       en: [
@@ -681,21 +681,21 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Chemical", "Food"],
     },
     short: {
-      th: "บดย่อยวัตถุดิบเปราะด้วยแรงกระแทกจากค้อน",
+      th: "บดย่อยวัตถุดิบเปราะด้วยแรงกระแทกของค้อน",
       en: "Reduces brittle material by hammer impact.",
     },
     process: {
-      th: "ลดขนาดวัตถุดิบเปราะได้รวดเร็วก่อนขั้นตอนถัดไป",
+      th: "ลดขนาดวัตถุดิบเปราะได้รวดเร็ว ก่อนส่งเข้าขั้นถัดไป",
       en: "Fast size reduction of friable material before the next step.",
     },
     features: {
       th: [
         "บดได้ละเอียดและเร็ว เหมาะกับวัตถุดิบเปราะ",
         "ค้อนถอดเปลี่ยนได้ ดูแลรักษาง่าย",
-        "ตะแกรงด้านล่างเลือกขนาดได้ตามผลผลิตที่ต้องการ",
+        "เลือกขนาดตะแกรงล่างได้ตามผลผลิตที่ต้องการ",
       ],
       en: [
-        "Fine, fast reduction — right for brittle material",
+        "Fine, fast reduction. Right for brittle material",
         "Replaceable hammers for simple upkeep",
         "Bottom screen sized to your target output",
       ],
@@ -725,14 +725,14 @@ export const machines: Machine[] = [
       en: "Sprays glaze with overspray capture and extraction.",
     },
     process: {
-      th: "เคลือบได้สม่ำเสมอ พร้อมสภาพแวดล้อมทำงานที่สะอาดและปลอดภัย",
-      en: "Even glazing with a cleaner, safer work area.",
+      th: "เคลือบเรียบเสมอกัน คนพ่นทำงานในพื้นที่สะอาดและปลอดภัยกว่า",
+      en: "Even glazing in a cleaner, safer work area.",
     },
     features: {
       th: [
-        "ระบบดักละอองและกรองอากาศ ลดฝุ่นเคลือบในโรงงาน",
-        "พื้นที่พ่นออกแบบให้ทำงานได้สะดวก เคลือบเรียบ",
-        "ขนาดและกำลังดูดเลือกได้ตามชิ้นงาน",
+        "ระบบดักละอองและกรองอากาศ ฝุ่นเคลือบในโรงงานลดลง",
+        "พื้นที่พ่นออกแบบให้ทำงานสะดวก เคลือบเรียบ",
+        "เลือกขนาดบูธและกำลังดูดได้ตามชิ้นงาน",
       ],
       en: [
         "Overspray capture and air filtration cut workshop dust",
@@ -764,18 +764,18 @@ export const machines: Machine[] = [
       en: ["Ceramics", "Food", "Warehousing"],
     },
     short: {
-      th: "ลำเลียงชิ้นงานและวัตถุดิบเชื่อมต่อแต่ละสถานีการผลิต",
+      th: "ลำเลียงชิ้นงานและวัตถุดิบเชื่อมระหว่างสถานีในไลน์ผลิต",
       en: "Moves parts and material between production stations.",
     },
     process: {
-      th: "ออกแบบเส้นทางและความเร็วให้ไลน์ผลิตต่อเนื่องไม่สะดุด",
+      th: "ออกแบบเส้นทางและความเร็วให้ไลน์ผลิตเดินต่อเนื่อง ไม่สะดุด",
       en: "Layout and speed engineered to keep the line flowing.",
     },
     features: {
       th: [
-        "ออกแบบเส้นทางและความยาวให้พอดีโรงงาน",
-        "ความเร็วและกำลังโหลดปรับได้ตามไลน์ผลิต",
-        "วัสดุสายพานเลือกตามลักษณะของชิ้นงาน",
+        "ออกแบบเส้นทางและความยาวให้พอดีกับผังโรงงาน",
+        "ปรับความเร็วและกำลังโหลดได้ตามไลน์",
+        "เลือกวัสดุสายพานได้ตามลักษณะชิ้นงาน",
       ],
       en: [
         "Path and length engineered to your floor",
@@ -818,19 +818,19 @@ export const machines: Machine[] = [
       en: "Turns slip into press-ready granulated powder.",
     },
     process: {
-      th: "ผลิตผงที่ไหลตัวดีและความชื้นคงที่สำหรับการอัดแห้ง",
+      th: "ทำผงที่ไหลตัวดี ความชื้นคงที่ พร้อมเข้าเครื่องอัดแห้ง",
       en: "Produces free-flowing, stable-moisture powder for dry pressing.",
     },
     features: {
       th: [
         "เม็ดผงไหลตัวดี ป้อนเข้าเครื่องอัดแห้งได้สม่ำเสมอ",
-        "คุมความชื้นปลายทางได้แม่นยำ",
-        "เป็นงานเฉพาะทาง โปรดสอบถามความเป็นไปได้ก่อนสั่งผลิต",
+        "คุมความชื้นปลายทางได้แม่น",
+        "งานเฉพาะทาง ปรึกษาความเป็นไปได้กับเราก่อนสั่งทำ",
       ],
       en: [
         "Free-flowing granules that feed dry-press lines evenly",
         "Tight control of final moisture",
-        "Specialised — please ask about feasibility before ordering",
+        "Specialised work. Please ask about feasibility before ordering",
       ],
     },
     seoKeywords: {
@@ -854,18 +854,18 @@ export const machines: Machine[] = [
     tags: ["dryer", "drying", "ceramic-machinery"],
     industries: { th: ["เซรามิก"], en: ["Ceramics"] },
     short: {
-      th: "อบไล่ความชื้นชิ้นงานก่อนเข้าเตาเผา",
+      th: "อบไล่ความชื้นในชิ้นงานก่อนเข้าเตาเผา",
       en: "Dries pieces to the right moisture before firing.",
     },
     process: {
-      th: "คุมอุณหภูมิและความชื้นให้ชิ้นงานแห้งสม่ำเสมอ ลดการแตกร้าว",
+      th: "คุมอุณหภูมิและความชื้นให้ชิ้นงานแห้งทั่วถึง ลดการแตกร้าว",
       en: "Controls heat and humidity for even drying and fewer cracks.",
     },
     features: {
       th: [
-        "ระบบควบคุมอุณหภูมิและความชื้น ลดของเสียจากการแตกร้าว",
+        "คุมอุณหภูมิและความชื้น ของเสียจากการแตกร้าวลดลง",
         "ออกแบบขนาดและกำลังตามจำนวนชิ้นงานต่อรอบ",
-        "ปรึกษารายละเอียดและความเป็นไปได้ก่อนสั่งผลิต",
+        "ปรึกษาความเป็นไปได้และรายละเอียดกับเราก่อนสั่งทำ",
       ],
       en: [
         "Temperature and humidity control to cut crack losses",
@@ -903,23 +903,23 @@ export const machines: Machine[] = [
       en: ["Ceramics (tile)", "Refractory", "Abrasives"],
     },
     short: {
-      th: "อัดผงแห้งเป็นชิ้นงานหนาแน่น เช่น กระเบื้องและวัสดุทนไฟ",
+      th: "อัดผงแห้งให้เป็นชิ้นงานหนาแน่น เช่น กระเบื้องและวัสดุทนไฟ",
       en: "Compacts dry powder into dense parts like tile and refractory.",
     },
     process: {
-      th: "ขึ้นรูปจากผงด้วยแรงอัดสูง ได้ความหนาแน่นและขนาดคงที่",
-      en: "Forms from powder under high force for consistent density and size.",
+      th: "ขึ้นรูปจากผงด้วยแรงอัดสูง ได้ความหนาแน่นและขนาดคงที่ทุกชิ้น",
+      en: "Forms parts from powder under high force, with consistent density and size.",
     },
     features: {
       th: [
-        "แรงอัดสูง ชิ้นงานแน่นและขนาดคงที่ทุกชิ้น",
-        "ออกแบบแม่พิมพ์และโต๊ะรับตามผลิตภัณฑ์",
-        "งานเฉพาะทาง โปรดปรึกษาความเป็นไปได้",
+        "แรงอัดสูง เนื้อแน่นและขนาดเท่ากันทุกชิ้น",
+        "ออกแบบแม่พิมพ์และโต๊ะรับตามผลิตภัณฑ์ของคุณ",
+        "งานเฉพาะทาง ปรึกษาความเป็นไปได้กับเราก่อน",
       ],
       en: [
-        "High force — consistent density and dimension every piece",
+        "High force. Consistent density and dimension on every piece",
         "Die and bed engineered to your product",
-        "Specialised — please discuss feasibility first",
+        "Specialised work. Please discuss feasibility first",
       ],
     },
     seoKeywords: {
@@ -947,18 +947,18 @@ export const machines: Machine[] = [
       en: "Fires ceramic ware to the required temperature cycle.",
     },
     process: {
-      th: "ขั้นตอนชี้ขาดความแข็งแรงและคุณภาพผิวของชิ้นงานสุดท้าย",
+      th: "ขั้นชี้ขาดความแข็งแรงและคุณภาพผิวของชิ้นงานสุดท้าย",
       en: "The decisive stage for final strength and surface quality.",
     },
     features: {
       th: [
         "ออกแบบรอบอุณหภูมิและขนาดห้องเผาตามชิ้นงานของคุณ",
-        "งานเฉพาะทางที่ต้องวางแผนร่วมกัน",
+        "งานเฉพาะทาง ต้องวางแผนร่วมกัน",
         "ปรึกษาเราเพื่อประเมินความเป็นไปได้",
       ],
       en: [
         "Firing cycle and chamber size designed around your ware",
-        "Specialised — needs joint planning",
+        "Specialised work. Needs joint planning",
         "Talk to us to assess feasibility",
       ],
     },
@@ -986,22 +986,22 @@ export const machines: Machine[] = [
       en: ["Studio pottery", "Education / ceramics"],
     },
     short: {
-      th: "แป้นหมุนสำหรับงานปั้นมือ สตูดิโอ และสถานศึกษา",
+      th: "แป้นหมุนสำหรับงานปั้นมือ ทั้งสตูดิโอและสถานศึกษา",
       en: "A throwing wheel for studios, schools, and hand work.",
     },
     process: {
-      th: "รองรับงานปั้นปริมาณน้อยถึงปานกลางและงานสอน",
+      th: "รองรับงานปั้นปริมาณน้อยถึงปานกลาง และงานสอน",
       en: "Suits small-to-medium throwing and teaching.",
     },
     features: {
       th: [
-        "ความเร็วและทิศทางหมุนปรับได้ตามผู้ใช้",
-        "โครงสร้างมั่นคง เงียบ เหมาะกับห้องเรียนและสตูดิโอ",
-        "สอบถามรุ่นที่ผลิตอยู่ในขณะนั้น",
+        "ปรับความเร็วและทิศทางหมุนได้ตามผู้ใช้",
+        "โครงมั่นคง เสียงเงียบ เหมาะกับห้องเรียนและสตูดิโอ",
+        "สอบถามรุ่นที่กำลังผลิตอยู่ตอนนั้นได้เลย",
       ],
       en: [
         "Adjustable speed and direction to suit the potter",
-        "Stable and quiet — right for classrooms and studios",
+        "Stable and quiet. Right for classrooms and studios",
         "Ask us which models we have running",
       ],
     },

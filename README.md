@@ -1,4 +1,4 @@
-# Petkasem Ceramic Machine — website
+# Petkasem Ceramic Machine, website
 
 Marketing + lead-generation site for **บริษัท เพชรเกษมจักรกลซีรามิค จำกัด**
 (Petkasem Ceramic Machine Co., Ltd.). Bilingual Thai-first / English,
@@ -18,7 +18,7 @@ statically generated, no backend.
 ```bash
 bun install
 bun run dev
-# http://localhost:3000 — redirects to /th/
+# http://localhost:3000, redirects to /th/
 ```
 
 ## Build
@@ -64,10 +64,10 @@ scripts/postbuild.mjs           # writes out/index.html root-redirect
 Append one object to `machines` in `src/data/machines.ts`. Set `status`
 (`available` | `made_to_order` | `on_request`) to control the badge + CTA
 wording. When you have a photo, drop it under `public/machines/` and add
-its path to that machine's `images: []` array — `MachineImage` swaps the
+its path to that machine's `images: []` array. `MachineImage` swaps the
 placeholder for the real image automatically.
 
 ## Open items
 
-See [TODO.md](./TODO.md) — items to confirm or replace before going live
+See [TODO.md](./TODO.md), items to confirm or replace before going live
 (LINE URL, photos, logo, etc.).

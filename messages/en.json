@@ -29,12 +29,12 @@
     "alsoKnownAs": "Also known as",
     "photoComing": "Real machine photos coming soon",
     "viewAll": "View all machines",
-    "discussSpec": "Discuss your spec",
+    "discussSpec": "Talk specs with us",
     "getQuote": "Get a quote",
     "askFeasibility": "Ask if we can build it",
     "enquire": "Enquire about this machine",
     "reportRepair": "Report a breakdown on LINE",
-    "talkToTeam": "Talk to our team",
+    "talkToTeam": "Talk to our engineers",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
@@ -45,26 +45,26 @@
   "status": {
     "available": "In Production",
     "made_to_order": "Made to Order",
-    "on_request": "On Request"
+    "on_request": "Ask Before Ordering"
   },
   "trust": {
     "title": "Why us",
-    "years": "35+ years of experience",
+    "years": "35+ years on the job",
     "yearsSub": "Founded 1986",
     "inhouse": "Fully in-house",
-    "inhouseSub": "Design, build, repair",
+    "inhouseSub": "Design, build, repair under one roof",
     "thailand": "Made in Thailand",
-    "thailandSub": "Thai craftsmanship, lifelong support",
+    "thailandSub": "Thai engineers, lifelong support",
     "nationwide": "Running nationwide",
-    "nationwideSub": "Our machines in factories across Thailand"
+    "nationwideSub": "Our machines run in factories across Thailand"
   },
   "home": {
     "eyebrow": "Ceramic-machinery makers since 1986",
-    "h1": "Ceramic machinery built and repaired by Thai engineers, since 1986",
-    "sub": "We design, build, install, and stand behind every machine for its lifetime — made in Thailand.",
+    "h1": "Ceramic machinery built and repaired by Thai engineers since 1986",
+    "sub": "We design, build, install, and stand behind every machine for its full working life. Made in Thailand at every step.",
     "featuredEyebrow": "Featured machines",
     "featuredTitle": "Our machines",
-    "featuredSub": "Coverage across the full ceramic line — from raw-material grinding to glazing and forming.",
+    "featuredSub": "Coverage across the full ceramic line, from raw-material grinding through glazing and forming.",
     "servicesEyebrow": "What we do",
     "servicesTitle": "Everything machine-related, handled in one place",
     "service1Title": "Custom builds (OEM)",
@@ -72,48 +72,48 @@
     "service2Title": "Repair & maintenance",
     "service2Body": "The same engineers who built the machine know every part of it.",
     "service3Title": "Parts & aftercare",
-    "service3Body": "Spares made in our workshop — no waiting for overseas parts.",
+    "service3Body": "We make spares in our own workshop. No waiting for overseas parts.",
     "ctaTitle": "Got a machine problem on the line?",
-    "ctaSub": "Talk to us at any stage — from design and build, to install and lifetime service."
+    "ctaSub": "Talk to us at any stage, from design and build to install and lifetime service."
   },
   "about": {
     "eyebrow": "About us",
     "h1": "Thai engineering the ceramic industry has trusted for 35+ years",
-    "p1": "Petkasem Ceramic Machine was founded in 1986, starting from a 400-square-metre workshop with a team of ten. The quality of the work spoke for itself — demand grew quickly.",
-    "p2": "In 1992 we moved to a new 3,200-square-metre factory in Nakhon Pathom with more than 40 skilled engineers, to keep up with that demand at higher quality.",
-    "h2standards": "Quality that's earned its reputation",
-    "pStandards": "Our machines run in ceramic factories across Thailand — in private industry, government facilities, and academic institutions. They run because they're built to be built right, and supported for the long haul. In 1995 we were also entrusted with OEM production for an overseas brand — one of the milestones we're quietly proud of.",
+    "p1": "Petkasem Ceramic Machine started in 1986 from a 400-square-metre workshop with a team of ten. The work spoke for itself and demand grew quickly.",
+    "p2": "In 1992 we moved to a 3,200-square-metre factory in Nakhon Pathom with more than 40 skilled engineers, so we could meet demand without dropping quality.",
+    "h2standards": "Quality that earned its reputation on the floor",
+    "pStandards": "Our machines run in ceramic factories across Thailand, in private industry, government facilities, and academic institutions. They run because they are built right and supported for the long haul. In 1995 we were trusted with OEM production for an overseas brand, a milestone we are quietly proud of.",
     "h2beyond": "Not only ceramics",
-    "pBeyond": "Beyond ceramic machinery we've expanded into food processing and other industrial equipment, sticking to the same rule: we only take on work we're confident we can stand behind.",
-    "h2promise": "Our commitment",
-    "pPromise": "We still work the way we did on day one — make good machines, price them fairly, and look after the customer afterwards. A good machine needs people who can keep it running for the long term."
+    "pBeyond": "Beyond ceramic machinery we have expanded into food processing and other industrial equipment, sticking to the same rule: we only take on work we can stand behind.",
+    "h2promise": "What we commit to",
+    "pPromise": "We still work the way we did on day one. Make good machines, price them fairly, look after the customer afterwards. A good machine needs people who can keep it running for the long term."
   },
   "products": {
     "eyebrow": "Machine catalogue",
     "h1": "Machines for the ceramic industry",
-    "sub": "We build machinery across the full ceramic production line — from raw-material grinding and filtration through to forming. Every machine is built to the same standard and sized to your throughput and floor space. If you don't see what you need, we make to order.",
+    "sub": "We build machinery across the full ceramic production line, from raw-material grinding and filtration through to forming. Every machine is built to the same standard and sized to your throughput and floor space. If you don't see what you need, we make to order.",
     "filterAll": "All",
     "filterByStage": "Filter by stage",
     "noResults": "No machines in this stage."
   },
   "product": {
     "backToList": "← Back to machines",
-    "askForSpec": "Tell us your throughput and the space you have — we'll size the machine to fit."
+    "askForSpec": "Tell us your throughput and the space you have. We'll size the machine to fit."
   },
   "solutions": {
     "eyebrow": "Find by need",
-    "h1": "Tell us the problem on your line — we'll tell you which machine solves it",
-    "sub": "Match the symptom you're seeing to the right machine. Each row links straight to the page for that machine."
+    "h1": "Tell us the problem on your line. We'll tell you which machine solves it.",
+    "sub": "Match the symptom you're seeing to the right machine. Each row links straight to that machine's page."
   },
   "custom": {
     "eyebrow": "Custom / OEM",
     "h1": "Off-the-shelf doesn't fit? We design and build to fit.",
-    "sub": "Every factory has its own process and constraints, and an off-the-shelf machine rarely fits all of them. We design and build to your spec, your space, and your throughput.",
+    "sub": "Every factory has its own process and constraints, and off-the-shelf machinery rarely fits all of them. We design and build to your spec, your space, and your throughput.",
     "whyTitle": "Why build with us",
     "why1": "35+ years of real ceramic-factory work in Thailand.",
-    "why2": "We build and repair in the same workshop — accountability stays in one place.",
+    "why2": "We build and repair in the same workshop. Accountability stays in one place.",
     "why3": "Fully customisable: size, power, every operational detail.",
-    "why4": "Talk to the engineers directly — changes happen fast, on the floor.",
+    "why4": "Talk to the engineers directly. Changes happen fast, on the floor.",
     "stepsTitle": "How we work",
     "step1": "We take your brief and operating requirements.",
     "step2": "Design proposal and quote.",
@@ -125,7 +125,7 @@
   "service": {
     "eyebrow": "Repair & service",
     "h1": "When the machine stops, the line stops. Call us before it gets worse.",
-    "sub": "We service and repair ceramic machinery of every kind, with the engineers who built these machines in the first place. They know every part.",
+    "sub": "We service and repair ceramic machinery of every kind. The engineers who built these machines are the ones who diagnose them. They know every part.",
     "scopeTitle": "What we repair",
     "scope1": "Ball mills, filter presses, grinders, magnetic sieves, and any other ceramic-line machinery.",
     "scope2": "Both machines built by us and general ceramic-factory equipment.",
@@ -135,13 +135,13 @@
     "why2Title": "Fast turnaround",
     "why2Body": "We respond quickly to cut downtime.",
     "why3Title": "Parts on hand",
-    "why3Body": "We make and source our own parts — no waiting on imports.",
+    "why3Body": "We make and source our own parts. No waiting on imports.",
     "why4Title": "Long-term care",
     "why4Body": "Preventive maintenance planning to keep machines running long."
   },
   "contact": {
     "eyebrow": "Contact",
-    "h1": "Let's talk about your build, repair, or quote",
+    "h1": "Talk to us about a build, a repair, or a quote",
     "sub": "Free consultation, no commitment. You can talk to our engineers directly.",
     "formTitle": "Send us a message",
     "formNote": "Fastest reply via LINE or phone.",
@@ -150,7 +150,7 @@
     "fieldCompany": "Company / factory",
     "fieldPhone": "Phone",
     "fieldEmail": "Email",
-    "fieldMessage": "Machine details / problem you want to solve",
+    "fieldMessage": "Machine details or the problem you want to solve",
     "send": "Send message"
   },
   "stage": {
@@ -174,24 +174,24 @@
   },
   "solutionsList": {
     "s1Pain": "We need consistent fineness on raw materials and glaze",
-    "s1Sol": "Ball Mill — steady fineness, fewer rejects",
-    "s2Pain": "Iron specks in our slip are making blemished, scrap pieces",
-    "s2Sol": "Magnetic Sieve — keeps slip and glaze clean",
-    "s3Pain": "Slip is too wet — we need press-ready clay",
-    "s3Sol": "Filter Press — even-moisture clay cake",
-    "s4Pain": "Lumps are too hard — we need to break them down before milling",
-    "s4Sol": "Jaw Crusher / Hammer Mill — heavy-duty size reduction",
+    "s1Sol": "Ball Mill: steady fineness, fewer rejects",
+    "s2Pain": "Iron specks in the slip are blemishing pieces and creating scrap",
+    "s2Sol": "Magnetic Sieve: keeps slip and glaze clean",
+    "s3Pain": "Slip is too wet. We need press-ready clay",
+    "s3Sol": "Filter Press: even-moisture clay cake",
+    "s4Pain": "Lumps are too hard. We need to break them down before milling",
+    "s4Sol": "Jaw Crusher / Hammer Mill: heavy-duty size reduction",
     "s5Pain": "Air bubbles in the clay are cracking the fired ware",
-    "s5Sol": "De-airing Pug Mill — removes air, homogenises the body",
-    "s6Pain": "We need to scale up plate/bowl forming with consistent quality",
-    "s6Sol": "Jigger / Roller-Head — fast, consistent round-ware forming",
+    "s5Sol": "De-airing Pug Mill: removes air, homogenises the body",
+    "s6Pain": "We need to scale up plate and bowl forming with consistent quality",
+    "s6Sol": "Jigger / Roller-Head: fast, consistent round-ware forming",
     "s7Pain": "We need to form dense tile, refractory, or abrasive shapes",
-    "s7Sol": "Hydraulic / Ram Press — high, consistent force",
-    "s8Pain": "Glaze coverage is uneven and there's overspray everywhere",
-    "s8Sol": "Glaze Booth — even coverage, clean workspace",
+    "s7Sol": "Hydraulic / Ram Press: high, consistent force",
+    "s8Pain": "Glaze coverage is uneven and overspray is everywhere",
+    "s8Sol": "Glaze Booth: even coverage, clean workspace",
     "s9Pain": "Our existing machinery is breaking down or showing its age",
-    "s9Sol": "Repair & maintenance — by the engineers who build these machines",
-    "s10Pain": "Our problem is unusual — no off-the-shelf machine fits",
-    "s10Sol": "Custom / OEM — we design and build to fit"
+    "s9Sol": "Repair & maintenance by the engineers who build these machines",
+    "s10Pain": "Our problem is unusual. No off-the-shelf machine fits",
+    "s10Sol": "Custom / OEM: we design and build to fit"
   }
 }

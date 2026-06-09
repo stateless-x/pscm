@@ -35,7 +35,7 @@ export const SITE = {
     th: "จันทร์–เสาร์ 08:00–17:00 น.",
     en: "Mon–Sat 08:00–17:00",
   },
-  // Map embed src (Nakhon Pathom approx — replace once confirmed)
+  // Map embed src (Nakhon Pathom approx, replace once confirmed)
   mapEmbedSrc:
     "https://www.google.com/maps?q=Sam+Phran,+Nakhon+Pathom&output=embed",
 } as const;

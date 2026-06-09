@@ -91,7 +91,12 @@ export default async function ProductDetailPage({
         <Container className="py-10 md:py-14">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
             <div>
-              <MachineImage machine={machine} locale={loc} priority />
+              <MachineImage
+                machine={machine}
+                locale={loc}
+                priority
+                showDisclaimer
+              />
             </div>
             <div className="flex flex-col gap-5">
               <Nameplate machine={machine} locale={loc} size="hero" />

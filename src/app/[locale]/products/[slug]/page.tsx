@@ -6,6 +6,7 @@ import { Check, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import { buildAlternates } from "@/lib/alternates";
 import { machines, machineBySlug } from "@/data/machines";
+import { statusConfig } from "@/data/machine-status";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
@@ -58,12 +59,7 @@ export default async function ProductDetailPage({
   const tStage = await getTranslations("stage");
   const tStatus = await getTranslations("status");
 
-  const ctaLabel =
-    machine.status === "available"
-      ? t("enquire")
-      : machine.status === "made_to_order"
-      ? t("discussSpec")
-      : t("askFeasibility");
+  const ctaLabel = t(statusConfig(machine.status).ctaKey);
 
   const related = machines
     .filter((m) => m.slug !== machine.slug && m.stage === machine.stage)

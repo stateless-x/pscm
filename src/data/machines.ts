@@ -1,11 +1,12 @@
 // All machine data lives here. Add a machine = add one object.
 // Spec §7. Bilingual fields rendered per active locale; never both stacked.
 
+import type { MachineStatus } from "./machine-status";
+export type { MachineStatus } from "./machine-status";
+
 export type Locale = "th" | "en";
 export type Bi = Record<Locale, string>;
 export type BiList = Record<Locale, string[]>;
-
-export type MachineStatus = "available" | "made_to_order" | "on_request";
 
 export type Stage =
   | "crushing"

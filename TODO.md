@@ -29,10 +29,23 @@ Mirrors spec §15. Each item lists the **single file** to edit.
    Currently a typographic "P" tile + "Petkasem Ceramic Machine" wordmark.
    Drop a real logo into `public/` and replace the `<span>` in Header.
 
-6. **Photos and video**, `src/data/machines.ts` → each machine's `images: []`
-   Add image paths (place files under `public/machines/`). When `images[0]`
-   exists, `MachineImage` swaps the placeholder for the real photo with no
-   other code changes. Locked 4:3 aspect ratio.
+6. **Photos (optional, ready when you are)**
+   The catalogue is designed to work *without* photos: each card uses a
+   per-stage gradient + large stage icon + model code as the visual. If
+   you ever want to add real photos, the swap is one line per machine:
+
+   - Drop a file under `public/machines/`, e.g. `public/machines/ball-mill.jpg`
+   - Open `src/data/machines.ts`, find that machine's `images: []`
+   - Change to `images: ["/machines/ball-mill.jpg"]`
+
+   That's it. `MachineImage` detects `images[0]` and bypasses the
+   gradient automatically. Aspect ratio is locked to 4:3, so use photos
+   shot landscape and roughly that crop. `next/image` handles sizing.
+
+   For multiple angles per machine, append additional paths
+   (`["/machines/ball-mill.jpg", "/machines/ball-mill-2.jpg"]`); the
+   component currently shows `images[0]` only — extend later if you want
+   a gallery.
 
 7. **Inquiry form endpoint**, `src/components/ContactForm.tsx`
    Currently composes a `mailto:` using `SITE.email`. To replace with a

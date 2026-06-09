@@ -5,8 +5,11 @@ import { StageIcon } from "./StageIcon";
 import { PLACEHOLDER_STYLE } from "./placeholder-style";
 import { cn } from "@/lib/cn";
 
-// Locked 4:3 aspect ratio. If images[0] exists, render via next/image.
-// Otherwise, a stage-typed gradient placeholder, never collapses layout.
+// Locked 4:3 aspect ratio. When images[0] exists, render via next/image.
+// Otherwise the stage gradient IS the visual (not a placeholder for a
+// missing photo) so keep it confident: gradient + accent + grid +
+// large stage icon + mono model code. No "photo coming soon" footnote,
+// no duplicated machine name (card title already shows it).
 //
 // `showDisclaimer` renders a small asterisk on the image plus the
 // "may not match the real machine" line below. Off by default for
@@ -29,6 +32,7 @@ export function MachineImage({
   const hasImage = machine.images.length > 0;
   const name = machine.name[locale];
   const style = PLACEHOLDER_STYLE[machine.stage];
+  const modelCode = machine.model ?? machine.slug.toUpperCase();
 
   return (
     <div className={cn("flex flex-col gap-2", className)}>
@@ -66,28 +70,18 @@ export function MachineImage({
               }}
             />
 
-            {/* Content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-text-invert-muted">
-              <div
-                className="grid h-16 w-16 place-items-center rounded-full ring-1 ring-white/10"
-                style={{ background: style.glow }}
-              >
-                <StageIcon
-                  stage={machine.stage}
-                  size={28}
-                  className="text-text-invert/80"
-                />
-              </div>
-              <span className="mono text-xs tracking-wider uppercase text-text-invert/60">
-                {machine.model ?? machine.slug}
-              </span>
-              <span className="px-4 text-center text-sm text-text-invert/85">
-                {name}
-              </span>
+            {/* Large stage icon, dominant element */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <StageIcon
+                stage={machine.stage}
+                size={88}
+                className="text-text-invert/45"
+              />
             </div>
 
-            <span className="absolute bottom-2 right-3 mono text-[10px] tracking-wider text-text-invert-muted/55">
-              {t("photoComing")}
+            {/* Model code mono, anchored bottom-left as if stencilled on */}
+            <span className="absolute bottom-3 left-3 mono text-[11px] tracking-[0.18em] uppercase text-text-invert/70">
+              {modelCode}
             </span>
           </div>
         )}

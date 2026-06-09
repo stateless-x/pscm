@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { buildAlternates } from "@/lib/alternates";
 import { featuredMachines } from "@/data/machines";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
@@ -23,6 +24,7 @@ export async function generateMetadata({
   return {
     title: t("h1"),
     description: t("sub"),
+    alternates: buildAlternates(locale),
   };
 }
 

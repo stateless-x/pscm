@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { buildAlternates } from "@/lib/alternates";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
@@ -21,7 +22,11 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "service" });
-  return { title: t("h1"), description: t("sub") };
+  return {
+    title: t("h1"),
+    description: t("sub"),
+    alternates: buildAlternates(locale, "service"),
+  };
 }
 
 export default async function ServicePage({

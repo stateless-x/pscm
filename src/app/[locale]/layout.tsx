@@ -53,14 +53,8 @@ export async function generateMetadata({
       template: `%s | ${t("siteTitleSuffix")}`,
     },
     description: name,
-    alternates: {
-      canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
-      languages: {
-        th: "/",
-        en: "/en",
-        "x-default": "/",
-      },
-    },
+    // Per-page generateMetadata sets the correct alternates for that path
+    // (see lib/alternates.ts). The layout intentionally omits them.
     openGraph: {
       type: "website",
       siteName: name,

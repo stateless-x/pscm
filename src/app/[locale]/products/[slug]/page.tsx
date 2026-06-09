@@ -4,6 +4,7 @@ import { hasLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Check, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { routing } from "@/i18n/routing";
+import { buildAlternates } from "@/lib/alternates";
 import { machines, machineBySlug } from "@/data/machines";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
@@ -37,6 +38,7 @@ export async function generateMetadata({
     title: machine.name[loc],
     description: machine.short[loc],
     keywords: machine.seoKeywords[loc],
+    alternates: buildAlternates(locale, `products/${machine.slug}`),
   };
 }
 

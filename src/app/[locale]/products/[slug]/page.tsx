@@ -121,14 +121,17 @@ export default async function ProductDetailPage({
                 {machine.short[loc]}
               </p>
 
+              {/*
+                Aliases as a quiet footnote: small, muted, single comma-
+                separated line, prefixed with "ฯลฯ:" so it still parses as
+                language to search engines but reads as an aside to humans.
+                NOT visually hidden (`display:none`/clip/font-size:0) — that
+                trips Google's hidden-text spam policy. This is just
+                lower-priority body text, which is fully indexable.
+              */}
               {machine.aliases && machine.aliases[loc].length > 0 && (
-                <p className="text-sm leading-relaxed text-text-muted">
-                  <span className="eyebrow mr-1.5 text-text-muted">
-                    {t("alsoKnownAs")}
-                  </span>
-                  <span className="italic">
-                    {machine.aliases[loc].join(" · ")}
-                  </span>
+                <p className="text-[11px] leading-snug text-text-muted/65">
+                  {t("alsoKnownAs")}: {machine.aliases[loc].join(", ")}
                 </p>
               )}
 

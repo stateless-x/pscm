@@ -19,6 +19,7 @@ import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { DevBanner } from "@/components/DevBanner";
+import { getPostsForMachine, type PostLocale } from "@/lib/posts";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -65,6 +66,8 @@ export default async function ProductDetailPage({
   const related = machines
     .filter((m) => m.slug !== machine.slug && m.stage === machine.stage)
     .slice(0, 3);
+
+  const relatedPosts = getPostsForMachine(machine.slug, loc as PostLocale, 3);
 
   const phone = SITE.phones[0];
 
@@ -218,6 +221,41 @@ export default async function ProductDetailPage({
           </aside>
         </div>
       </Section>
+
+      {/* Related blog posts (SEO cross-link: products ↔ articles) */}
+      {relatedPosts.length > 0 && (
+        <Section
+          eyebrow={loc === "th" ? "อ่านเพิ่ม" : "Read more"}
+          title={
+            loc === "th"
+              ? "บทความที่เกี่ยวกับเครื่องนี้"
+              : "Articles about this machine"
+          }
+          variant="alt"
+        >
+          <div className="mx-auto grid max-w-3xl gap-4">
+            {relatedPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}` as const}
+                className="group flex flex-col gap-2 border border-line bg-paper p-5 transition hover:border-amber hover:bg-paper-2 md:flex-row md:items-center md:justify-between md:gap-6"
+              >
+                <div className="flex flex-col gap-1.5">
+                  <h3 className="text-base font-semibold leading-snug text-text transition group-hover:text-amber-strong md:text-lg">
+                    {post.frontmatter.title}
+                  </h3>
+                  <p className="text-sm leading-snug text-text-muted line-clamp-2">
+                    {post.frontmatter.description}
+                  </p>
+                </div>
+                <span className="mono shrink-0 text-[11px] uppercase tracking-[0.18em] text-text-muted group-hover:text-amber-strong">
+                  {loc === "th" ? "อ่าน" : "Read"} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      )}
 
       {/* Related machines */}
       {related.length > 0 && (

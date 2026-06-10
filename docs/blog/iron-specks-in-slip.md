@@ -20,6 +20,10 @@ tags:
   - "การลดของเสีย"
 locale: th
 template: "default"
+relatedMachines:
+  - magnetic-sieve
+  - filter-press
+  - blunger
 ---
 
 # เศษเหล็กในน้ำดิน: ของเสียที่ป้องกันได้ด้วยตะแกรงแม่เหล็ก

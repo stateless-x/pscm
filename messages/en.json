@@ -8,6 +8,7 @@
     "solutions": "Find by Need",
     "custom": "Custom / OEM",
     "service": "Repair & Service",
+    "blog": "Articles",
     "about": "About",
     "contact": "Contact",
     "quote": "Get a Quote",
@@ -84,13 +85,13 @@
   },
   "about": {
     "eyebrow": "About us",
-    "h1": "Thai engineering the ceramic industry has trusted for 35+ years",
+    "h1": "Thai engineering in the ceramic industry since 1986",
     "p1": "Petkasem Ceramic Machine started in 1986 from a 400-square-metre workshop with a team of ten. The work spoke for itself and demand grew quickly.",
     "p2": "In 1992 we moved to a 3,200-square-metre factory in Nakhon Pathom with more than 40 skilled engineers, so we could meet demand without dropping quality.",
     "h2standards": "Quality that earned its reputation on the floor",
-    "pStandards": "Our machines run in ceramic factories across Thailand, in private industry, government facilities, and academic institutions. They run because they are built right and supported for the long haul. In 1995 we were trusted with OEM production for an overseas brand, a milestone we are quietly proud of.",
+    "pStandards": "Our machines run in ceramic factories across Thailand, in private industry, government facilities, and academic institutions. They run because they are built right and because we still make the parts and do the repairs in the same workshop. In 1995 we took on OEM production for an overseas brand, a milestone we are quietly proud of.",
     "h2beyond": "Not only ceramics",
-    "pBeyond": "Beyond ceramic machinery we have expanded into food processing and other industrial equipment, sticking to the same rule: we only take on work we can stand behind.",
+    "pBeyond": "Beyond ceramic machinery we have expanded into food processing and other industrial equipment. The rule is the same: we only take on work that fits what our shop actually does well.",
     "h2promise": "What we commit to",
     "pPromise": "We still work the way we did on day one. Make good machines, price them fairly, look after the customer afterwards. A good machine needs people who can keep it running for the long term."
   },
@@ -105,6 +106,17 @@
   "product": {
     "backToList": "← Back to machines",
     "askForSpec": "Tell us your throughput and the space you have. We'll size the machine to fit."
+  },
+  "blog": {
+    "eyebrow": "Articles",
+    "h1": "Notes and guides from our engineers",
+    "sub": "Pitfalls, sizing math, and the things worth knowing before you buy ceramic machinery. Written by Petkasem's engineering team.",
+    "readingTime": "{minutes} min read",
+    "publishedOn": "Published",
+    "byAuthor": "By",
+    "relatedTitle": "Read more",
+    "backToList": "← Back to articles",
+    "noPosts": "No articles yet"
   },
   "solutions": {
     "eyebrow": "Find by need",
@@ -142,8 +154,8 @@
     "why2Body": "We respond quickly to cut downtime.",
     "why3Title": "Parts on hand",
     "why3Body": "We make and source our own parts. No waiting on imports.",
-    "why4Title": "Long-term care",
-    "why4Body": "Preventive maintenance planning to keep machines running long."
+    "why4Title": "Preventive planning",
+    "why4Body": "Scheduled maintenance plans so unplanned downtime is rare."
   },
   "contact": {
     "eyebrow": "Contact",

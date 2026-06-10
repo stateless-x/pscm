@@ -1,5 +1,6 @@
 import { SITE } from "@/lib/site";
 import type { Machine } from "@/data/machines";
+import type { Post } from "@/lib/posts";
 
 function Script({ data }: { data: object }) {
   return (
@@ -98,6 +99,44 @@ export function BreadcrumbJsonLd({
       name: item.name,
       item: item.url,
     })),
+  };
+  return <Script data={data} />;
+}
+
+export function ArticleJsonLd({
+  post,
+  url,
+  locale,
+}: {
+  post: Post;
+  url: string;
+  locale: "th" | "en";
+}) {
+  const fm = post.frontmatter;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: fm.title,
+    description: fm.description,
+    inLanguage: locale,
+    keywords: fm.keywords?.join(", "),
+    datePublished: fm.publishDate,
+    dateModified: fm.publishDate,
+    author: {
+      "@type": "Organization",
+      name: fm.author ?? SITE.name[locale],
+      url: SITE.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name[locale],
+      url: SITE.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE.url}/logo.png`,
+      },
+    },
   };
   return <Script data={data} />;
 }

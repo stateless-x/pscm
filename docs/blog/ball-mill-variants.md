@@ -20,6 +20,10 @@ tags:
   - "การเลือกเครื่องจักร"
 locale: th
 template: "default"
+relatedMachines:
+  - ball-mill
+  - grinder
+  - blunger
 ---
 
 # หม้อบด vs บอลมิล vs พอตมิล: ต่างกันยังไง ใช้ตัวไหนดี

@@ -13,15 +13,27 @@ type Route =
   | "/solutions"
   | "/custom"
   | "/service"
+  | "/blog"
   | "/about"
   | "/contact";
 
-const NAV_ITEMS: { href: Route; key: "home" | "products" | "solutions" | "custom" | "service" | "about" | "contact" }[] = [
+type NavKey =
+  | "home"
+  | "products"
+  | "solutions"
+  | "custom"
+  | "service"
+  | "blog"
+  | "about"
+  | "contact";
+
+const NAV_ITEMS: { href: Route; key: NavKey }[] = [
   { href: "/", key: "home" },
   { href: "/products", key: "products" },
   { href: "/solutions", key: "solutions" },
   { href: "/custom", key: "custom" },
   { href: "/service", key: "service" },
+  { href: "/blog", key: "blog" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ];

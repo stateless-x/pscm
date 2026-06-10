@@ -20,6 +20,14 @@ tags:
   - "การลงทุน"
 locale: th
 template: "default"
+relatedMachines:
+  - ball-mill
+  - filter-press
+  - magnetic-sieve
+  - pug-mill
+  - hydraulic-press
+  - jigger-roller
+  - kiln
 ---
 
 # ลงทุนเครื่องจักรเซรามิกตัวไหนก่อนดี? ลำดับการซื้อที่โรงงานไทยควรรู้

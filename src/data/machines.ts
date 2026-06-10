@@ -146,13 +146,13 @@ export const machines: Machine[] = [
         "รีดน้ำได้จริง ความชื้นเท่ากันทุกแผ่น",
         "โครงสร้างทนแรงดันสูง ใช้งานได้ยาว",
         "เลือกจำนวนแผ่นและขนาดได้ตามที่โรงงานต้องการ",
-        "อะไหล่หาง่าย ซ่อมได้ตลอดอายุเครื่อง",
+        "อะไหล่ผลิตเองในโรงงาน ทีมที่สร้างคือทีมที่ซ่อมให้",
       ],
       en: [
         "Real dewatering, with even moisture across every cake",
         "High-pressure build for a long service life",
         "Plate count and size made to your spec",
-        "Serviceable for life. Parts always on hand",
+        "Parts made in-house. The team that built it also repairs it.",
       ],
     },
     seoKeywords: {

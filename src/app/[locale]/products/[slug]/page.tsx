@@ -18,6 +18,7 @@ import { StageIcon } from "@/components/StageIcon";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { DevBanner } from "@/components/DevBanner";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -69,6 +70,7 @@ export default async function ProductDetailPage({
 
   return (
     <>
+      <DevBanner />
       {/* Breadcrumb */}
       <div className="border-b border-line bg-paper-2">
         <Container className="py-4">

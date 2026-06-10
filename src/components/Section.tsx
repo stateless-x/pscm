@@ -43,15 +43,26 @@ export function Section({
         {(number || eyebrow) && (
           <div
             className={cn(
-              "section-no flex items-center gap-3",
+              "flex items-center gap-3",
               variant === "dark" ? "text-amber/90" : "text-amber-strong",
             )}
           >
-            {number && <span>§ {number}</span>}
+            {number && (
+              <span className="section-no">§ {number}</span>
+            )}
             {number && eyebrow && (
               <span className={cn("h-px w-8", muted, "bg-current opacity-40")} />
             )}
-            {eyebrow && <span className={muted}>{eyebrow}</span>}
+            {eyebrow && (
+              <span
+                className={cn(
+                  "label-th text-xs font-semibold tracking-[0.08em]",
+                  muted,
+                )}
+              >
+                {eyebrow}
+              </span>
+            )}
           </div>
         )}
         {title && (

@@ -8,6 +8,7 @@ import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
 import { ProductsExplorer } from "@/components/ProductsExplorer";
+import { DevBanner } from "@/components/DevBanner";
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,7 @@ export default async function ProductsPage({
         variant="compact"
         showPrimaryCTAs={false}
       />
+      <DevBanner />
       <Section variant="light">
         <ProductsExplorer machines={sorted} locale={loc} />
       </Section>

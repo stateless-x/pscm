@@ -6,7 +6,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import { Header } from "@/components/Header";
-import { DevBanner } from "@/components/DevBanner";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { OrganizationJsonLd } from "@/components/JsonLd";
@@ -85,7 +84,6 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col bg-paper text-text antialiased">
         <NextIntlClientProvider>
           <Header />
-          <DevBanner />
           <main className="flex-1">{children}</main>
           <Footer />
           <StickyMobileCTA />

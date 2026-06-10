@@ -98,22 +98,36 @@ body {
   color: var(--text-muted);
 }
 
-/* Eyebrow utility: small uppercase mono label */
+/* Eyebrow utility: small label above section titles. Uses Plex Sans
+   Thai so Thai text renders correctly; Latin in this font still looks
+   like a proper label. No uppercase (Thai has no case; uppercasing
+   Latin alongside Thai reads inconsistent). Tracking gives the label
+   feel without leaning on a mono face. */
 .eyebrow {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-sans-thai), var(--font-sans), sans-serif;
   font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
 }
 
+/* Thai-safe label: Plex Sans Thai 500 with tracking. Use this anywhere
+   a label/eyebrow has Thai text. Mono only renders correctly for Latin
+   + digits, so Thai falling through to system mono looks ugly. */
 .eyebrow-th {
   font-family: var(--font-sans-thai), sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
+}
+
+/* Slightly larger Thai label, same family. For chip-like contexts where
+   0.75rem feels too small (banner body, in-line context). */
+.label-th {
+  font-family: var(--font-sans-thai), sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
 /* Hairline rules */

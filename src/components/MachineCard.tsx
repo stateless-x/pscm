@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { Machine } from "@/data/machines";
+import { machinePopularName } from "@/data/machines";
 import { Link } from "@/i18n/navigation";
 import { MachineImage } from "./MachineImage";
 import { Nameplate } from "./Nameplate";
@@ -16,7 +17,9 @@ export function MachineCard({
 }) {
   const t = useTranslations("common");
   const tStage = useTranslations("stage");
-  const name = machine.name[locale];
+  // Card title uses the most-searched alias (e.g. "บอลมิล" instead of
+  // "หม้อบด"). Detail page still shows the formal name as H1.
+  const name = machinePopularName(machine, locale);
 
   return (
     <Link

@@ -1027,6 +1027,16 @@ export const machinesByStage = (stage: Stage) =>
 export const machineBySlug = (slug: string) =>
   machines.find((m) => m.slug === slug);
 
+/**
+ * Returns the most-searched name for a machine — aliases[locale][0]
+ * if aliases exist, otherwise the formal `name`. Use for surfaces
+ * that should match what real buyers type into search (card titles,
+ * search results). Keep formal `name` for SEO title tags, JSON-LD,
+ * breadcrumb, H1, anywhere the canonical name matters.
+ */
+export const machinePopularName = (m: Machine, locale: Locale) =>
+  m.aliases?.[locale]?.[0] ?? m.name[locale];
+
 export const allStages: Stage[] = [
   "crushing",
   "grinding",

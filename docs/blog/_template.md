@@ -36,7 +36,44 @@ controllable, and never commits to a future the writer can't guarantee.
 4. **Honest soft brand mention at the END only.** Body reads as useful
    editorial that would be valid even reposted on a competitor's site.
    Brand mention lives in a single italic paragraph at the bottom,
-   ~50 words, with a concrete CTA (see rule 8).
+   ~50 words, with a concrete CTA (see CTA rules below).
+
+5. **No specific baht prices for machinery or spare parts.** Buyers
+   will quote the number back when negotiating, and material/parts
+   prices fluctuate. Use qualitative ranges instead. Reference table:
+
+   | Don't write | Write |
+   |---|---|
+   | 80 ถึง 150 บาท/kg | ระดับร้อยบาทต่อกิโลกรัม |
+   | 800 ถึง 2,000 บาท/kg | ระดับพันบาทต่อกิโลกรัม |
+   | 30,000 ถึง 80,000 บาท | ระดับหมื่นบาท / ระดับหลายหมื่นบาท |
+   | 50,000 ถึง 150,000 บาท | ระดับหมื่นถึงแสนบาท |
+   | 80,000 ถึง 250,000 บาท | ระดับแสนบาท |
+   | 250,000 ถึง 800,000 บาท | ระดับหลายแสนถึงล้านบาท |
+   | 500,000 ถึง 1,500,000 บาท | ระดับล้านบาท |
+   | 1.5 ถึง 4 ล้านบาท | ระดับล้านถึงหลายล้านบาท |
+   | 8 ล้านขึ้นไป | ระดับสิบล้านบาทขึ้นไป |
+
+   **Exceptions** — keep these specific numbers:
+   - **Per-piece manufacturing cost in ROI examples** ("ต้นทุนชิ้นละ
+     30 บาท"). Mark as "(ตัวเลขสมมติ ใส่ของคุณเอง)" so the reader
+     knows it's a worked example, not a Petkasem quote.
+   - **Scrap-money math results** that flow from a reader example
+     (1% × 100,000 ชิ้น × 30 บาท = 30,000 บาท/เดือน). These show
+     the reader how to compute, not what to expect from us.
+   - **Physical specs**: kW, kg/hr, bar, mm, tonnage capacity,
+     percentages, time intervals, mesh sizes. None are prices.
+
+6. **Disclaimer block at the top of every price-mentioning post.**
+   After the H1, before the intro, insert this callout verbatim:
+
+   ```
+   > [!อ้างอิงราคา] **ตัวเลขในบทความเป็นช่วงอ้างอิงเพื่อการตัดสินใจ ไม่ใช่ใบเสนอราคา.** ราคาเครื่องจักรและอะไหล่จริงผันผวนตามราคาวัตถุดิบ ขนาด สเปก ที่ตั้งโรงงาน และเวลา ขอใบเสนอราคาปัจจุบันสำหรับโรงงานคุณได้ที่ทีมงานเรา ฟรี ไม่มีค่าใช้จ่าย
+   ```
+
+   The renderer styles this as an amber-rule callout. Skip the block
+   only on posts with zero baht numbers (purely operational/maintenance
+   content with no cost discussion).
 
 ## Required sections (in this order)
 
@@ -54,7 +91,7 @@ controllable, and never commits to a future the writer can't guarantee.
    sentences. Frames promises around what's controllable now.
 6. **Closing thought** (1 short paragraph) — pulls the argument
    together without restating it
-7. **Italic outro with CTA** — see rule 8
+7. **Italic outro with CTA** — see CTA rules below
 
 ## Frontmatter schema
 
@@ -73,7 +110,7 @@ template: "default"  # this template
 ---
 ```
 
-## CTA rules (rule 8, the most important rule)
+## CTA rules (the most important rule)
 
 The closing italic outro is where we earn the lead. Three things it
 MUST do, in this order:

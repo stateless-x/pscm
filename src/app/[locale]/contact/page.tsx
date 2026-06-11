@@ -51,6 +51,20 @@ export default async function ContactPage({
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           {/* Contact info */}
           <div className="space-y-6">
+            {/* Registered company name — sits above the contact list as a
+                business-card-style header. The opposite-locale form is
+                shown small so buyers see both registered names regardless
+                of which page they landed on. */}
+            <div className="border-b border-line pb-6">
+              <p className="eyebrow">{tCommon("madeInThailand")}</p>
+              <h2 className="mt-2 text-xl font-semibold leading-tight text-text md:text-2xl">
+                {SITE.name[loc]}
+              </h2>
+              <p className="mt-1 text-sm text-text-muted">
+                {SITE.name[loc === "th" ? "en" : "th"]}
+              </p>
+            </div>
+
             {/* LINE — promoted as the primary contact channel for TH B2B */}
             <a
               href={SITE.lineUrl}

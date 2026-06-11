@@ -256,38 +256,41 @@ body {
 }
 
 /* Blog prose: applied to the rendered markdown body on /blog/<slug>.
-   Tight, readable, no Tailwind Typography plugin needed for one route. */
+   Editorial reading column — narrow, generous leading, real hierarchy. */
 .prose-blog {
   color: var(--text);
-  font-size: 1.0625rem;
-  line-height: 1.75;
+  font-size: 1.125rem;
+  line-height: 1.85;
 }
 .prose-blog > * + * {
-  margin-top: 1.1em;
+  margin-top: 1.25em;
 }
 .prose-blog h2 {
-  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 2.4em;
-  margin-bottom: 0.4em;
-  letter-spacing: -0.005em;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2.6em;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 80px;
 }
 .prose-blog h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 1.8em;
-  margin-bottom: 0.3em;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 0.4em;
 }
 .prose-blog p {
   color: var(--text);
 }
 .prose-blog strong {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
 }
 .prose-blog em {
-  color: var(--text-muted);
+  color: inherit;
+  font-style: italic;
 }
 .prose-blog a {
   color: var(--amber-strong);
@@ -313,7 +316,7 @@ body {
 }
 .prose-blog blockquote {
   border-left: 3px solid var(--amber);
-  padding: 0.2em 0 0.2em 1em;
+  padding: 0.4em 0 0.4em 1.2em;
   color: var(--text-muted);
   font-style: normal;
 }
@@ -325,7 +328,89 @@ body {
   border-radius: 2px;
 }
 .prose-blog hr {
-  margin: 2.4em 0;
+  margin: 2.6em 0;
   border: 0;
   border-top: 1px solid var(--line);
+}
+
+/* Trap / caution callout. Markdown source:
+     > [!กับดัก] **Title.** body text.
+   Renders amber-rule sidebar with paper-2 background. */
+.prose-blog .callout {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1.1em 1.4em;
+  background: var(--paper-2);
+  border-left: 3px solid var(--amber);
+}
+.prose-blog .callout p {
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.prose-blog .callout p + p {
+  margin-top: 0.6em;
+}
+.prose-blog .callout strong:first-child {
+  display: block;
+  font-size: 0.95em;
+  letter-spacing: 0.01em;
+}
+
+/* Closing italic outro from posts: the brand mention + CTA paragraph.
+   Visually separates from body so the eye lands on it instead of skating
+   past. Card with subtle warm tint, mono label above. */
+.prose-blog em + em,
+.prose-blog p:last-of-type em:only-child,
+.prose-blog p > em:only-child {
+  /* No-op selector left in place to document intent; the actual
+     outro styling is handled by .blog-outro applied by the page. */
+}
+
+/* Inline TOC: small, mono label, hairline-divided list. */
+.blog-toc {
+  margin: 2em 0;
+  padding: 1em 1.25em;
+  background: var(--paper-2);
+  border-left: 2px solid var(--line);
+}
+.blog-toc-label {
+  font-family: var(--font-sans-thai), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.6em;
+}
+.blog-toc-list {
+  display: grid;
+  gap: 0.35em;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.blog-toc-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+.blog-toc-list a:hover {
+  color: var(--amber-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Outro card: post page wraps the last paragraph in this. */
+.blog-outro {
+  margin-top: 3em;
+  padding: 1.5em 1.5em;
+  background: linear-gradient(135deg, var(--amber-soft) 0%, var(--paper-2) 100%);
+  border-left: 3px solid var(--amber);
+}
+.blog-outro p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4a3805;
+}
+.blog-outro a {
+  color: var(--amber-strong);
+  font-weight: 600;
 }

@@ -99,7 +99,7 @@ export default async function BlogPostPage({
       {/* Article head */}
       <article className="bg-paper">
         <Container className="py-10 md:py-14">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-[42rem]">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-muted">
               {fm.publishDate && (
                 <time dateTime={fm.publishDate} className="mono">
@@ -128,6 +128,30 @@ export default async function BlogPostPage({
               </p>
             )}
 
+            {/* TOC: only show when post has 3+ H2s, otherwise it's noise. */}
+            {post.toc.length >= 3 && (
+              <nav
+                className="blog-toc"
+                aria-label={loc === "th" ? "สารบัญ" : "On this page"}
+              >
+                <div className="blog-toc-label">
+                  {loc === "th" ? "ในบทความนี้" : "On this page"}
+                </div>
+                <ol className="blog-toc-list">
+                  {post.toc.map((entry, i) => (
+                    <li key={entry.id}>
+                      <a href={`#${entry.id}`}>
+                        <span className="mono mr-2 text-[10px] text-text-muted">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        {entry.text}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
+
             <hr className="my-8 border-line" />
 
             <div
@@ -136,6 +160,14 @@ export default async function BlogPostPage({
               // control. Not user content. Safe to render.
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
+
+            {/* Outro card: brand mention + CTA, visually separated from body */}
+            {post.outroHtml && (
+              <aside
+                className="blog-outro"
+                dangerouslySetInnerHTML={{ __html: post.outroHtml }}
+              />
+            )}
 
             {fm.tags && fm.tags.length > 0 && (
               <div className="mt-12 flex flex-wrap gap-2 border-t border-line pt-6 text-[11px] text-text-muted">

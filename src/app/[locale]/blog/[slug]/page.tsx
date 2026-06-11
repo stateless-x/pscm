@@ -12,6 +12,7 @@ import { SITE } from "@/lib/site";
 import {
   ArticleJsonLd,
   BreadcrumbJsonLd,
+  FaqJsonLd,
 } from "@/components/JsonLd";
 import {
   getAllPosts,
@@ -100,27 +101,35 @@ export default async function BlogPostPage({
       <article className="bg-paper">
         <Container className="py-10 md:py-14">
           <div className="mx-auto max-w-[42rem]">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-muted">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-text-muted">
               {fm.publishDate && (
                 <time dateTime={fm.publishDate} className="mono">
                   {fm.publishDate}
                 </time>
               )}
+              {fm.lastUpdated && fm.lastUpdated !== fm.publishDate && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span className="mono">
+                    {t("updatedOn")}{" "}
+                    <time dateTime={fm.lastUpdated}>{fm.lastUpdated}</time>
+                  </span>
+                </>
+              )}
               <span aria-hidden="true">·</span>
               <span>
                 {t("readingTime", { minutes: post.readingTimeMinutes })}
               </span>
-              {fm.author && (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <span>
-                    {t("byAuthor")} {fm.author}
-                  </span>
-                </>
-              )}
             </div>
 
             <h1 className="display-h2 mt-5 text-text">{fm.title}</h1>
+
+            {fm.author && (
+              <p className="mt-3 text-sm text-text-muted">
+                {t("byAuthor")}{" "}
+                <span className="font-semibold text-text">{fm.author}</span>
+              </p>
+            )}
 
             {fm.description && (
               <p className="mt-5 text-lg leading-relaxed text-text-muted">
@@ -160,6 +169,27 @@ export default async function BlogPostPage({
               // control. Not user content. Safe to render.
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
+
+            {/* FAQ section: rendered visibly + emitted as FAQPage schema below */}
+            {fm.faq && fm.faq.length > 0 && (
+              <section className="mt-12 border-t border-line pt-8">
+                <h2 className="display-h2 text-text">
+                  {loc === "th" ? "คำถามที่พบบ่อย" : "Frequently asked questions"}
+                </h2>
+                <dl className="mt-6 grid gap-6">
+                  {fm.faq.map((item, i) => (
+                    <div key={i}>
+                      <dt className="text-lg font-semibold leading-snug text-text">
+                        {item.q}
+                      </dt>
+                      <dd className="mt-2 text-base leading-relaxed text-text-muted">
+                        {item.a}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            )}
 
             {/* Outro card: brand mention + CTA, visually separated from body */}
             {post.outroHtml && (
@@ -224,6 +254,7 @@ export default async function BlogPostPage({
       <CTABand />
 
       <ArticleJsonLd post={post} url={postUrl} locale={loc} />
+      <FaqJsonLd post={post} />
       <BreadcrumbJsonLd
         items={[
           {

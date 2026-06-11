@@ -31,11 +31,14 @@ export interface PostFrontmatter {
   keywords?: string[];
   author?: string;
   publishDate?: string;
+  lastUpdated?: string;
   tags?: string[];
   locale: PostLocale;
   template?: string;
   /** Optional: machine slugs this post relates to, for cross-linking. */
   relatedMachines?: string[];
+  /** Optional: Q&A pairs for FAQ section + FAQPage JSON-LD. */
+  faq?: { q: string; a: string }[];
 }
 
 export interface TocEntry {

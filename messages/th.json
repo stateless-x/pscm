@@ -114,6 +114,7 @@
     "readingTime": "อ่าน {minutes} นาที",
     "publishedOn": "เผยแพร่",
     "byAuthor": "เขียนโดย",
+    "updatedOn": "อัปเดตล่าสุด",
     "relatedTitle": "อ่านเพิ่ม",
     "backToList": "← กลับไปหน้าบทความ",
     "noPosts": "ยังไม่มีบทความ"

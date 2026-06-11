@@ -103,6 +103,21 @@ export function BreadcrumbJsonLd({
   return <Script data={data} />;
 }
 
+export function FaqJsonLd({ post }: { post: Post }) {
+  const faq = post.frontmatter.faq;
+  if (!faq || faq.length === 0) return null;
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+  return <Script data={data} />;
+}
+
 export function ArticleJsonLd({
   post,
   url,
@@ -122,7 +137,7 @@ export function ArticleJsonLd({
     inLanguage: locale,
     keywords: fm.keywords?.join(", "),
     datePublished: fm.publishDate,
-    dateModified: fm.publishDate,
+    dateModified: fm.lastUpdated ?? fm.publishDate,
     author: {
       "@type": "Organization",
       name: fm.author ?? SITE.name[locale],

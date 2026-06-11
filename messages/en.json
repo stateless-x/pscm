@@ -114,6 +114,7 @@
     "readingTime": "{minutes} min read",
     "publishedOn": "Published",
     "byAuthor": "By",
+    "updatedOn": "Updated",
     "relatedTitle": "Read more",
     "backToList": "← Back to articles",
     "noPosts": "No articles yet"

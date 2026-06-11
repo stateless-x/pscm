@@ -50,7 +50,8 @@ priority. **[1]** = write first, **[3]** = backlog.
   and operating modes. Explain when each fits. End with "ทุกขนาดสั่งทำ
   ได้กับ Petkasem" CTA → /products/ball-mill.
 
-### 3. ฟิลเตอร์เพรส เลือกขนาดและจำนวนแผ่นยังไงให้พอดีโรงงาน
+### 3. ฟิลเตอร์เพรส: เลือกขนาดและจำนวนแผ่นให้พอดีกับไลน์โรงงาน
+- **Status:** ✓ Shipped (`/docs/blog/filter-press-sizing.md`)
 - **Audience:** Plant engineers sizing a filter press for their slip line
 - **Intent:** Comparison/transactional, high-funnel-to-deal
 - **Keywords:** ฟิลเตอร์เพรส, เครื่องอัดกรอง, ขนาดฟิลเตอร์เพรส, จำนวนแผ่น, สเปก
@@ -59,7 +60,8 @@ priority. **[1]** = write first, **[3]** = backlog.
   count → physical footprint. This is the kind of post procurement officers
   bookmark. Strong CTA to /products/filter-press for sizing inquiry.
 
-### 4. เครื่องอัดไฮดรอลิก ใช้ในอุตสาหกรรมไหนได้บ้าง (เซรามิก, อิฐ, วัสดุทนไฟ, โลหะ)
+### 4. เครื่องอัดไฮดรอลิก: ใช้ได้ในกี่อุตสาหกรรม และต่างกันยังไง
+- **Status:** ✓ Shipped (`/docs/blog/hydraulic-press-cross-industry.md`). Includes food industry with honest sanitary/FDA caveat — flags that food-grade is a different spec, not the same machine. Opens a sales lane without overselling.
 - **Audience:** Anyone who has a "we need to press something dense" problem
 - **Intent:** Informational, broad-funnel cross-industry
 - **Keywords:** เครื่องอัดไฮดรอลิก, ไฮดรอลิคเพรส, เครื่องอัดกระเบื้อง, hydraulic press
@@ -76,7 +78,8 @@ priority. **[1]** = write first, **[3]** = backlog.
   why iron is the cause, math the cost of even 1% scrap, then introduce
   the fix. Highest-intent conversion potential of any post.
 
-### 6. เครื่องบดกราม vs เครื่องบดค้อน: บดวัตถุดิบหยาบควรใช้ตัวไหน
+### 6. เครื่องบดกราม vs เครื่องบดค้อน: บดวัตถุดิบหยาบ ใช้ตัวไหนดี
+- **Status:** ✓ Shipped (`/docs/blog/jaw-vs-hammer-crusher.md`)
 - **Audience:** Material-prep engineers, mining/recycling buyers
 - **Intent:** Comparison
 - **Keywords:** เครื่องบดกราม, เครื่องบดค้อน, jaw crusher, hammer mill, เครื่องบดหิน
@@ -97,7 +100,8 @@ priority. **[1]** = write first, **[3]** = backlog.
   (3-6 months typical) and what drives cost (size, materials, controls).
   Direct CTA → /custom.
 
-### 8. ซ่อมเครื่องจักรเซรามิกเก่าให้ใช้ได้อีก 10 ปี: คุ้มมั้ย เมื่อไหร่ควรเปลี่ยน
+### 8. ซ่อมหรือเปลี่ยนใหม่: เครื่องเก่าในโรงงานเซรามิกควรไปทางไหน
+- **Status:** ⏸ Deferred. Original title "อีก 10 ปี" was an implicit forever-promise. Renamed to a decision-framework angle. Defer until we have 1-2 real case studies from actual repair customers to ground the framework with numbers. Avoid "10 ปี" or similar timeframes in the rewrite.
 - **Audience:** Plant owners with aging equipment
 - **Intent:** Comparison (repair vs replace), high-intent
 - **Keywords:** ซ่อมเครื่องจักรเซรามิก, อะไหล่หม้อบด, อายุเครื่องจักรโรงงาน
@@ -106,7 +110,8 @@ priority. **[1]** = write first, **[3]** = backlog.
   motor + bearings = repair almost always; main drum cracked = often
   replace. Plays to our service-page strength. CTA → /service.
 
-### 9. เครื่องรีดดินสุญญากาศ (pug mill) ทำไมต้องมี ใช้กับงานอะไรได้บ้าง
+### 9. เครื่องรีดดินสุญญากาศ: ทำไมเป็นจุดเปลี่ยนของไลน์ขึ้นรูป
+- **Status:** ✓ Shipped (`/docs/blog/pug-mill-why.md`)
 - **Audience:** Forming-line engineers, brick/terracotta producers
 - **Intent:** Informational + product-led
 - **Keywords:** เครื่องรีดดิน, pug mill, vacuum pug mill, เครื่องนวดดิน, ลดแตกร้าวเตาเผา
@@ -114,7 +119,8 @@ priority. **[1]** = write first, **[3]** = backlog.
 - **Angle:** The "why vacuum" explanation. Air bubbles = firing cracks.
   Pug mill pays for itself in saved scrap within months.
 
-### 10. เครื่องจิกเกอร์ / โรลเลอร์เฮด: เลือกยังไงให้พอดีกับจาน-ชามที่ผลิต
+### 10. เครื่องจิกเกอร์และโรลเลอร์เฮด: เลือกให้พอดีกับจาน ชาม และทรงที่ผลิต
+- **Status:** ⏸ Deferred. Niche audience (ceramic tableware only), so the post needs to be sharper to justify the small reach. Write after we get at least one tableware customer who can share specs we can anonymise in examples.
 - **Audience:** Tableware factory operators
 - **Intent:** Comparison/sizing
 - **Keywords:** เครื่องจิกเกอร์, jigger machine, roller head, เครื่องขึ้นรูปจาน
@@ -122,7 +128,8 @@ priority. **[1]** = write first, **[3]** = backlog.
 - **Angle:** Decision factors: piece size, throughput, mould inventory.
   Niche audience but very high intent.
 
-### 11. การดูแลรักษาเครื่องจักรเซรามิก: เช็คลิสต์รายสัปดาห์ / รายเดือน / รายปี
+### 11. เช็คลิสต์ดูแลเครื่องจักรเซรามิก: รายสัปดาห์ รายเดือน รายปี
+- **Status:** ✓ Shipped (`/docs/blog/maintenance-checklist.md`). Long-form (~1400 words) evergreen reference content.
 - **Audience:** Maintenance staff (broader audience, recurring readers)
 - **Intent:** Informational, evergreen
 - **Keywords:** บำรุงรักษาเครื่องจักร, การดูแลหม้อบด, อายุเครื่อง, preventive maintenance
@@ -152,6 +159,7 @@ priority. **[1]** = write first, **[3]** = backlog.
   pitch which is increasingly procurement-relevant.
 
 ### 15. ผลิตในประเทศไทย vs นำเข้าจากจีน: ราคา, คุณภาพ, บริการหลังการขาย
+- **Status:** ⏸ Deferred. Sensitive topic. Badmouthing Chinese suppliers risks alienating future customers who currently use them; hedging reads as weak. Worth writing only after we can frame it from real customer-switching stories with permission. Risk of post backfiring is non-trivial. Hire a freelance industry writer or write very carefully with multiple draft reviews.
 - **Why backlog:** Sensitive topic. Risk of looking like a sales pitch
   unless written carefully. But high search interest. Hire a freelance
   industry writer or write very carefully.
@@ -173,6 +181,7 @@ priority. **[1]** = write first, **[3]** = backlog.
   but smaller search volume.
 
 ### 20. ROI ของเครื่องอัดผงแห้งสำหรับโรงงานกระเบื้อง: ตัวเลขจริงคืออะไร
+- **Status:** ⏸ Blocked by data dependency. `dust-press` is currently marked `on_request`, so promoting it via an ROI post sets a buyer expectation we may not be able to meet quickly. Two options: (1) re-rank dust-press to `made_to_order` first if you actually want to push it commercially, then write this post; (2) skip and focus the same effort on an `hydraulic-press` ROI post instead, which IS one of our highest-priority products.
 - **Why backlog:** ROI calculators are link-magnet content but require
   enough customer data to make the numbers believable.
 

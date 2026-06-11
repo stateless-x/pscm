@@ -47,6 +47,10 @@
     "address": "Address",
     "hours": "Hours",
     "or": "or",
+    "chatOnLine": "Chat with us on LINE",
+    "lineHandle": "LINE ID",
+    "openInGoogleMaps": "Open in Google Maps",
+    "mapPin": "Workshop location",
     "languageToggle": "TH"
   },
   "status": {

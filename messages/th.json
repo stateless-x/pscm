@@ -47,6 +47,10 @@
     "address": "ที่อยู่",
     "hours": "เวลาทำการ",
     "or": "หรือ",
+    "chatOnLine": "ทักหาเราที่ LINE",
+    "lineHandle": "LINE ID",
+    "openInGoogleMaps": "เปิดใน Google Maps",
+    "mapPin": "พิกัดโรงงาน",
     "languageToggle": "EN"
   },
   "status": {

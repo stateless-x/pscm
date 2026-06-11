@@ -29,13 +29,19 @@ export const SITE = {
     { display: "02-431-2099", tel: "+6624312099" },
   ],
   email: "purin.buriwong@gmail.com",
-  // TODO §15.1: replace with LINE Official Account deep link
-  lineUrl: "https://line.me/R/ti/p/~",
+  // Personal LINE ID `bobroach`. When we get an Official Account,
+  // swap to `https://lin.ee/<id>`.
+  lineUrl: "https://line.me/ti/p/bobroach",
+  lineId: "bobroach",
   hours: {
     th: "จันทร์–เสาร์ 08:00–17:00 น.",
     en: "Mon–Sat 08:00–17:00",
   },
-  // Map embed src (Nakhon Pathom approx, replace once confirmed)
+  // Embed URL — pinned to the registered address. The `q=` form is
+  // the documented iframe-friendly Maps embed source.
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Sam+Phran,+Nakhon+Pathom&output=embed",
+    "https://www.google.com/maps?q=60%2F7+Moo+9+Phutthamonthon+Sai+5+Rai+Khing+Sam+Phran+Nakhon+Pathom+73210&output=embed",
+  // Human-facing share URL for the "open in Google Maps" link below
+  // the embed.
+  mapShareUrl: "https://maps.app.goo.gl/fXwbbptdVaAfJ63dA",
 } as const;

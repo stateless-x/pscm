@@ -9,7 +9,8 @@ import { Section } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { LineIcon } from "@/components/LineIcon";
 
 export async function generateMetadata({
   params,
@@ -50,6 +51,31 @@ export default async function ContactPage({
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           {/* Contact info */}
           <div className="space-y-6">
+            {/* LINE — promoted as the primary contact channel for TH B2B */}
+            <a
+              href={SITE.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 bg-[#06C755] p-4 text-white transition hover:bg-[#05a648] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2"
+            >
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white/15">
+                <LineIcon size={26} className="text-white" />
+              </div>
+              <div className="flex-1">
+                <div className="text-base font-semibold leading-tight">
+                  {tCommon("chatOnLine")}
+                </div>
+                <div className="mono mt-0.5 text-[12px] tracking-wider text-white/85">
+                  {tCommon("lineHandle")}: {SITE.lineId}
+                </div>
+              </div>
+              <ArrowUpRight
+                size={20}
+                className="shrink-0 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden="true"
+              />
+            </a>
+
             <ContactRow
               icon={MapPin}
               label={tCommon("address")}
@@ -85,35 +111,32 @@ export default async function ContactPage({
               }
             />
             <ContactRow
-              icon={MessageCircle}
-              label="LINE"
-              value={
-                <a
-                  href={SITE.lineUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-10 items-center gap-2 bg-[#06C755] px-4 text-sm font-semibold text-white hover:bg-[#05a648]"
-                >
-                  <MessageCircle size={16} />
-                  Chat on LINE
-                </a>
-              }
-            />
-            <ContactRow
               icon={Clock}
               label={tCommon("hours")}
               value={SITE.hours[loc]}
             />
 
-            <div className="aspect-[4/3] w-full border border-line bg-paper-2">
-              <iframe
-                src={SITE.mapEmbedSrc}
-                className="h-full w-full"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps"
-              />
+            <div className="space-y-2">
+              <div className="aspect-[4/3] w-full overflow-hidden border border-line bg-paper-2">
+                <iframe
+                  src={SITE.mapEmbedSrc}
+                  className="h-full w-full"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={tCommon("mapPin")}
+                />
+              </div>
+              <a
+                href={SITE.mapShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-amber-strong"
+              >
+                <MapPin size={14} aria-hidden="true" />
+                {tCommon("openInGoogleMaps")}
+                <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
             </div>
           </div>
 

@@ -47,10 +47,15 @@ Mirrors spec §15. Each item lists the **single file** to edit.
    component currently shows `images[0]` only — extend later if you want
    a gallery.
 
-7. **Inquiry form endpoint**, `src/components/ContactForm.tsx`
-   Currently composes a `mailto:` using `SITE.email`. To replace with a
-   real handler, change the `<form action>` to a Web3Forms or Formspree
-   endpoint (read from `process.env.NEXT_PUBLIC_FORM_ENDPOINT`).
+7. ~~Inquiry form endpoint~~ — REMOVED. The contact form was a
+   `mailto:` form that fails on most mobile devices and produces
+   unreadable output on desktop. The contact page now surfaces LINE +
+   phone as the primary channels with email as quiet fallback, which
+   is how Thai B2B actually contacts industrial suppliers. If you
+   ever want a form back, wire Web3Forms / Formspree / FormSubmit
+   into a new ContactForm component — env var pattern would be
+   `process.env.NEXT_PUBLIC_FORM_ENDPOINT`. Not recommended unless
+   you have specific lead-tracking needs LINE can't satisfy.
 
 8. **Google Maps embed**, `src/lib/site.ts` → `SITE.mapEmbedSrc`
    Currently a generic Sam Phran search. Replace with a real "share →

@@ -6,11 +6,11 @@ import { routing } from "@/i18n/routing";
 import { buildAlternates } from "@/lib/alternates";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
-import { ContactForm } from "@/components/ContactForm";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { LineIcon } from "@/components/LineIcon";
+import { InterestedInBanner } from "@/components/InterestedInBanner";
 
 export async function generateMetadata({
   params,
@@ -154,16 +154,96 @@ export default async function ContactPage({
             </div>
           </div>
 
-          {/* Form */}
-          <div className="border border-line bg-paper p-6 md:p-8">
-            <h2 className="text-xl font-semibold text-text">
-              {t("formTitle")}
-            </h2>
-            <div className="mt-6">
-              <Suspense fallback={<div className="h-96" />}>
-                <ContactForm locale={loc} />
-              </Suspense>
+          {/* Action panel — replaces the old contact form.
+              Thai B2B buyers contact via LINE or phone, not web forms.
+              Surface those channels prominently with a clear hierarchy
+              and a small acknowledgement banner if the user came from
+              a product page (?ref=<slug>). */}
+          <div className="flex flex-col gap-4">
+            <Suspense fallback={null}>
+              <InterestedInBanner locale={loc} />
+            </Suspense>
+
+            {/* Fastest channel: LINE */}
+            <a
+              href={SITE.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-5 bg-[#06C755] p-6 text-white transition hover:bg-[#05a648] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 md:p-7"
+            >
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/15">
+                <LineIcon size={30} className="text-white" />
+              </div>
+              <div className="flex-1">
+                <div className="text-lg font-semibold leading-tight md:text-xl">
+                  {t("fastestReply")}
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-white/90">
+                  {t("fastestReplySub")}
+                </p>
+                <div className="mono mt-3 text-[12px] tracking-wider text-white/85">
+                  {tCommon("lineHandle")}: {SITE.lineId}
+                </div>
+              </div>
+              <ArrowUpRight
+                size={22}
+                className="shrink-0 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden="true"
+              />
+            </a>
+
+            {/* Phone — secondary channel */}
+            <div className="border border-line bg-paper p-6 md:p-7">
+              <div className="flex items-start gap-5">
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-paper-2">
+                  <Phone size={26} className="text-text" aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-lg font-semibold leading-tight text-text md:text-xl">
+                    {t("alsoCall")}
+                  </div>
+                  <p className="mt-1 text-sm text-text-muted">
+                    {t("alsoCallSub")}
+                  </p>
+                  <div className="mt-4 flex flex-col gap-1.5">
+                    {SITE.phones.map((p) => (
+                      <a
+                        key={p.tel}
+                        href={`tel:${p.tel}`}
+                        className="mono text-xl font-semibold text-text hover:text-amber-strong"
+                      >
+                        {p.display}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Email — slowest, quietest */}
+            <a
+              href={`mailto:${SITE.email}`}
+              className="group flex items-center gap-4 border border-line bg-paper p-4 transition hover:border-amber hover:bg-paper-2"
+            >
+              <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-paper-2">
+                <Mail size={18} className="text-text-muted" aria-hidden="true" />
+              </div>
+              <div className="flex-1">
+                <div className="text-sm font-semibold text-text">
+                  {t("alsoEmail")}
+                </div>
+                <div className="text-sm text-text-muted">{SITE.email}</div>
+              </div>
+              <ArrowUpRight
+                size={16}
+                className="shrink-0 text-text-muted transition group-hover:text-amber"
+                aria-hidden="true"
+              />
+            </a>
+
+            <p className="mt-2 text-xs leading-relaxed text-text-muted">
+              {t("alsoEmailSub")}
+            </p>
           </div>
         </div>
       </Section>

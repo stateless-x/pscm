@@ -166,15 +166,13 @@
     "eyebrow": "Contact",
     "h1": "Talk to us about a build, a repair, or a quote",
     "sub": "Free consultation, no commitment. You can talk to our engineers directly.",
-    "formTitle": "Send us a message",
-    "formNote": "Fastest reply via LINE or phone.",
-    "interestedIn": "I'm interested in:",
-    "fieldName": "Full name",
-    "fieldCompany": "Company / factory",
-    "fieldPhone": "Phone",
-    "fieldEmail": "Email",
-    "fieldMessage": "Machine details or the problem you want to solve",
-    "send": "Send message"
+    "interestedIn": "Interested in",
+    "fastestReply": "Fastest reply: LINE",
+    "fastestReplySub": "Most Thai buyers reach us on LINE. You'll talk to an engineer, not a salesperson. Reply within working hours.",
+    "alsoCall": "Or call us",
+    "alsoCallSub": "Mon to Sat, business hours",
+    "alsoEmail": "Email",
+    "alsoEmailSub": "Slower than LINE or phone."
   },
   "stage": {
     "crushing": "Primary Crushing",

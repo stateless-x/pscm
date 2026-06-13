@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -11,6 +12,10 @@ export function Hero({
   subtitle,
   variant = "default",
   showPrimaryCTAs = true,
+  image,
+  imageAlt = "",
+  imagePosition = "center",
+  overlay = "strong",
   children,
 }: {
   eyebrow?: string;
@@ -18,6 +23,20 @@ export function Hero({
   subtitle?: string;
   variant?: "default" | "compact";
   showPrimaryCTAs?: boolean;
+  /** Optional background photo (path under /public). When set, it sits
+   *  behind a dark overlay tuned to keep the headline legible. The hero is
+   *  the LCP on every page, so the image is loaded with priority. */
+  image?: string;
+  imageAlt?: string;
+  /** object-position for the background photo (default "center"). Use to
+   *  keep the important part of a photo in frame when object-cover crops —
+   *  e.g. "center 35%" to keep a standing group's faces visible. */
+  imagePosition?: string;
+  /** Overlay strength. "strong" (default) maximises text legibility — right
+   *  for busy/light photos where the photo is just texture. "soft" lets the
+   *  photo show through (e.g. an About hero where seeing the team matters),
+   *  darkening mainly the bottom-left where the headline sits. */
+  overlay?: "strong" | "soft";
   children?: React.ReactNode;
 }) {
   const t = useTranslations("nav");
@@ -30,9 +49,59 @@ export function Hero({
         "relative overflow-hidden bg-bg text-text-invert",
         isDefault
           ? "pt-14 pb-16 md:pt-20 md:pb-24 lg:pt-28 lg:pb-36"
-          : "py-14 md:py-20",
+          : // Compact heroes get extra min-height when carrying a photo so a
+            // standing group shot isn't squeezed to a thin crop band.
+            image
+            ? "flex items-center py-14 md:py-20 min-h-[340px] md:min-h-[420px]"
+            : "py-14 md:py-20",
       )}
     >
+      {image && (
+        <>
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: imagePosition }}
+          />
+          {/* Dark overlay tuned so text stays legible over busy photos.
+              "strong": heavy flat tint + left→right gradient keeping the
+              copy column nearly opaque + bottom gradient for the CTAs — the
+              photo reads as texture. "soft": lighter tint, darkening mainly
+              the bottom-left where the headline sits, so the photo (e.g. the
+              team) stays clearly visible up top. */}
+          {overlay === "strong" ? (
+            <>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-bg/45"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg via-bg/60 to-transparent"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/20 to-transparent"
+              />
+            </>
+          ) : (
+            <>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-bg/35"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-bg via-bg/45 to-transparent"
+              />
+            </>
+          )}
+        </>
+      )}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -71,30 +140,38 @@ export function Hero({
           )}
 
           {showPrimaryCTAs && (
-            <div className="rise-in rise-in-delay-3 mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+            // Stack on mobile (full-width primary button + a grouped row of
+            // contact links below it), inline row from sm up. flex-wrap on a
+            // single row of mixed-width items orphaned the LINE link on
+            // mobile; this keeps everything aligned at every width.
+            <div className="rise-in rise-in-delay-3 mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
               <Link
                 href="/contact"
-                className="inline-flex min-h-[52px] items-center gap-2 bg-amber px-7 text-[15px] font-semibold text-ink hover:bg-amber-strong"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 bg-amber px-7 text-[15px] font-semibold text-ink hover:bg-amber-strong"
               >
                 {t("quote")}
                 <ArrowRight size={18} />
               </Link>
-              <a
-                href={`tel:${phone.tel}`}
-                className="mono inline-flex items-center gap-2 text-[15px] text-text-invert/90 hover:text-amber"
-              >
-                <Phone size={16} />
-                {phone.display}
-              </a>
-              <a
-                href={SITE.lineUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[15px] text-text-invert/90 hover:text-amber"
-              >
-                <MessageCircle size={16} />
-                {t("line")}
-              </a>
+              {/* Phone + LINE grouped so they share a row on mobile instead of
+                  wrapping independently. */}
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                <a
+                  href={`tel:${phone.tel}`}
+                  className="mono inline-flex items-center gap-2 text-[15px] text-text-invert/90 hover:text-amber"
+                >
+                  <Phone size={16} />
+                  {phone.display}
+                </a>
+                <a
+                  href={SITE.lineUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[15px] text-text-invert/90 hover:text-amber"
+                >
+                  <MessageCircle size={16} />
+                  {t("line")}
+                </a>
+              </div>
             </div>
           )}
         </div>

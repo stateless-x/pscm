@@ -32,17 +32,20 @@ export function CTABand({
               </p>
             )}
           </div>
-          <div className="flex flex-wrap gap-3">
+          {/* Full-width stacked buttons on mobile (clean, tap-friendly),
+              inline auto-width row from sm up. justify-center keeps content
+              centered when buttons go full-width. */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/contact"
-              className="inline-flex min-h-[48px] items-center gap-2 bg-amber px-6 text-sm font-semibold text-ink hover:bg-amber-strong"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-amber px-6 text-sm font-semibold text-ink hover:bg-amber-strong"
             >
               {t("nav.quote")}
               <ArrowRight size={18} />
             </Link>
             <a
               href={`tel:${phone.tel}`}
-              className="inline-flex min-h-[48px] items-center gap-2 border border-line-dark bg-transparent px-5 text-sm font-medium text-text-invert hover:border-amber hover:text-amber"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-line-dark bg-transparent px-5 text-sm font-medium text-text-invert hover:border-amber hover:text-amber"
             >
               <Phone size={18} />
               <span className="mono">{phone.display}</span>
@@ -51,7 +54,7 @@ export function CTABand({
               href={SITE.lineUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[48px] items-center gap-2 bg-[#06C755] px-5 text-sm font-semibold text-white hover:bg-[#05a648]"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-[#06C755] px-5 text-sm font-semibold text-white hover:bg-[#05a648]"
             >
               <MessageCircle size={18} />
               {t("nav.line")}

@@ -70,6 +70,12 @@ export function ProductJsonLd({
     name: machine.name[locale],
     description: machine.short[locale],
     category: machine.category[locale],
+    // Absolute image URL when a real photo exists — lets the machine show in
+    // Google's product rich results and image search. Omitted for machines
+    // still on the gradient placeholder (no real photo to point at).
+    ...(machine.images[0] && {
+      image: `${SITE.url}${machine.images[0]}`,
+    }),
     brand: {
       "@type": "Brand",
       name: SITE.shortName.en,

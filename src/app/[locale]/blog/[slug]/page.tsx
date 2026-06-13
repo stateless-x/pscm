@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { buildAlternates } from "@/lib/alternates";
+import { postCover } from "@/lib/post-covers";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
@@ -19,7 +21,7 @@ import {
   getPostBySlug,
   type PostLocale,
 } from "@/lib/posts";
-import { machineBySlug, machinePopularName } from "@/data/machines";
+import { machineBySlug, machineDisplayName } from "@/data/machines";
 
 export function generateStaticParams() {
   // One static path per (locale × post). Posts know their own locale via
@@ -40,6 +42,11 @@ export async function generateMetadata({
   const post = getPostBySlug(slug, locale as PostLocale);
   if (!post) return {};
   const fm = post.frontmatter;
+  // Share preview: the post's own cover when it has one, else the brand card.
+  const cover = postCover(slug);
+  const ogImage = cover
+    ? { url: cover.src, width: 1200, height: 900 }
+    : { url: "/assets/og-card.webp", width: 1200, height: 655 };
   return {
     title: fm.title,
     description: fm.description,
@@ -52,6 +59,14 @@ export async function generateMetadata({
       publishedTime: fm.publishDate,
       authors: fm.author ? [fm.author] : undefined,
       tags: fm.tags,
+      // A page-level openGraph replaces (not merges) the layout's, so the
+      // image must be set here or articles — the most-shared page type —
+      // would have no preview image.
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [ogImage.url],
     },
   };
 }
@@ -68,7 +83,9 @@ export default async function BlogPostPage({
   const loc = locale as "th" | "en";
 
   const t = await getTranslations("blog");
+  const tImg = await getTranslations("images");
   const fm = post.frontmatter;
+  const cover = postCover(slug);
 
   // Related machines (linked product cards at the bottom of the post)
   const related = (fm.relatedMachines ?? [])
@@ -135,6 +152,19 @@ export default async function BlogPostPage({
               <p className="mt-5 text-lg leading-relaxed text-text-muted">
                 {fm.description}
               </p>
+            )}
+
+            {cover && (
+              <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden bg-paper-2">
+                <Image
+                  src={cover.src}
+                  alt={tImg(cover.altKey)}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 42rem"
+                  className="object-cover"
+                />
+              </div>
             )}
 
             {/* TOC: only show when post has 3+ H2s, otherwise it's noise. */}
@@ -239,7 +269,7 @@ export default async function BlogPostPage({
                       {m.model ?? m.slug.toUpperCase()}
                     </span>
                     <span className="text-base font-semibold leading-snug text-text transition group-hover:text-amber-strong">
-                      {machinePopularName(m, loc)}
+                      {machineDisplayName(m, loc)}
                     </span>
                     <span className="text-sm leading-snug text-text-muted line-clamp-2">
                       {m.short[loc]}

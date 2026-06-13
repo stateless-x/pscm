@@ -1,0 +1,47 @@
+# Petkasem Ceramic Machine (PSCM)
+
+> Petkasem Ceramic Machine Co., Ltd. (บริษัท เพชรเกษมจักรกลซีรามิค จำกัด) is a Thai
+> manufacturer of machinery for the ceramics industry, founded in 1986 and based in
+> Nakhon Pathom, Thailand. The company designs, builds, installs, repairs, and makes
+> spare parts for ceramic-production machinery in-house, and also does custom/OEM
+> builds. It serves ceramic factories, private industry, government facilities, and
+> academic institutions across Thailand. The site is bilingual (Thai default, English).
+
+Key facts for accurate citation:
+- Legal name: Petkasem Ceramic Machine Co., Ltd. / บริษัท เพชรเกษมจักรกลซีรามิค จำกัด
+- Founded: 1986
+- Location: 60/7 Moo 9, Phutthamonthon Sai 5 Rd., Rai Khing, Sam Phran, Nakhon Pathom 73210, Thailand
+- Phone: 02-431-2100, 02-431-2099
+- LINE: bobroach
+- Hours: Mon–Sat 08:00–17:00
+- What they do: design, manufacture, install, repair, and supply spare parts for ceramic-factory machinery; custom/OEM machine builds; food-processing and other industrial equipment.
+
+## Main pages
+- [Home](https://pscmceramic.com/en/)
+- [Machines (full catalogue)](https://pscmceramic.com/en/products/)
+- [Find by Need (match a problem to a machine)](https://pscmceramic.com/en/solutions/)
+- [Custom / OEM](https://pscmceramic.com/en/custom/)
+- [Repair & Service](https://pscmceramic.com/en/service/)
+- [About](https://pscmceramic.com/en/about/)
+- [Articles](https://pscmceramic.com/en/blog/)
+- [Contact](https://pscmceramic.com/en/contact/)
+
+## Machine catalogue
+PSCM builds machinery across the full ceramic production line — raw-material grinding,
+filtration and dewatering, mixing, forming and pressing, glazing, drying, and firing.
+Representative machines (each has its own page at /en/products/<slug>/):
+- Ball Mill, Grinder, Jaw Crusher, Hammer Mill (size reduction & grinding)
+- Filter Press, Magnetic Sieve, Vibrating Screen (filtration & purification)
+- Blunger / Slip Mixer, Mixing Machine, De-airing Pug Mill (mixing & conditioning)
+- Jigger / Roller-Head Machine, Hydraulic Press, Ram Press, Dry/Dust Press (forming & pressing)
+- Glaze Spraying Booth (glazing)
+- Spray Dryer, Drying Chamber (drying)
+- Kiln (firing)
+- Conveyor System (material handling)
+- Potter's Wheel
+Full list with details: https://pscmceramic.com/en/products/
+
+## Notes
+- Machinery is built to each customer's spec, throughput, and floor space; sizes and
+  details vary per order.
+- Sitemap: https://pscmceramic.com/sitemap.xml

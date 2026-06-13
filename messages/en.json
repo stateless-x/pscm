@@ -16,12 +16,8 @@
     "line": "LINE",
     "menu": "Menu",
     "close": "Close",
-    "openMenu": "Open menu"
-  },
-  "devBanner": {
-    "label": "Site under development",
-    "body": "Some product photos aren't up yet. Reach out and we'll send you real shots.",
-    "cta": "Contact us"
+    "openMenu": "Open menu",
+    "language": "Language"
   },
   "common": {
     "madeInThailand": "MADE IN THAILAND",
@@ -34,7 +30,7 @@
     "process": "Where it fits",
     "alsoKnownAs": "Also known as",
     "photoComing": "Real machine photos coming soon",
-    "imageDisclaimer": "* Reference image. Each machine is built to the customer's spec, so the real unit may differ.",
+    "imageDisclaimer": "* Illustrative example only. This image does not represent the actual quality of the product; design and details vary by model, requirements, application, and other factors. Contact us to see real units we have built.",
     "viewAll": "View all machines",
     "discussSpec": "Talk specs with us",
     "getQuote": "Get a quote",
@@ -69,6 +65,23 @@
     "nationwide": "Running nationwide",
     "nationwideSub": "Our machines run in factories across Thailand"
   },
+  "images": {
+    "handcraftAlt": "A ceramic-machine component being shaped by hand on the workshop floor",
+    "teamAlt": "Engineers at work on a machine build in the Petkasem workshop",
+    "solderingAlt": "Control-panel wiring assembled in-house during a machine build",
+    "installedAlt": "A finished ceramic machine installed and running on a factory line",
+    "claySlipAlt": "Ceramic slip — the liquid clay a blunger and filter press process",
+    "filterCakeAlt": "Pressed clay cake from a filter press, ready for forming",
+    "puggedClayAlt": "De-aired pugged clay extruded from a pug mill",
+    "groundPowderAlt": "Finely ground ceramic raw-material powder",
+    "greenwareTilesAlt": "Pressed ceramic tiles, formed and not yet fired",
+    "greenwareBowlsAlt": "Unfired greenware bowls shaped on a forming machine",
+    "bisqueWareAlt": "Bisque-fired ceramic ware, ready for glazing",
+    "dryingRackAlt": "Ceramic pieces drying on workshop racks before firing",
+    "workshopEyebrow": "Inside the workshop",
+    "workshopTitle": "Built and serviced under one roof",
+    "workshopBody": "Design, fabrication, wiring, and repair all happen in our Nakhon Pathom workshop. The team that builds a machine is the team that keeps it running."
+  },
   "home": {
     "eyebrow": "Ceramic-machinery makers since 1986",
     "h1": "Ceramic machinery built and repaired by Thai engineers since 1986",
@@ -84,6 +97,11 @@
     "service2Body": "The same engineers who built the machine know every part of it.",
     "service3Title": "Parts & aftercare",
     "service3Body": "We make spares in our own workshop. No waiting for overseas parts.",
+    "customersEyebrow": "Who we work with",
+    "customersTitle": "Trusted from private factories to government institutions",
+    "customersSub": "Our machines run in ceramic factories, universities and vocational colleges, craft studios, and government bodies across Thailand.",
+    "customersComingSoon": "Featured customers coming soon",
+    "customersCta": "Want to be a reference customer?",
     "ctaTitle": "Got a machine problem on the line?",
     "ctaSub": "Talk to us at any stage. Design, build, install, and repair done by the team that built your machine."
   },

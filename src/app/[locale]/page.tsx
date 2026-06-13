@@ -10,6 +10,10 @@ import { Section } from "@/components/Section";
 import { CardGrid } from "@/components/CardGrid";
 import { MachineCard } from "@/components/MachineCard";
 import { CTABand } from "@/components/CTABand";
+import { WorkshopImage } from "@/components/WorkshopImage";
+import { Parallax } from "@/components/Parallax";
+import { CustomersSection } from "@/components/CustomersSection";
+import { Container } from "@/components/Container";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, Cog, Wrench, LifeBuoy } from "lucide-react";
 
@@ -37,6 +41,7 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const tCommon = await getTranslations("common");
+  const tImg = await getTranslations("images");
   const loc = locale as "th" | "en";
 
   const SERVICES = [
@@ -51,6 +56,8 @@ export default async function HomePage({
         eyebrow={t("eyebrow")}
         title={t("h1")}
         subtitle={t("sub")}
+        image="/assets/handcraft.webp"
+        imageAlt={tImg("handcraftAlt")}
       />
 
       <TrustBar />
@@ -62,7 +69,7 @@ export default async function HomePage({
         subtitle={t("featuredSub")}
         variant="light"
       >
-        <CardGrid>
+        <CardGrid className="reveal-stagger">
           {featuredMachines.map((m, i) => (
             <MachineCard
               key={m.slug}
@@ -82,6 +89,41 @@ export default async function HomePage({
           </Link>
         </div>
       </Section>
+
+      <section className="bg-bg text-text-invert py-14 md:py-20">
+        <Container>
+          <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-14">
+            <div className="max-w-md">
+              <p className="eyebrow text-amber">{tImg("workshopEyebrow")}</p>
+              <h2 className="mt-3 text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-tight text-text-invert">
+                {tImg("workshopTitle")}
+              </h2>
+              <p className="mt-4 max-w-prose text-base leading-relaxed text-text-invert/80">
+                {tImg("workshopBody")}
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <Parallax travel={6} className="aspect-[3/4] overflow-hidden">
+                <WorkshopImage
+                  src="installed.webp"
+                  alt={tImg("installedAlt")}
+                  className="h-full"
+                />
+              </Parallax>
+              <Parallax
+                travel={9}
+                className="mt-8 aspect-[3/4] overflow-hidden"
+              >
+                <WorkshopImage
+                  src="soldering.webp"
+                  alt={tImg("solderingAlt")}
+                  className="h-full"
+                />
+              </Parallax>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <Section
         number="02"
@@ -115,6 +157,8 @@ export default async function HomePage({
           ))}
         </div>
       </Section>
+
+      <CustomersSection number="03" />
 
       <CTABand title={t("ctaTitle")} subtitle={t("ctaSub")} />
     </>

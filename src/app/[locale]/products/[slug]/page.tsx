@@ -18,7 +18,6 @@ import { StageIcon } from "@/components/StageIcon";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
 import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
-import { DevBanner } from "@/components/DevBanner";
 import { getPostsForMachine, type PostLocale } from "@/lib/posts";
 
 export function generateStaticParams() {
@@ -73,7 +72,6 @@ export default async function ProductDetailPage({
 
   return (
     <>
-      <DevBanner />
       {/* Breadcrumb */}
       <div className="border-b border-line bg-paper-2">
         <Container className="py-4">
@@ -145,17 +143,18 @@ export default async function ProductDetailPage({
                 </p>
               </div>
 
-              <div className="mt-3 flex flex-wrap gap-3">
+              {/* Full-width stacked on mobile, inline row from sm up. */}
+              <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
                   href={`/contact?ref=${machine.slug}` as const}
-                  className="inline-flex min-h-[48px] items-center gap-2 bg-amber px-6 text-sm font-semibold text-ink hover:bg-amber-strong"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-amber px-6 text-sm font-semibold text-ink hover:bg-amber-strong"
                 >
                   {ctaLabel}
                   <ArrowRight size={18} />
                 </Link>
                 <a
                   href={`tel:${phone.tel}`}
-                  className="inline-flex min-h-[48px] items-center gap-2 border border-line bg-transparent px-5 text-sm font-medium text-text hover:border-amber hover:text-amber-strong"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 border border-line bg-transparent px-5 text-sm font-medium text-text hover:border-amber hover:text-amber-strong"
                 >
                   <Phone size={18} />
                   <span className="mono">{phone.display}</span>
@@ -164,7 +163,7 @@ export default async function ProductDetailPage({
                   href={SITE.lineUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[48px] items-center gap-2 bg-[#06C755] px-5 text-sm font-semibold text-white hover:bg-[#05a648]"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-[#06C755] px-5 text-sm font-semibold text-white hover:bg-[#05a648]"
                 >
                   <MessageCircle size={18} />
                   LINE

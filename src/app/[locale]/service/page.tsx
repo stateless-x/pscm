@@ -6,6 +6,8 @@ import { buildAlternates } from "@/lib/alternates";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
+import { Container } from "@/components/Container";
+import { WorkshopImage } from "@/components/WorkshopImage";
 import {
   Brain,
   Clock,
@@ -37,6 +39,7 @@ export default async function ServicePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("service");
+  const tImg = await getTranslations("images");
 
   const reasons: { icon: LucideIcon; title: string; body: string }[] = [
     { icon: Brain, title: t("why1Title"), body: t("why1Body") },
@@ -51,6 +54,8 @@ export default async function ServicePage({
         eyebrow={t("eyebrow")}
         title={t("h1")}
         subtitle={t("sub")}
+        image="/assets/soldering.webp"
+        imageAlt={tImg("solderingAlt")}
       />
       <Section title={t("scopeTitle")} variant="light">
         <ul className="grid gap-3">
@@ -62,6 +67,15 @@ export default async function ServicePage({
           </li>
         </ul>
       </Section>
+      <section className="bg-paper pb-4">
+        <Container>
+          <WorkshopImage
+            src="installed.webp"
+            alt={tImg("installedAlt")}
+            className="aspect-[21/9] w-full"
+          />
+        </Container>
+      </section>
       <Section title={t("whyTitle")} variant="alt">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {reasons.map((r) => (

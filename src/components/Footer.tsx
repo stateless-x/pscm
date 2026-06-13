@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
+import { PscmMark } from "./PscmMark";
 
 const NAV_ITEMS = [
   { href: "/", key: "home" },
@@ -19,13 +20,14 @@ export function Footer() {
 
   return (
     <footer className="mt-20 bg-bg text-text-invert">
-      <div className="mx-auto max-w-[1200px] px-5 py-12 md:px-8 md:py-16">
+      {/* Extra bottom padding on mobile clears the fixed StickyMobileCTA bar
+          (≈52px + safe-area), which is md:hidden — so the gap is mobile-only.
+          Without this the copyright line sits behind the call/LINE bar. */}
+      <div className="mx-auto max-w-[1200px] px-5 pt-12 pb-[calc(env(safe-area-inset-bottom)+72px)] md:px-8 md:py-16 md:pb-16">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="mono text-[11px] uppercase tracking-[0.18em] text-amber">
-              PSCM
-            </div>
-            <div className="mt-1 text-base font-semibold">
+            <PscmMark className="h-8 w-auto text-amber" />
+            <div className="mt-3 text-base font-semibold">
               {SITE.name[locale]}
             </div>
             <p className="mt-3 text-sm text-text-invert-muted">

@@ -53,12 +53,30 @@ export async function generateMetadata({
       template: `%s | ${t("siteTitleSuffix")}`,
     },
     description: name,
+    // SVG favicon — the PSCM stamp. Vector renders crisply at tab size in
+    // modern browsers. (Site previously had no favicon at all.)
+    icons: {
+      icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
+      apple: [{ url: "/logo.svg" }],
+    },
     // Per-page generateMetadata sets the correct alternates for that path
     // (see lib/alternates.ts). The layout intentionally omits them.
     openGraph: {
       type: "website",
       siteName: name,
       locale: locale === "th" ? "th_TH" : "en_US",
+      images: [
+        {
+          url: "/assets/og-card.webp",
+          width: 1200,
+          height: 655,
+          alt: name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/assets/og-card.webp"],
     },
   };
 }

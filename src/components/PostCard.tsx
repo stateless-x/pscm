@@ -1,16 +1,31 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Post } from "@/lib/posts";
+import { postCover } from "@/lib/post-covers";
 
 export function PostCard({ post }: { post: Post }) {
   const t = useTranslations("blog");
+  const tImg = useTranslations("images");
   const fm = post.frontmatter;
+  const cover = postCover(post.slug);
 
   return (
     <Link
       href={`/blog/${post.slug}` as const}
       className="group flex h-full flex-col gap-3 border-b border-line pb-6 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber"
     >
+      {cover && (
+        <div className="relative mb-1 aspect-[16/9] w-full overflow-hidden bg-paper-2">
+          <Image
+            src={cover.src}
+            alt={tImg(cover.altKey)}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-cover transition duration-300 group-hover:scale-[1.02]"
+          />
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-muted">
         {fm.publishDate && (
           <time dateTime={fm.publishDate} className="mono">

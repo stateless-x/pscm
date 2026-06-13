@@ -37,7 +37,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("py-20 md:py-28 lg:py-32", bg, className)}
+      className={cn("py-14 md:py-28 lg:py-32", bg, className)}
     >
       <Container className={containerClassName}>
         {(number || eyebrow) && (

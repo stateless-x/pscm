@@ -46,6 +46,7 @@ export default async function SolutionsPage({
   setRequestLocale(locale);
   const t = await getTranslations("solutions");
   const tList = await getTranslations("solutionsList");
+  const tImg = await getTranslations("images");
 
   return (
     <>
@@ -55,6 +56,8 @@ export default async function SolutionsPage({
         subtitle={t("sub")}
         variant="compact"
         showPrimaryCTAs={false}
+        image="/assets/installed.webp"
+        imageAlt={tImg("installedAlt")}
       />
       <Section variant="light">
         <ol className="grid gap-4">

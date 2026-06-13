@@ -37,10 +37,11 @@ export const SITE = {
     th: "จันทร์–เสาร์ 08:00–17:00 น.",
     en: "Mon–Sat 08:00–17:00",
   },
-  // Embed URL — pinned to the registered address. The `q=` form is
-  // the documented iframe-friendly Maps embed source.
+  // Embed URL — Google "place" embed (pb= form) pinned to the actual
+  // registered business listing (Petkasem Ceramic Machine Co.,Ltd), not
+  // just the address string. Copied from the Maps "Embed a map" share.
   mapEmbedSrc:
-    "https://www.google.com/maps?q=60%2F7+Moo+9+Phutthamonthon+Sai+5+Rai+Khing+Sam+Phran+Nakhon+Pathom+73210&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.8383420019845!2d100.28675008296!3d13.728235263464049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2eabbf4229b0b%3A0x14274b01a4d01194!2sPetkasem%20ceramic%20machine%20co.%2Cltd!5e0!3m2!1sen!2sus!4v1781353621118!5m2!1sen!2sus",
   // Human-facing share URL for the "open in Google Maps" link below
   // the embed.
   mapShareUrl: "https://maps.app.goo.gl/fXwbbptdVaAfJ63dA",

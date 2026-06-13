@@ -3,9 +3,10 @@ import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
-import { LanguageToggle } from "./LanguageToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { cn } from "@/lib/cn";
 
 type Route =
   | "/"
@@ -41,7 +42,13 @@ const NAV_ITEMS: { href: Route; key: NavKey }[] = [
 export function MobileNav() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const phone = SITE.phones[0];
+
+  // Active when the path matches exactly (home) or is a section the current
+  // page lives under (e.g. /products/ball-mill highlights "Machines").
+  const isActive = (href: Route) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -72,25 +79,34 @@ export function MobileNav() {
             </Dialog.Close>
           </div>
 
-          <nav className="flex-1 overflow-y-auto px-5 py-6">
-            <ul className="flex flex-col gap-1">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.key}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block py-3 text-lg text-text-invert hover:text-amber"
-                  >
-                    {t(item.key)}
-                  </Link>
-                </li>
-              ))}
+          <nav className="flex-1 overflow-y-auto px-5 py-4">
+            <ul className="flex flex-col divide-y divide-line-dark/60">
+              {NAV_ITEMS.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <li key={item.key}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "flex items-center border-l-2 py-3.5 pl-3 text-lg transition",
+                        active
+                          ? "border-amber font-semibold text-amber"
+                          : "border-transparent text-text-invert hover:border-line-dark hover:text-amber",
+                      )}
+                    >
+                      {t(item.key)}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
-            <div className="mt-6 flex items-center gap-3 border-t border-line-dark pt-6">
-              <LanguageToggle />
-              <span className="mono text-[10px] uppercase tracking-wider text-text-invert-muted">
-                TH / EN
+            <div className="mt-6 flex items-center justify-between border-t border-line-dark pt-6">
+              <span className="label-th text-xs font-semibold tracking-[0.08em] text-text-invert-muted">
+                {t("language")}
               </span>
+              <LanguageSwitcher />
             </div>
           </nav>
 

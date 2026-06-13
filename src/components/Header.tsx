@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { MobileNav } from "./MobileNav";
-import { LanguageToggle } from "./LanguageToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { PscmMark } from "./PscmMark";
 
 const NAV_ITEMS = [
   { href: "/products", key: "products" },
@@ -24,12 +25,9 @@ export function Header() {
           className="flex items-center gap-2.5 mr-auto lg:mr-8"
           aria-label="Petkasem Ceramic Machine"
         >
-          <span className="grid h-9 w-9 shrink-0 place-items-center bg-amber text-ink ring-1 ring-amber-strong">
-            <span className="mono text-base font-bold">P</span>
-          </span>
-          <span className="mono hidden text-[11px] uppercase tracking-[0.22em] text-text-invert sm:inline">
-            PSCM
-          </span>
+          {/* PSCM stamp mark — inline so it inherits currentColor (amber).
+              The mark already reads "PSCM", so no separate text label. */}
+          <PscmMark className="h-7 w-auto shrink-0 text-amber" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-5 mr-auto">
@@ -45,7 +43,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <LanguageToggle />
+          <LanguageSwitcher />
           <Link
             href="/contact"
             className="inline-flex h-10 items-center whitespace-nowrap bg-amber px-4 text-sm font-semibold text-ink hover:bg-amber-strong"

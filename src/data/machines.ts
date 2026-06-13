@@ -109,7 +109,7 @@ export const machines: Machine[] = [
       th: ["บอลมิล", "หม้อบดบอลมิล", "เครื่องบดบอลมิล", "พอตมิล", "พ็อตมิล", "หม้อบดละเอียด", "หม้อบดเซรามิก", "หม้อบดไฮอลูมิน่า", "เครื่องบดบอล", "บอลมิลเซรามิก"],
       en: ["ball mill", "ceramic ball mill", "pot mill", "rapid mill", "ball mill machine", "alumina ball mill", "glaze ball mill", "lab ball mill", "wet ball mill"],
     },
-    images: [],
+    images: ["/machines/ball-mill.webp"],
   },
   {
     slug: "filter-press",
@@ -168,7 +168,7 @@ export const machines: Machine[] = [
       th: ["ฟิลเตอร์เพรส", "ฟิลเตอร์ เพรส", "เครื่องอัดตะกอน", "เครื่องรีดตะกอน", "เครื่องบีบอัดตะกอน", "เครื่องรีดน้ำตะกอน", "เครื่องอัดกากตะกอน", "ฟิลเตอร์เพรสน้ำเสีย", "เครื่องอัดตะกอนแบบแผ่น"],
       en: ["filter press", "plate filter press", "filter press machine", "sludge dewatering filter press", "chamber filter press", "membrane filter press", "industrial filter press", "ceramic filter press"],
     },
-    images: [],
+    images: ["/machines/filter-press.webp"],
   },
   {
     slug: "grinder",
@@ -212,7 +212,7 @@ export const machines: Machine[] = [
       th: ["เครื่องบด", "เครื่องบดวัตถุดิบ", "เครื่องบดละเอียด", "เครื่องบดเซรามิก", "เครื่องโม่", "เครื่องบดผง", "เครื่องบดแร่", "เครื่องบดวัตถุดิบเซรามิก", "เครื่องตีป่น"],
       en: ["grinder", "grinding machine", "raw material grinder", "ceramic grinder", "industrial grinder", "fine grinder", "pulverizer", "material grinder"],
     },
-    images: [],
+    images: ["/machines/grinder.webp"],
   },
   {
     slug: "magnetic-sieve",
@@ -267,7 +267,7 @@ export const machines: Machine[] = [
       th: ["ตะแกรงแม่เหล็ก", "ตะแกรงกรองน้ำดิน", "ตะแกรงกรองน้ำเคลือบ", "แม่เหล็กดักเหล็ก", "แม่เหล็กแยกเหล็ก", "เครื่องคัดแยกเหล็ก", "ตะแกรงแม่เหล็กกรองน้ำดิน", "ตัวกรองแม่เหล็ก"],
       en: ["magnetic sieve", "magnetic separator", "magnetic filter", "magnetic trap", "ceramic slip magnetic separator", "glaze magnetic filter", "iron trap", "magnet separator"],
     },
-    images: [],
+    images: ["/machines/magnetic-sieve.webp"],
   },
 
   // === CROSS-INDUSTRY HERO ===
@@ -338,7 +338,7 @@ export const machines: Machine[] = [
       th: ["เครื่องอัดไฮดรอลิก", "เครื่องอัดไฮดรอลิค", "เครื่องอัดไฮโดรลิค", "แท่นอัดไฮดรอลิก", "ไฮดรอลิคเพรส", "เครื่องเพรสไฮดรอลิก", "เครื่องอัดน้ำมัน", "เครื่องอัดแรงดันสูง", "เครื่องกดไฮดรอลิก"],
       en: ["hydraulic press", "hydraulic press machine", "tile hydraulic press", "shop press", "h-frame press", "industrial hydraulic press", "refractory hydraulic press", "ceramic hydraulic press"],
     },
-    images: [],
+    images: ["/machines/hydraulic-press.webp"],
   },
 
   // === MADE-TO-ORDER & ON-REQUEST (expanded per spec build note) ===
@@ -384,7 +384,7 @@ export const machines: Machine[] = [
       th: ["เครื่องรีดดิน", "เครื่องรีดดินสุญญากาศ", "พักมิล", "เครื่องนวดดิน", "เครื่องอัดคลุกผสม", "เครื่องรีดดินเหนียว", "เครื่องผสมดิน", "เครื่องอัดดิน", "vacuum pug mill"],
       en: ["pug mill", "de-airing pug mill", "vacuum pug mill", "clay extruder", "clay pug mill", "pugmill", "clay mixer extruder", "brick pug mill"],
     },
-    images: [],
+    images: ["/machines/pug-mill.webp"],
   },
   {
     slug: "blunger",
@@ -427,7 +427,7 @@ export const machines: Machine[] = [
       th: ["เครื่องกวนน้ำดิน", "เครื่องกวนสลิป", "เครื่องผสมน้ำดิน", "ถังกวนน้ำดิน", "เครื่องกวนเคลือบ", "บลังเจอร์", "เครื่องปั่นน้ำดิน", "เครื่องกวนน้ำเคลือบ"],
       en: ["blunger", "slip mixer", "slurry mixer", "slip blunger", "ceramic slurry agitator", "slip agitator", "propeller mixer", "slip stirrer"],
     },
-    images: [],
+    images: ["/machines/blunger.webp"],
   },
   {
     slug: "jigger-roller",
@@ -473,7 +473,7 @@ export const machines: Machine[] = [
       th: ["เครื่องจิกเกอร์", "เครื่องโรลเลอร์", "จิกเกอร์", "เครื่องขึ้นรูปจาน", "เครื่องขึ้นรูปชาม", "เครื่องขึ้นรูปด้วยใบมีด", "เครื่องโรลเลอร์เฮด", "เครื่องขึ้นรูปจิกเกอร์", "เครื่องขึ้นรูปถ้วยชาม"],
       en: ["jigger machine", "roller head machine", "jiggering machine", "roller machine ceramic", "jigger roller", "plate forming machine", "bowl forming machine", "ceramic forming machine"],
     },
-    images: [],
+    images: ["/machines/jigger-roller.webp"],
   },
   {
     slug: "ram-press",
@@ -523,7 +523,7 @@ export const machines: Machine[] = [
       th: ["แร็มเพรส", "เครื่องแร็มเพรส", "ram press", "เครื่องอัดแร็มเพรส", "เครื่องกดขึ้นรูปดิน", "เครื่องกดดินขึ้นรูป", "เครื่องอัดขึ้นรูปดิน", "เครื่องกดดินระบบไฮดรอลิก"],
       en: ["ram press", "ram press machine", "ceramic ram press", "hydraulic ram press", "refractory ram press", "clay ram press"],
     },
-    images: [],
+    images: ["/machines/ram-press.webp"],
   },
   {
     slug: "vibrating-screen",
@@ -572,7 +572,7 @@ export const machines: Machine[] = [
       th: ["ตะแกรงสั่น", "ตะแกรงสั่นคัดแยก", "เครื่องร่อนสั่น", "ตะแกรงสั่นวงกลม", "เครื่องคัดขนาดผง", "ตะแกรงร่อน", "เครื่องร่อนแยกขนาด", "ไวเบรติ้งสกรีน", "ตะแกรงสั่นเซรามิก", "เครื่องแยกผงสั่น"],
       en: ["vibrating screen", "vibrating sieve", "vibration screen", "vibratory separator", "circular vibrating screen", "rotary vibrating sieve", "powder vibrating screen", "industrial vibrating screen"],
     },
-    images: [],
+    images: ["/machines/vibrating-screen.webp"],
   },
   {
     slug: "mixer",
@@ -615,7 +615,7 @@ export const machines: Machine[] = [
       th: ["เครื่องผสม", "เครื่องผสมวัตถุดิบ", "เครื่องผสมแห้ง", "เครื่องผสมเปียก", "เครื่องผสมอุตสาหกรรม", "มิกเซอร์", "เครื่องผสมความเร็วสูง", "เครื่องคลุกผสม", "เครื่องผสมผง"],
       en: ["mixer", "mixing machine", "industrial mixer", "high speed mixer", "powder mixer", "dry mixer", "wet mixer", "ribbon blender", "intensive mixer"],
     },
-    images: [],
+    images: ["/machines/mixer.webp"],
   },
   {
     slug: "jaw-crusher",
@@ -658,7 +658,7 @@ export const machines: Machine[] = [
       th: ["เครื่องบดกราม", "เครื่องบดขากรรไกร", "เครื่องโม่หิน", "เครื่องบดหิน", "เครื่องบดหินกราม", "เครื่องบดแร่", "เครื่องบดปฐมภูมิ", "เครื่องบดวัตถุดิบกราม", "ครัชเชอร์กราม"],
       en: ["jaw crusher", "primary jaw crusher", "stone jaw crusher", "rock crusher", "laboratory jaw crusher", "mini jaw crusher", "jaw crusher machine", "stone crusher"],
     },
-    images: [],
+    images: ["/machines/jaw-crusher.webp"],
   },
   {
     slug: "hammer-mill",
@@ -708,7 +708,7 @@ export const machines: Machine[] = [
       th: ["เครื่องบดค้อน", "แฮมเมอร์มิล", "เครื่องบดแบบค้อนเหวี่ยง", "เครื่องบดค้อนเหวี่ยง", "เครื่องตีป่น", "เครื่องบดผงค้อน", "เครื่องโม่ค้อน", "hammer crusher"],
       en: ["hammer mill", "hammer crusher", "hammer mill machine", "impact hammer mill", "hammer mill grinder", "fine hammer mill", "industrial hammer mill"],
     },
-    images: [],
+    images: ["/machines/hammer-mill.webp"],
   },
   {
     slug: "glaze-spray-booth",
@@ -748,7 +748,7 @@ export const machines: Machine[] = [
       th: ["ตู้พ่นเคลือบ", "ตู้พ่นน้ำเคลือบ", "เครื่องพ่นน้ำเคลือบ", "ตู้พ่นเคลือบเซรามิก", "ตู้พ่นเคลือบม่านน้ำ", "ห้องพ่นเคลือบ", "บูธพ่นเคลือบ", "ตู้พ่นเคลือบระบบม่านน้ำ"],
       en: ["glaze spray booth", "glaze spraying booth", "water curtain glaze booth", "ceramic glaze booth", "glaze application booth", "water curtain spray booth", "glaze spraying cabinet"],
     },
-    images: [],
+    images: ["/machines/glaze-spray-booth.webp"],
   },
   {
     slug: "conveyor",
@@ -791,7 +791,7 @@ export const machines: Machine[] = [
       th: ["สายพานลำเลียง", "ระบบสายพานลำเลียง", "คอนเวเยอร์", "เบลท์คอนเวเยอร์", "สายพานคอนเวเยอร์", "ระบบลำเลียง", "ลูกกลิ้งลำเลียง", "สกรูลำเลียง", "สายพานลำเลียงโรงงาน"],
       en: ["conveyor", "conveyor system", "belt conveyor", "belt conveyor system", "industrial conveyor", "roller conveyor", "material handling conveyor", "screw conveyor", "chain conveyor"],
     },
-    images: [],
+    images: ["/machines/conveyor.webp"],
   },
   {
     slug: "spray-dryer",
@@ -841,7 +841,7 @@ export const machines: Machine[] = [
       th: ["สเปรย์ดรายเออร์", "เครื่องอบแห้งแบบพ่นฝอย", "เครื่องทำผงแห้งแบบพ่นฝอย", "เครื่องทำแห้งแบบพ่นฝอย", "เครื่องอบผง", "สเปรย์ดราย", "เครื่องอบสเปรย์", "เครื่องผลิตผงแห้งจากน้ำดิน"],
       en: ["spray dryer", "spray drying machine", "spray drier", "industrial spray dryer", "ceramic spray dryer", "atomizer dryer", "slip spray dryer", "powder spray dryer"],
     },
-    images: [],
+    images: ["/machines/spray-dryer.webp"],
   },
   {
     slug: "dryer-chamber",
@@ -881,7 +881,7 @@ export const machines: Machine[] = [
       th: ["ตู้อบ", "ห้องอบแห้ง", "ตู้อบแห้ง", "ตู้อบลมร้อน", "ตู้อบอุตสาหกรรม", "เตาอบแห้ง", "ห้องอบดิน", "ตู้อบเซรามิก", "ตู้อบไฟฟ้า"],
       en: ["drying chamber", "drying oven", "drying cabinet", "hot air oven", "industrial drying oven", "ceramic dryer", "tray dryer", "batch dryer", "drying room"],
     },
-    images: [],
+    images: ["/machines/dryer-chamber.webp"],
   },
   {
     slug: "dust-press",
@@ -930,7 +930,7 @@ export const machines: Machine[] = [
       th: ["เครื่องอัดผงแห้ง", "เครื่องอัดผง", "ดัสท์เพรส", "เครื่องอัดกระเบื้อง", "เครื่องอัดแห้ง", "เครื่องอัดผงเซรามิก", "เครื่องอัดผงทนไฟ", "เครื่องอัดอิฐทนไฟ"],
       en: ["dust press", "dry press", "dust pressing machine", "tile press", "ceramic dust press", "powder press", "refractory dust press", "dry powder press", "hydraulic tile press"],
     },
-    images: [],
+    images: ["/machines/dust-press.webp"],
   },
   {
     slug: "kiln",
@@ -970,7 +970,7 @@ export const machines: Machine[] = [
       th: ["เตาเผา", "เตาเผาเซรามิก", "เตาเผาไฟฟ้า", "เตาเผาแก๊ส", "เตาเผาเครื่องปั้นดินเผา", "เตาเผาไฟสูง", "เตาเผาอุตสาหกรรม", "เตาอบเซรามิก", "เตาเผาเคลือบ", "เตาเผาชัทเทิล"],
       en: ["kiln", "ceramic kiln", "electric kiln", "gas kiln", "pottery kiln", "shuttle kiln", "tunnel kiln", "industrial kiln", "high temperature kiln", "firing kiln"],
     },
-    images: [],
+    images: ["/machines/kiln.webp"],
   },
   {
     slug: "potters-wheel",
@@ -1013,7 +1013,7 @@ export const machines: Machine[] = [
       th: ["แป้นหมุน", "แป้นหมุนปั้นดิน", "แป้นหมุนไฟฟ้า", "แป้นปั้นไฟฟ้า", "แป้นหมุนเซรามิก", "แป้นปั้น", "แป้นหมุนปั้นเซรามิก", "แป้นหมุนเครื่องปั้นดินเผา", "พ็อตเตอร์วีล"],
       en: ["potter's wheel", "potters wheel", "pottery wheel", "electric pottery wheel", "ceramic wheel", "throwing wheel", "studio pottery wheel"],
     },
-    images: [],
+    images: ["/machines/potters-wheel.webp"],
   },
 ];
 
@@ -1036,6 +1036,19 @@ export const machineBySlug = (slug: string) =>
  */
 export const machinePopularName = (m: Machine, locale: Locale) =>
   m.aliases?.[locale]?.[0] ?? m.name[locale];
+
+/**
+ * Display form of the popular name. English aliases are stored lowercase
+ * for SEO synonym matching ("ball mill", "filter press"); on headings and
+ * links we want them Title-Cased ("Ball Mill"). Thai has no letter case,
+ * so it passes through untouched. Use this anywhere the popular name is
+ * shown to a human; keep `machinePopularName` for raw alias text.
+ */
+export const machineDisplayName = (m: Machine, locale: Locale) => {
+  const popular = machinePopularName(m, locale);
+  if (locale !== "en") return popular;
+  return popular.replace(/\b\p{L}/gu, (c) => c.toUpperCase());
+};
 
 export const allStages: Stage[] = [
   "crushing",

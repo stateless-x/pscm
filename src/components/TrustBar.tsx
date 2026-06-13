@@ -18,7 +18,7 @@ export function TrustBar() {
   return (
     <section className="border-y border-line bg-paper py-14 md:py-20">
       <Container>
-        <div className="grid grid-cols-1 divide-y divide-line md:grid-cols-4 md:divide-y-0 md:divide-x">
+        <div className="reveal-stagger grid grid-cols-1 divide-y divide-line md:grid-cols-4 md:divide-y-0 md:divide-x">
           {ITEMS.map((item, i) => (
             <div
               key={item.labelKey}

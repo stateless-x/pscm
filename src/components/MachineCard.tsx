@@ -1,5 +1,5 @@
 import type { Machine } from "@/data/machines";
-import { machinePopularName } from "@/data/machines";
+import { machineDisplayName } from "@/data/machines";
 import { Link } from "@/i18n/navigation";
 import { MachineImage } from "./MachineImage";
 
@@ -9,8 +9,8 @@ import { MachineImage } from "./MachineImage";
 // noise on a scannable grid. They live on the product detail page
 // where buyers are evaluating, not scanning.
 //
-// Whole card is the link. Hover lifts the border a touch and scales
-// the image subtly; no SaaS-glow.
+// Whole card is the link. Hover lifts the image block (slight rise + soft
+// shadow), tightens the ring, and scales the image subtly; no SaaS-glow.
 export function MachineCard({
   machine,
   locale,
@@ -20,14 +20,14 @@ export function MachineCard({
   locale: "th" | "en";
   priority?: boolean;
 }) {
-  const name = machinePopularName(machine, locale);
+  const name = machineDisplayName(machine, locale);
 
   return (
     <Link
       href={`/products/${machine.slug}` as const}
       className="group flex h-full flex-col gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber"
     >
-      <div className="overflow-hidden ring-1 ring-line/60 transition group-hover:ring-text/30">
+      <div className="overflow-hidden ring-1 ring-line/60 transition duration-300 group-hover:-translate-y-1 group-hover:shadow-lg group-hover:shadow-ink/5 group-hover:ring-text/30">
         <div className="transition duration-300 group-hover:scale-[1.02]">
           <MachineImage machine={machine} locale={locale} priority={priority} />
         </div>

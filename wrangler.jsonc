@@ -1,0 +1,22 @@
+{
+  // Static-assets deploy for the Next.js `output: "export"` build.
+  //
+  // Why this file exists: without a wrangler config, `wrangler deploy`
+  // auto-detects Next.js as a SERVER app and runs the OpenNext adapter,
+  // which looks for `.next/standalone/.next/server/pages-manifest.json` —
+  // a file static export never produces (build fails with ENOENT).
+  //
+  // This config pins an assets-only deploy: Wrangler just uploads `out/`
+  // (produced by `bun run build`) and serves it. No Worker entrypoint
+  // (`main`), so no server runtime and no OpenNext.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pscm",
+  "compatibility_date": "2026-06-14",
+  "assets": {
+    "directory": "./out",
+    // Serve the exported 404 page on an unmatched path. NOT
+    // "single-page-application" — this is a multi-page static site, and
+    // SPA mode would wrongly return index.html (HTTP 200) for every miss.
+    "not_found_handling": "404-page"
+  }
+}

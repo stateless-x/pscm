@@ -60,26 +60,27 @@ export default async function SolutionsPage({
         imageAlt={tImg("installedAlt")}
       />
       <Section variant="light">
-        <ol className="grid gap-4">
+        <ol className="grid gap-5">
           {SOLUTIONS.map((s, i) => (
             <li key={s.painKey}>
               <Link
                 href={s.href}
-                className="group grid gap-3 border border-line bg-paper-2 p-5 transition hover:border-amber hover:bg-paper md:grid-cols-[auto_1fr_auto] md:items-center md:gap-6 md:p-6"
+                className="group grid gap-4 border border-line bg-paper-2 p-6 transition hover:border-amber hover:bg-paper md:grid-cols-[auto_1fr_auto] md:items-center md:gap-8 md:p-8"
               >
-                <span className="mono text-xs uppercase tracking-[0.18em] text-amber-strong md:self-start">
+                <span className="mono text-sm uppercase tracking-[0.18em] text-amber-strong md:self-start">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div className="flex flex-col gap-1.5">
-                  <h3 className="text-base font-semibold leading-snug text-text">
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-semibold leading-snug text-text md:text-xl">
                     {tList(s.painKey)}
                   </h3>
-                  <p className="text-sm text-text-muted">{tList(s.solKey)}</p>
+                  <p className="text-base leading-relaxed text-text-muted">
+                    {tList(s.solKey)}
+                  </p>
                 </div>
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-text-muted transition group-hover:text-amber-strong md:justify-self-end">
-                  →
+                <span className="inline-flex items-center gap-2 text-base font-medium text-text-muted transition group-hover:text-amber-strong md:justify-self-end">
                   <ArrowRight
-                    size={18}
+                    size={20}
                     className="transition group-hover:translate-x-1"
                     aria-hidden="true"
                   />

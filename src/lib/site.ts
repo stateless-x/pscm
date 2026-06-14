@@ -10,7 +10,7 @@ export const SITE = {
     th: "เพชรเกษมจักรกลซีรามิค",
     en: "Petkasem Ceramic Machine",
   },
-  // TODO §15.7: confirm production domain
+  // Production domain — registered and live on Cloudflare (Jun 2026).
   url: "https://pscmceramic.com",
   foundedYear: 1986,
   address: {

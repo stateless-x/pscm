@@ -284,7 +284,7 @@ export default async function BlogPostPage({
       <CTABand />
 
       <ArticleJsonLd post={post} url={postUrl} locale={loc} />
-      <FaqJsonLd post={post} />
+      <FaqJsonLd faq={post.frontmatter.faq} />
       <BreadcrumbJsonLd
         items={[
           {

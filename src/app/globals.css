@@ -76,7 +76,11 @@ body {
    scale because Plex Sans Thai has the proportions for display use. */
 .display-h1 {
   font-size: clamp(2.5rem, 6.5vw, 5.5rem);
-  line-height: 0.98;
+  /* Thai stacks vowels + tone marks above the base glyph, so a sub-1
+     line-height (the usual Latin display trick) clips them against the
+     line above. 1.1 keeps marks clear while staying tight enough to read
+     as a display headline. */
+  line-height: 1.1;
   letter-spacing: -0.015em;
   font-weight: 700;
 }

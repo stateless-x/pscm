@@ -17,7 +17,7 @@ import { Nameplate } from "@/components/Nameplate";
 import { StageIcon } from "@/components/StageIcon";
 import { Link } from "@/i18n/navigation";
 import { SITE } from "@/lib/site";
-import { ProductJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { ProductJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/JsonLd";
 import { getPostsForMachine, type PostLocale } from "@/lib/posts";
 
 export function generateStaticParams() {
@@ -178,6 +178,14 @@ export default async function ProductDetailPage({
       <Section variant="alt">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
+            {machine.description && (
+              <div className="mb-8">
+                <div className="eyebrow text-text-muted">{t("overview")}</div>
+                <p className="mt-3 text-base leading-relaxed text-text">
+                  {machine.description[loc]}
+                </p>
+              </div>
+            )}
             <div className="eyebrow text-text-muted">{t("features")}</div>
             <ul className="mt-4 space-y-3">
               {machine.features[loc].map((f, i) => (
@@ -217,9 +225,54 @@ export default async function ProductDetailPage({
                 ))}
               </ul>
             </div>
+
+            {/* Spec table: explicitly a "typical industry range", NOT a fixed
+                PSCM spec. The note keeps it honest for a build-to-order maker. */}
+            {machine.specs && machine.specs.length > 0 && (
+              <div>
+                <div className="eyebrow text-text-muted">{t("specs")}</div>
+                <dl className="mt-3 divide-y divide-line border border-line bg-paper">
+                  {machine.specs.map((spec) => (
+                    <div
+                      key={spec.label.en}
+                      className="grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-3 px-3 py-2.5"
+                    >
+                      <dt className="text-xs font-medium text-text-muted">
+                        {spec.label[loc]}
+                      </dt>
+                      <dd className="text-xs text-text">{spec.value[loc]}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="mt-2 text-[11px] leading-snug text-text-muted/75">
+                  {t("specsNote")}
+                </p>
+              </div>
+            )}
           </aside>
         </div>
       </Section>
+
+      {/* FAQ: honest Q&A, rendered on-page + as FAQPage JSON-LD */}
+      {machine.faq && machine.faq.length > 0 && (
+        <Section eyebrow={t("faq")} title={machine.name[loc]} variant="light">
+          <dl className="mx-auto grid max-w-3xl gap-4">
+            {machine.faq.map((item) => (
+              <div
+                key={item.q.en}
+                className="border border-line bg-paper p-5"
+              >
+                <dt className="text-base font-semibold leading-snug text-text">
+                  {item.q[loc]}
+                </dt>
+                <dd className="mt-2 text-base leading-relaxed text-text-muted">
+                  {item.a[loc]}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Section>
+      )}
 
       {/* Related blog posts (SEO cross-link: products ↔ articles) */}
       {relatedPosts.length > 0 && (
@@ -282,6 +335,12 @@ export default async function ProductDetailPage({
       <CTABand />
 
       <ProductJsonLd machine={machine} locale={loc} />
+      <FaqJsonLd
+        faq={machine.faq?.map((item) => ({
+          q: item.q[loc],
+          a: item.a[loc],
+        }))}
+      />
       <BreadcrumbJsonLd
         items={[
           {

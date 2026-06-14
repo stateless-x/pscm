@@ -68,7 +68,7 @@ export function ProductJsonLd({
     "@context": "https://schema.org",
     "@type": "Product",
     name: machine.name[locale],
-    description: machine.short[locale],
+    description: machine.description?.[locale] ?? machine.short[locale],
     category: machine.category[locale],
     // Absolute image URL when a real photo exists — lets the machine show in
     // Google's product rich results and image search. Omitted for machines
@@ -109,8 +109,10 @@ export function BreadcrumbJsonLd({
   return <Script data={data} />;
 }
 
-export function FaqJsonLd({ post }: { post: Post }) {
-  const faq = post.frontmatter.faq;
+// Accepts a flat {q, a}[] so it works for both blog posts (frontmatter.faq)
+// and machine pages (machine.faq mapped to the active locale). Callers map
+// their own shape to this before passing it in.
+export function FaqJsonLd({ faq }: { faq?: { q: string; a: string }[] }) {
   if (!faq || faq.length === 0) return null;
   const data = {
     "@context": "https://schema.org",

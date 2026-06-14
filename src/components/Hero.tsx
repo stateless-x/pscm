@@ -119,22 +119,22 @@ export function Hero({
       <Container className="relative">
         <div className="max-w-5xl">
           {eyebrow && (
-            <p className="rise-in mono text-[11px] uppercase tracking-[0.22em] text-amber/90">
+            <p className="rise-in label-th inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-amber/90 before:h-px before:w-8 before:bg-amber/50 before:content-['']">
               {eyebrow}
             </p>
           )}
           <h1
             className={cn(
-              "rise-in rise-in-delay-1 mt-6 font-bold text-text-invert",
+              "rise-in rise-in-delay-1 mt-7 font-bold text-text-invert md:mt-8",
               isDefault
                 ? "display-h1"
-                : "text-[clamp(1.875rem,4vw,2.75rem)] leading-[1.05] tracking-tight",
+                : "text-[clamp(1.875rem,4vw,2.75rem)] leading-[1.15] tracking-tight",
             )}
           >
             {title}
           </h1>
           {subtitle && (
-            <p className="rise-in rise-in-delay-2 mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-text-invert/80">
+            <p className="rise-in rise-in-delay-2 mt-7 max-w-2xl text-lg leading-relaxed text-text-invert/80 md:mt-8 md:text-xl">
               {subtitle}
             </p>
           )}

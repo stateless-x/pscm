@@ -1,5 +1,9 @@
 # SEO setup checklist
 
+Last verified: 2026-09-10 against the current Next.js static export. When this
+document and the implementation disagree, `src/lib/site.ts`, route code, and
+the generated files in `out/` are authoritative.
+
 One-time setup of the free Google tools every B2B site should have
 before launch. Do these in order. Total time: about 60 to 90 minutes
 spread across 1 or 2 sessions.
@@ -115,8 +119,8 @@ results in Google search. Critical for Thai B2B buyers searching
    - **Phone**: 02-431-2100
    - **Website**: `https://pscmceramic.com/th/`
    - **Description** (750 characters): write naturally in Thai.
-     Mention since 1986, design + build + repair, in-house parts
-     production, primary machine types (หม้อบด, ฟิลเตอร์เพรส,
+     Mention since 1986, design + build, repairs only for machines the company
+     manufactured, and spare-parts enquiries via LINE. Include primary machine types (หม้อบด, ฟิลเตอร์เพรส,
      ตะแกรงแม่เหล็ก, เครื่องอัดไฮดรอลิก). Avoid superlatives.
      Avoid "ผู้นำ", "ที่ดีที่สุด" — Google considers them red flags.
 
@@ -224,3 +228,29 @@ Then again at 6 months. Then quarterly.
 SEO is a freight train, not a switch. The work you do today shows
 results in 3 to 12 months. Stay patient. Stay honest in the content.
 The compound effect is real.
+
+---
+
+## Maintaining SEO facts in code
+
+Use one source for each kind of fact so the visible pages, JSON-LD, sitemap,
+and machine-readable reference do not contradict one another:
+
+1. Update company identity, contact details, service area, repair policy,
+   spare-parts policy, or international coordination in `src/lib/site.ts`.
+2. Update a machine once in `src/data/machines.ts`. Product pages,
+   `sitemap.xml`, and `llms.txt` are generated from that catalogue.
+3. Update page-level Thai and English copy in `messages/th.json` and
+   `messages/en.json`. Keep Thailand as the primary market in both languages.
+4. Do not recreate `public/llms.txt`; `src/app/llms.txt/route.ts` generates it
+   from the shared facts during `next build`.
+5. Run `npm run build`, then verify:
+   - `out/th/service/index.html` states the repair boundary and LINE path.
+   - One file under `out/th/products/` carries the same answer in visible FAQ
+     text and FAQ JSON-LD.
+   - `out/llms.txt` uses the same market and service boundaries.
+   - `out/sitemap.xml` lists the expected Thai and English canonical URLs.
+
+International work is not a second target market. It is considered case by
+case and requires an external export/shipping agent; the visible service page
+links to the coordinator at `https://pooh.fyi/`.

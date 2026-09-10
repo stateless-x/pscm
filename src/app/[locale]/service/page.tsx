@@ -8,6 +8,7 @@ import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
 import { Container } from "@/components/Container";
 import { WorkshopImage } from "@/components/WorkshopImage";
+import { SITE } from "@/lib/site";
 import {
   Brain,
   Clock,
@@ -25,7 +26,7 @@ export async function generateMetadata({
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "service" });
   return {
-    title: t("h1"),
+    title: t("seoTitle"),
     description: t("sub"),
     alternates: buildAlternates(locale, "service"),
   };
@@ -40,11 +41,16 @@ export default async function ServicePage({
   setRequestLocale(locale);
   const t = await getTranslations("service");
   const tImg = await getTranslations("images");
+  const loc = locale as "th" | "en";
 
   const reasons: { icon: LucideIcon; title: string; body: string }[] = [
     { icon: Brain, title: t("why1Title"), body: t("why1Body") },
     { icon: Clock, title: t("why2Title"), body: t("why2Body") },
-    { icon: Package, title: t("why3Title"), body: t("why3Body") },
+    {
+      icon: Package,
+      title: t("why3Title"),
+      body: SITE.servicePolicy.parts[loc],
+    },
     { icon: CalendarClock, title: t("why4Title"), body: t("why4Body") },
   ];
 
@@ -60,12 +66,25 @@ export default async function ServicePage({
       <Section title={t("scopeTitle")} variant="light">
         <ul className="grid gap-3">
           <li className="border-l-2 border-amber bg-paper-2 p-4 text-base text-text">
-            {t("scope1")}
+            {SITE.servicePolicy.repair[loc]}
           </li>
           <li className="border-l-2 border-amber bg-paper-2 p-4 text-base text-text">
             {t("scope2")}
           </li>
         </ul>
+      </Section>
+      <Section title={t("internationalTitle")} variant="alt">
+        <div className="max-w-3xl space-y-3 text-base leading-relaxed text-text">
+          <p>{SITE.servicePolicy.international[loc]}</p>
+          <a
+            href={SITE.servicePolicy.internationalCoordinatorUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex font-medium text-amber-strong underline decoration-amber/50 underline-offset-4 hover:decoration-amber-strong"
+          >
+            {t("internationalLink")}
+          </a>
+        </div>
       </Section>
       <section className="bg-paper pb-4">
         <Container>

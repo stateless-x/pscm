@@ -20,7 +20,7 @@ export function OrganizationJsonLd({ locale }: { locale: "th" | "en" }) {
     alternateName: locale === "th" ? SITE.name.en : SITE.name.th,
     url: SITE.url,
     foundingDate: String(SITE.foundedYear),
-    areaServed: "TH",
+    areaServed: SITE.servicePolicy.areaServed,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.addressParts.streetAddress,
@@ -39,7 +39,7 @@ export function LocalBusinessJsonLd({ locale }: { locale: "th" | "en" }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": `${SITE.url}#localbusiness`,
+    "@id": `${SITE.url}#organization`,
     name: SITE.name[locale],
     url: SITE.url,
     telephone: SITE.phones[0].tel,
@@ -82,8 +82,7 @@ export function ProductJsonLd({
     },
     manufacturer: {
       "@type": "Organization",
-      name: SITE.name.en,
-      url: SITE.url,
+      "@id": `${SITE.url}#organization`,
     },
     countryOfOrigin: "TH",
     sku: machine.model ?? machine.slug.toUpperCase(),
@@ -148,13 +147,13 @@ export function ArticleJsonLd({
     dateModified: fm.lastUpdated ?? fm.publishDate,
     author: {
       "@type": "Organization",
+      "@id": `${SITE.url}#organization`,
       name: fm.author ?? SITE.name[locale],
-      url: SITE.url,
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE.url}#organization`,
       name: SITE.name[locale],
-      url: SITE.url,
       logo: {
         "@type": "ImageObject",
         url: `${SITE.url}/logo.png`,

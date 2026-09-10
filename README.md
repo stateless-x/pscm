@@ -47,7 +47,8 @@ src/
       solutions/page.tsx        # need → machine map
       custom/page.tsx           # OEM
       service/page.tsx          # repair (highest-intent page)
-      contact/page.tsx          # phone + LINE + form + map
+      contact/page.tsx          # phone + LINE + map
+    llms.txt/route.ts           # generated machine-readable company reference
     sitemap.ts
     robots.ts
   components/                   # Hero, Nameplate, MachineCard, etc.
@@ -66,6 +67,23 @@ Append one object to `machines` in `src/data/machines.ts`. Set `status`
 wording. When you have a photo, drop it under `public/machines/` and add
 its path to that machine's `images: []` array. `MachineImage` swaps the
 placeholder for the real image automatically.
+
+## SEO content sources of truth
+
+- Company identity, contact details, market, repair boundary, spare-parts
+  policy, and international coordination live in `src/lib/site.ts`.
+- Product facts and product-page SEO content live in `src/data/machines.ts`.
+- Thai and English page copy lives in `messages/th.json` and
+  `messages/en.json`.
+- `src/app/llms.txt/route.ts`, JSON-LD, and product FAQ output read those
+  sources. Do not add a hand-written `public/llms.txt`.
+- Add a machine once in `src/data/machines.ts`; the product route, sitemap,
+  and llms.txt include it automatically. After changing an entity-level
+  policy, run `npm run build` and spot-check `out/th/service/index.html`, one
+  product page, `out/llms.txt`, and `out/sitemap.xml`.
+
+For production indexing and local-search setup, follow
+[`docs/seo-setup-checklist.md`](./docs/seo-setup-checklist.md).
 
 ## Open items
 

@@ -37,6 +37,22 @@ export const SITE = {
     th: "จันทร์–เสาร์ 08:00–17:00 น.",
     en: "Mon–Sat 08:00–17:00",
   },
+  servicePolicy: {
+    areaServed: "TH",
+    repair: {
+      th: "รับซ่อมและบำรุงรักษาเฉพาะเครื่องจักรที่เพชรเกษมจักรกลซีรามิคเป็นผู้ผลิต",
+      en: "Repair and maintenance are limited to machines manufactured by Petkasem Ceramic Machine.",
+    },
+    parts: {
+      th: "จำหน่ายอะไหล่สำหรับเครื่องที่เราผลิต กรุณาส่งรูปป้ายชื่อเครื่อง รุ่น และรายละเอียดที่ต้องการทาง LINE เพื่อเช็กอะไหล่",
+      en: "We sell spare parts for machines we manufacture. Send the nameplate, model, and part details via LINE so we can check availability.",
+    },
+    international: {
+      th: "ให้บริการลูกค้าในประเทศไทยเป็นหลัก งานต่างประเทศรับพิจารณาเป็นกรณีและต้องมีตัวแทนภายนอกช่วยประสานงานส่งออกและขนส่ง",
+      en: "We primarily serve customers in Thailand. International orders are considered case by case and require a third-party export and shipping agent.",
+    },
+    internationalCoordinatorUrl: "https://pooh.fyi",
+  },
   // Embed URL — Google "place" embed (pb= form) pinned to the actual
   // registered business listing (Petkasem Ceramic Machine Co.,Ltd), not
   // just the address string. Copied from the Maps "Embed a map" share.

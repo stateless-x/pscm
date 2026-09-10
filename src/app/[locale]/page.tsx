@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "home" });
   return {
-    title: t("h1"),
+    title: t("seoTitle"),
     description: t("sub"),
     alternates: buildAlternates(locale),
   };

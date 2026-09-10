@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { hasLocale, useTranslations } from "next-intl";
+import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Check, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { routing } from "@/i18n/routing";
@@ -67,6 +67,22 @@ export default async function ProductDetailPage({
     .slice(0, 3);
 
   const relatedPosts = getPostsForMachine(machine.slug, loc as PostLocale, 3);
+
+  // Parts/repair policy is entity-level business truth. Keep it in SITE so
+  // every product page and its JSON-LD changes together when policy changes.
+  const faq = machine.faq?.map((item) => {
+    const question = item.q.en.toLowerCase();
+    const isPartsAndRepair =
+      question.includes("parts") &&
+      (question.includes("repair") || question.includes("service"));
+
+    return {
+      q: item.q[loc],
+      a: isPartsAndRepair
+        ? `${SITE.servicePolicy.parts[loc]} ${SITE.servicePolicy.repair[loc]}`
+        : item.a[loc],
+    };
+  });
 
   const phone = SITE.phones[0];
 
@@ -254,19 +270,19 @@ export default async function ProductDetailPage({
       </Section>
 
       {/* FAQ: honest Q&A, rendered on-page + as FAQPage JSON-LD */}
-      {machine.faq && machine.faq.length > 0 && (
+      {faq && faq.length > 0 && (
         <Section eyebrow={t("faq")} title={machine.name[loc]} variant="light">
           <dl className="mx-auto grid max-w-3xl gap-4">
-            {machine.faq.map((item) => (
+            {faq.map((item) => (
               <div
-                key={item.q.en}
+                key={item.q}
                 className="border border-line bg-paper p-5"
               >
                 <dt className="text-base font-semibold leading-snug text-text">
-                  {item.q[loc]}
+                  {item.q}
                 </dt>
                 <dd className="mt-2 text-base leading-relaxed text-text-muted">
-                  {item.a[loc]}
+                  {item.a}
                 </dd>
               </div>
             ))}
@@ -335,12 +351,7 @@ export default async function ProductDetailPage({
       <CTABand />
 
       <ProductJsonLd machine={machine} locale={loc} />
-      <FaqJsonLd
-        faq={machine.faq?.map((item) => ({
-          q: item.q[loc],
-          a: item.a[loc],
-        }))}
-      />
+      <FaqJsonLd faq={faq} />
       <BreadcrumbJsonLd
         items={[
           {

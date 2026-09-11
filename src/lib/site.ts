@@ -33,6 +33,14 @@ export const SITE = {
   // swap to `https://lin.ee/<id>`.
   lineUrl: "https://line.me/ti/p/bobroach",
   lineId: "bobroach",
+  siteCredit: {
+    name: "Pooh",
+    url: "https://pooh.fyi/",
+    label: {
+      th: "ออกแบบและพัฒนาเว็บไซต์โดย",
+      en: "Website design and development by",
+    },
+  },
   hours: {
     th: "จันทร์–เสาร์ 08:00–17:00 น.",
     en: "Mon–Sat 08:00–17:00",

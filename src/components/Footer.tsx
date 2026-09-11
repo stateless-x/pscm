@@ -92,6 +92,16 @@ export function Footer() {
             © {SITE.foundedYear}–{new Date().getFullYear()} {SITE.shortName[locale]}.{" "}
             {t("footer.copyright")}
           </p>
+          <p className="text-[11px] text-text-invert-muted">
+            {SITE.siteCredit.label[locale]}{" "}
+            <a
+              href={SITE.siteCredit.url}
+              rel="author"
+              className="font-semibold text-text-invert underline decoration-line-dark underline-offset-4 transition hover:text-amber hover:decoration-amber"
+            >
+              pooh.fyi
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -31,6 +31,10 @@ export function GET() {
 - LINE: ${SITE.lineId} (${SITE.lineUrl})
 - Hours: ${SITE.hours.en}
 
+## Website attribution
+
+- ${SITE.siteCredit.label.en} [${SITE.siteCredit.name}](${SITE.siteCredit.url})
+
 ## Key Thai pages
 
 - [หน้าแรก](${SITE.url}/th/): ผู้ผลิตเครื่องจักรเซรามิกสำหรับลูกค้าในประเทศไทย

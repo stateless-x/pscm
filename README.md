@@ -75,8 +75,9 @@ placeholder for the real image automatically.
 
 ## SEO content sources of truth
 
-- Company identity, contact details, market, repair boundary, spare-parts
-  policy, and international coordination live in `src/lib/site.ts`.
+- Company identity, contact details, Thailand market position, foreign customer
+  fit, delivery and aftercare boundary, repair policy, spare parts policy, and
+  project coordination live in `src/lib/site.ts`.
 - Product facts and product-page SEO content live in `src/data/machines.ts`.
 - Thai and English page copy lives in `messages/th.json` and
   `messages/en.json`.
@@ -86,6 +87,24 @@ placeholder for the real image automatically.
   and llms.txt include it automatically. After changing an entity-level
   policy, run `npm run build` and spot-check `out/th/service/index.html`, one
   product page, `out/llms.txt`, and `out/sitemap.xml`.
+
+### Maintaining the Thailand market position
+
+The English homepage owns the category intent “ceramic machinery manufacturer
+in Thailand.” Do not add another landing page for the same query. Supporting
+pages have separate jobs: `/service` explains repair and aftercare, while
+`/about` establishes the company and its operating boundary.
+
+Update `SITE.marketPositioning` once when the customer fit or service area
+changes. The homepage description, service and About pages, Organization
+JSON-LD, and generated `llms.txt` read those facts from the same registry.
+Foreign companies are welcome when their machine is for a site in Thailand;
+do not describe the company as exporting machines for installation abroad.
+
+After an update, run `bun run lint && bun run build`, then check the generated
+English homepage and service HTML, `out/robots.txt`, `out/llms.txt`, and
+`out/sitemap.xml`. Keep search and answer-engine crawlers allowed. The current
+content policy blocks training crawlers.
 
 For production indexing and local-search setup, follow
 [`docs/seo-setup-checklist.md`](./docs/seo-setup-checklist.md).

@@ -8,6 +8,7 @@ import { Section } from "@/components/Section";
 import { CTABand } from "@/components/CTABand";
 import { TrustBar } from "@/components/TrustBar";
 import { WorkshopImage } from "@/components/WorkshopImage";
+import { SITE } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -33,6 +34,7 @@ export default async function AboutPage({
   setRequestLocale(locale);
   const t = await getTranslations("about");
   const tImg = await getTranslations("images");
+  const loc = locale as "th" | "en";
 
   return (
     <>
@@ -66,6 +68,8 @@ export default async function AboutPage({
             {t("h2standards")}
           </h2>
           <p>{t("pStandards")}</p>
+          <p>{SITE.marketPositioning.foreignCustomerFit[loc]}</p>
+          <p>{SITE.marketPositioning.thailandBoundary[loc]}</p>
 
           <h2 className="mt-12 text-2xl font-semibold text-text">
             {t("h2beyond")}

@@ -1,6 +1,6 @@
 # Product context — Petkasem Ceramic Machine
 
-Updated: 2026-09-10 · Sources: `src/lib/site.ts`, `src/data/machines.ts`, bilingual page copy, and the user’s redesign brief. Repository-derived audience assumptions are marked **Inferred**.
+Updated: 2026-09-11 · Sources: `src/lib/site.ts`, `src/data/machines.ts`, bilingual page copy, and the user’s redesign and market briefs. Repository-derived audience assumptions are marked **Inferred**.
 
 ## Product
 
@@ -9,6 +9,7 @@ Petkasem Ceramic Machine Co., Ltd. is a Thai manufacturer of ceramic-production 
 ## Primary audience and job
 
 - **Inferred:** Thai SME factory owners, production managers, engineers, vocational institutions, and ceramic studios who need to choose, replace, custom-build, or repair production equipment.
+- International procurement and engineering teams are also a fit when the machine will be delivered, installed, and maintained at a site in Thailand.
 - Visitors commonly arrive with a production symptom, a required process stage, a throughput constraint, or a stopped machine—not a polished procurement brief.
 - Their job is to identify a credible machine or service, understand whether Petkasem can handle the case, and start a technically useful conversation through LINE or phone.
 
@@ -21,7 +22,7 @@ The differentiator is continuity of responsibility: the team that designs and bu
 - Founded in 1986; workshop in Nakhon Pathom; service focuses on Thailand.
 - In-house design, fabrication, electrical work, repair, and parts for Petkasem-built machines.
 - Repair and maintenance are limited to machines manufactured by Petkasem.
-- International work is considered case by case and needs an external export/shipping coordinator.
+- Delivery, installation, maintenance, and spare parts support are limited to sites in Thailand so the Nakhon Pathom workshop can provide practical aftercare. The company does not currently ship machines for installation outside Thailand.
 - Do not invent prices, delivery times, warranties, certifications, customer logos, performance figures, or response-time guarantees.
 - Preserve all current machine facts, service boundaries, contact details, bilingual content, static export behavior, and crawlable server-rendered content.
 
@@ -30,7 +31,7 @@ The differentiator is continuity of responsibility: the team that designs and bu
 - Platform: responsive web, Next.js App Router, statically exported.
 - Primary action: start a LINE conversation with useful machine/spec/nameplate context.
 - Secondary actions: call the workshop, browse machines, diagnose by production problem, request a custom build, or read a technical guide.
-- **Inferred success signal:** more qualified LINE/phone enquiries from Thai SMEs without sacrificing organic discovery or page speed.
+- **Inferred success signal:** more qualified LINE/phone enquiries from Thai SMEs and international teams with Thailand projects, without sacrificing organic discovery or page speed.
 
 ## Experience principles
 

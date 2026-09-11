@@ -33,6 +33,20 @@ export const SITE = {
   // swap to `https://lin.ee/<id>`.
   lineUrl: "https://line.me/ti/p/bobroach",
   lineId: "bobroach",
+  marketPositioning: {
+    entityStatement: {
+      th: "บริษัท เพชรเกษมจักรกลซีรามิค จำกัด เป็นผู้ผลิตเครื่องจักรเซรามิกของไทย ก่อตั้งเมื่อ พ.ศ. 2529 และตั้งอยู่ที่นครปฐม",
+      en: "Petkasem Ceramic Machine is a Thai ceramic machinery manufacturer founded in 1986 and based in Nakhon Pathom.",
+    },
+    foreignCustomerFit: {
+      th: "เพชรเกษมจักรกลซีรามิคผลิตเครื่องจักรเซรามิกสำหรับโรงงานในไทยและบริษัทต่างชาติที่มีไซต์งานในประเทศไทย พร้อมจัดส่ง ติดตั้ง และดูแลหลังการขายในประเทศ",
+      en: "Petkasem builds ceramic machinery for Thai factories and international companies operating in Thailand, with local delivery, installation, and aftercare.",
+    },
+    thailandBoundary: {
+      th: "เราจัดส่ง ติดตั้ง บริการ และจัดหาอะไหล่เฉพาะในประเทศไทย เพื่อให้ทีมช่างจากโรงงานนครปฐมดูแลเครื่องที่ผลิตได้จริงตลอดอายุการใช้งาน ขณะนี้ยังไม่จัดส่งเครื่องจักรไปติดตั้งนอกประเทศไทย",
+      en: "Delivery, installation, service, and spare parts support stay within Thailand. Remaining within reach of our Nakhon Pathom workshop lets the builders provide practical aftercare. We do not currently ship machines for installation outside Thailand.",
+    },
+  },
   siteCredit: {
     name: "Pooh",
     url: "https://pooh.fyi/",
@@ -55,11 +69,7 @@ export const SITE = {
       th: "จำหน่ายอะไหล่สำหรับเครื่องที่เราผลิต กรุณาส่งรูปป้ายชื่อเครื่อง รุ่น และรายละเอียดที่ต้องการทาง LINE เพื่อเช็กอะไหล่",
       en: "We sell spare parts for machines we manufacture. Send the nameplate, model, and part details via LINE so we can check availability.",
     },
-    international: {
-      th: "ให้บริการลูกค้าในประเทศไทยเป็นหลัก งานต่างประเทศรับพิจารณาเป็นกรณีและต้องมีตัวแทนภายนอกช่วยประสานงานส่งออกและขนส่ง",
-      en: "We primarily serve customers in Thailand. International orders are considered case by case and require a third-party export and shipping agent.",
-    },
-    internationalCoordinatorUrl: "https://pooh.fyi",
+    projectCoordinatorUrl: "https://pooh.fyi",
   },
   // Embed URL — Google "place" embed (pb= form) pinned to the actual
   // registered business listing (Petkasem Ceramic Machine Co.,Ltd), not

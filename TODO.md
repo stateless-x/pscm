@@ -75,7 +75,7 @@ Mirrors spec §15. Each item lists the **single file** to edit.
   `messages/en.json`), fluent native copy, not machine-translated.
 - All 20 machines from §7.4 with Thai/English short, process, features,
   and SEO keywords.
-- Static export builds clean (`bun run build`) → 58 routes under `out/`.
+- Static export builds clean (`bun run build`) → 70 routes under `out/`.
 - Sitemap, robots, JSON-LD (Organization sitewide, Product per machine,
   LocalBusiness on Contact, BreadcrumbList on product pages) emitted.
 

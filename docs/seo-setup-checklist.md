@@ -1,6 +1,7 @@
 # SEO setup checklist
 
-Last verified: 2026-09-10 against the current Next.js static export. When this
+Last verified: 2026-09-11 against the current Next.js static export and current
+Google Search documentation. When this
 document and the implementation disagree, `src/lib/site.ts`, route code, and
 the generated files in `out/` are authoritative.
 
@@ -57,9 +58,14 @@ search. It is free and required.
    - Enter `sitemap.xml` (just that, not the full URL)
    - Submit
 
-5. **Set the preferred locale** (optional but helps):
-   - Sidebar: "Settings" then "International Targeting"
-   - Confirm "Thailand" as the geographic target
+5. **Keep the Thailand and language signals explicit on the site**:
+   - Do not follow old instructions for the retired International Targeting
+     report. Google's current guidance uses locale specific URLs and
+     `hreflang` for this job.
+   - Keep stable `/th/` and `/en/` URLs, self referencing canonicals,
+     reciprocal `hreflang`, and a visible language switcher.
+   - Keep the Thailand service area in visible copy and Organization data.
+   - Reference: [Google's multilingual and multi-regional site guidance](https://developers.google.com/search/docs/advanced/crawling/managing-multi-regional-sites).
 
 ### What to watch in the first 30 days
 
@@ -96,7 +102,7 @@ results in Google search. Critical for Thai B2B buyers searching
   ต.ไร่ขิง อ.สามพราน นครปฐม 73210)
 - Business phone (we have: 02-431-2100)
 - At least one photo of the workshop or building (phone photo is fine)
-- 1 to 2 weeks of patience for the postcard verification
+- Access to the verification method Google offers for the profile
 
 ### Steps
 
@@ -125,10 +131,12 @@ results in Google search. Critical for Thai B2B buyers searching
      Avoid "ผู้นำ", "ที่ดีที่สุด" — Google considers them red flags.
 
 4. **Verify ownership**:
-   - Google mails a postcard with a verification code to your
-     business address. Takes 7 to 14 days in Thailand.
-   - When the postcard arrives, enter the code in Business Profile.
-   - Until verified, the profile is not publicly visible.
+   - Use the verification method Google offers for the profile. The available
+     method depends on the business and may include a live mobile video.
+   - For video verification, show the real location, permanent business name,
+     workshop or machinery, and proof that you manage the business. Record it
+     live in one continuous take and avoid faces or sensitive documents.
+   - Reference: [Google's current video verification requirements](https://support.google.com/business/answer/14271705?hl=en).
 
 5. **After verification, add content** (immediate ranking boost):
    - **Photos**: at least 5 (exterior of building, workshop interior,
@@ -236,8 +244,9 @@ The compound effect is real.
 Use one source for each kind of fact so the visible pages, JSON-LD, sitemap,
 and machine-readable reference do not contradict one another:
 
-1. Update company identity, contact details, service area, repair policy,
-   spare-parts policy, or international coordination in `src/lib/site.ts`.
+1. Update company identity, contact details, `marketPositioning`, service area,
+   repair policy, spare parts policy, or project coordination in
+   `src/lib/site.ts`.
 2. Update a machine once in `src/data/machines.ts`. Product pages,
    `sitemap.xml`, and `llms.txt` are generated from that catalogue.
 3. Update page-level Thai and English copy in `messages/th.json` and
@@ -251,6 +260,9 @@ and machine-readable reference do not contradict one another:
    - `out/llms.txt` uses the same market and service boundaries.
    - `out/sitemap.xml` lists the expected Thai and English canonical URLs.
 
-International work is not a second target market. It is considered case by
-case and requires an external export/shipping agent; the visible service page
-links to the coordinator at `https://pooh.fyi/`.
+Foreign companies are welcome when the machine will be delivered, installed,
+and maintained at a site in Thailand. Delivery, service, and spare parts
+support remain inside Thailand so the Nakhon Pathom workshop can provide
+practical aftercare. The company does not currently ship machines for
+installation outside Thailand. The visible service page links to the Thailand
+project coordinator at `https://pooh.fyi/`.

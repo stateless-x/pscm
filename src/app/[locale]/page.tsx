@@ -16,6 +16,7 @@ import { CustomersSection } from "@/components/CustomersSection";
 import { Container } from "@/components/Container";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, Cog, Wrench, LifeBuoy } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -25,11 +26,21 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "home" });
-  return {
-    title: t("seoTitle"),
-    description: t("sub"),
-    alternates: buildAlternates(locale),
-  };
+  const description =
+    SITE.marketPositioning.foreignCustomerFit[locale as "th" | "en"];
+  const alternates = buildAlternates(locale);
+
+  if (locale === "en") {
+    return {
+      title: {
+        absolute: "Ceramic Machinery Manufacturer in Thailand | Petkasem",
+      },
+      description,
+      alternates,
+    };
+  }
+
+  return { title: t("seoTitle"), description, alternates };
 }
 
 export default async function HomePage({
@@ -55,7 +66,7 @@ export default async function HomePage({
       <Hero
         eyebrow={t("eyebrow")}
         title={t("h1")}
-        subtitle={t("sub")}
+        subtitle={SITE.marketPositioning.foreignCustomerFit[loc]}
         image="/assets/handcraft.webp"
         imageAlt={tImg("handcraftAlt")}
       />

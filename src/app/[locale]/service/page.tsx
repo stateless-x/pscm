@@ -75,9 +75,10 @@ export default async function ServicePage({
       </Section>
       <Section title={t("internationalTitle")} variant="alt">
         <div className="max-w-3xl space-y-3 text-base leading-relaxed text-text">
-          <p>{SITE.servicePolicy.international[loc]}</p>
+          <p>{SITE.marketPositioning.foreignCustomerFit[loc]}</p>
+          <p>{SITE.marketPositioning.thailandBoundary[loc]}</p>
           <a
-            href={SITE.servicePolicy.internationalCoordinatorUrl}
+            href={SITE.servicePolicy.projectCoordinatorUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex font-medium text-amber-strong underline decoration-amber/50 underline-offset-4 hover:decoration-amber-strong"

@@ -13,16 +13,25 @@ export const dynamic = "force-static";
 //   search bots above.
 // robots.txt is allow/disallow only; it does not throttle request volume.
 // On a static CDN-served export, crawler volume is a non-issue regardless.
-const ALLOW_CITE = ["OAI-SearchBot", "PerplexityBot", "Google-Extended"];
+const ALLOW_CITE = [
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "Claude-SearchBot",
+  "Claude-User",
+  "PerplexityBot",
+  "Perplexity-User",
+  "DuckAssistBot",
+  "Applebot",
+];
 const BLOCK_TRAIN = [
   "GPTBot",
   "ClaudeBot",
-  "anthropic-ai",
-  "Claude-Web",
+  "Google-Extended",
+  "Applebot-Extended",
   "CCBot",
   "Bytespider",
-  "Applebot-Extended",
-  "Meta-ExternalAgent",
+  "meta-externalagent",
+  "Amazonbot",
 ];
 
 export default function robots(): MetadataRoute.Robots {

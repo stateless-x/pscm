@@ -48,8 +48,8 @@ export default async function BlogIndexPage({
           <p className="py-12 text-center text-text-muted">{t("noPosts")}</p>
         ) : (
           <div className="mx-auto grid max-w-3xl gap-10">
-            {posts.map((post) => (
-              <PostCard key={post.slug} post={post} />
+            {posts.map((post, i) => (
+              <PostCard key={post.slug} post={post} priority={i === 0} />
             ))}
           </div>
         )}

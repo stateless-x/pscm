@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Thai, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Sans_Thai, IBM_Plex_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -13,15 +13,8 @@ import "../globals.css";
 
 const sansThai = IBM_Plex_Sans_Thai({
   subsets: ["thai", "latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   variable: "--font-sans-thai",
-  display: "swap",
-});
-
-const sans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
   display: "swap",
 });
 
@@ -97,9 +90,14 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sansThai.variable} ${sans.variable} ${mono.variable} h-full`}
+      className={`${sansThai.variable} ${mono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-text antialiased">
+        <template
+          dangerouslySetInnerHTML={{
+            __html: `<!-- THESIS: Built by the people who keep it running; rejects the generic industrial catalogue. OWN-WORLD: ceramic stock, blueprint cobalt, kiln-red inspection marks, job-traveller blocks, hard rules and honest workshop photography. STORY: identify the maker, see the proof, find the right machine or service, start a useful conversation. FIRST VIEWPORT: full-bleed workshop frame, oversized claim on the left, operating facts and contact action at hand. FORM: glaze-lab job traveller, grounded direction 04, seed 2cd1c13d. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance -->`,
+          }}
+        />
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>

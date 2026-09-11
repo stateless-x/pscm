@@ -1,31 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  /* Foundation: graphite / steel */
-  --bg: #0f1113;
-  --surface: #16191c;
-  --surface-2: #1e2227;
-  --ink: #11140f;
-  --paper: #f2f3f5;
-  --paper-2: #e6e8eb;
-  --line: #c9cdd2;
-  --line-dark: #2a2f35;
+  /* Glaze-lab job traveller: ceramic stock, blueprint ink, kiln marks */
+  --bg: #102a3b;
+  --surface: #17394d;
+  --surface-2: #245064;
+  --ink: #111d24;
+  --paper: #f5efe3;
+  --paper-2: #e9dfcd;
+  --line: #cbbda7;
+  --line-dark: #416071;
 
   /* Text */
-  --text: #15181b;
-  --text-muted: #5b6168;
-  --text-invert: #eef1f4;
-  --text-invert-muted: #9aa1a8;
+  --text: #17242b;
+  --text-muted: #526169;
+  --text-invert: #fff9ed;
+  --text-invert-muted: #b9cad1;
 
-  /* Accent: industrial amber */
-  --amber: #e8a317;
-  --amber-strong: #c8860b;
-  --amber-soft: #fcefcf;
+  /* Legacy token name kept to avoid noisy component churn: kiln red */
+  --amber: #ff7148;
+  --amber-strong: #b83920;
+  --amber-soft: #f6d2c3;
+  --cobalt: #146b94;
+  --cobalt-soft: #d1e3e8;
+  --clay: #b96f50;
 
   /* Status */
-  --status-available: #2f9e5b;
-  --status-order: #e8a317;
-  --status-request: #6b7178;
+  --status-available: #27775d;
+  --status-order: #ee5b32;
+  --status-request: #617078;
 }
 
 @theme inline {
@@ -44,11 +47,14 @@
   --color-amber: var(--amber);
   --color-amber-strong: var(--amber-strong);
   --color-amber-soft: var(--amber-soft);
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-soft: var(--cobalt-soft);
+  --color-clay: var(--clay);
   --color-status-available: var(--status-available);
   --color-status-order: var(--status-order);
   --color-status-request: var(--status-request);
 
-  --font-sans: var(--font-sans-thai), var(--font-sans), system-ui, sans-serif;
+  --font-sans: var(--font-sans-thai), system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
 }
 
@@ -57,11 +63,21 @@ html {
 }
 
 body {
-  background: var(--paper);
+  background-color: var(--paper);
   color: var(--text);
-  font-family: var(--font-sans-thai), var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans-thai), system-ui, sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Focus: visible, never removed */
@@ -75,7 +91,7 @@ body {
    Tight leading, big scale, weight 700. Thai sits comfortably at this
    scale because Plex Sans Thai has the proportions for display use. */
 .display-h1 {
-  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  font-size: clamp(2.75rem, 7.4vw, 6.75rem);
   /* Thai stacks vowels + tone marks above the base glyph, so a sub-1
      line-height (the usual Latin display trick) clips them against the
      line above. 1.1 keeps marks clear while staying tight enough to read
@@ -83,13 +99,15 @@ body {
   line-height: 1.1;
   letter-spacing: -0.015em;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .display-h2 {
-  font-size: clamp(1.875rem, 4vw, 3rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 4.6vw, 3.75rem);
+  line-height: 1.08;
   letter-spacing: -0.01em;
-  font-weight: 600;
+  font-weight: 700;
+  text-wrap: balance;
 }
 
 /* Numbered section label: § 01, Trust */
@@ -99,7 +117,40 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--text-muted);
+  color: currentColor;
+}
+
+.blueprint-grid {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 79px,
+    rgba(255, 249, 237, 0.06) 80px
+  );
+}
+
+.job-sheet {
+  position: relative;
+  border: 1px solid var(--line);
+  background: rgba(255, 249, 237, 0.66);
+  box-shadow: 6px 6px 0 rgba(16, 42, 59, 0.08);
+}
+
+.job-sheet::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(20, 107, 148, 0.18);
+  pointer-events: none;
+}
+
+.kiln-stamp {
+  border: 1px solid currentColor;
+  box-shadow: 2px 2px 0 currentColor;
+}
+
+.image-ink {
+  filter: saturate(0.72) contrast(1.08);
 }
 
 /* Eyebrow utility: small label above section titles. Uses Plex Sans
@@ -108,7 +159,7 @@ body {
    Latin alongside Thai reads inconsistent). Tracking gives the label
    feel without leaning on a mono face. */
 .eyebrow {
-  font-family: var(--font-sans-thai), var(--font-sans), sans-serif;
+  font-family: var(--font-sans-thai), sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -342,8 +393,8 @@ body {
   margin-top: 0.4em;
 }
 .prose-blog blockquote {
-  border-left: 3px solid var(--amber);
-  padding: 0.4em 0 0.4em 1.2em;
+  border-top: 2px solid var(--amber);
+  padding: 1em 0 0;
   color: var(--text-muted);
   font-style: normal;
 }
@@ -368,7 +419,7 @@ body {
   margin-bottom: 2em;
   padding: 1.1em 1.4em;
   background: var(--paper-2);
-  border-left: 3px solid var(--amber);
+  border-top: 2px solid var(--amber);
 }
 .prose-blog .callout p {
   margin-top: 0;
@@ -430,7 +481,8 @@ body {
   margin-top: 3em;
   padding: 1.5em 1.5em;
   background: linear-gradient(135deg, var(--amber-soft) 0%, var(--paper-2) 100%);
-  border-left: 3px solid var(--amber);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--amber);
 }
 .blog-outro p {
   font-size: 1rem;

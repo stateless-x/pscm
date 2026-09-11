@@ -18,24 +18,27 @@ export function Header() {
   const t = useTranslations("nav");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line-dark bg-bg/95 text-text-invert backdrop-blur supports-[backdrop-filter]:bg-bg/85">
-      <div className="mx-auto flex h-16 max-w-[1280px] items-center gap-4 px-5 md:px-8">
+    <header className="sticky top-0 z-40 border-b-2 border-bg bg-paper/95 text-text backdrop-blur supports-[backdrop-filter]:bg-paper/88">
+      <div className="mx-auto flex h-[72px] max-w-[1440px] items-center gap-4 px-5 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2.5 mr-auto lg:mr-8"
+          className="group mr-auto flex items-center gap-3 lg:mr-8"
           aria-label="Petkasem Ceramic Machine"
         >
           {/* PSCM stamp mark — inline so it inherits currentColor (amber).
               The mark already reads "PSCM", so no separate text label. */}
-          <PscmMark className="h-7 w-auto shrink-0 text-amber" />
+          <PscmMark className="h-7 w-auto shrink-0 text-amber-strong transition group-hover:text-amber" />
+          <span className="hidden border-l border-line pl-3 text-[9px] font-semibold uppercase leading-tight tracking-[0.18em] text-text-muted sm:block">
+            Ceramic<br />Machine · 1986
+          </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-5 mr-auto">
+        <nav className="hidden lg:flex items-center gap-1 mr-auto">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.key}
               href={item.href}
-              className="whitespace-nowrap text-sm text-text-invert hover:text-amber"
+              className="whitespace-nowrap px-2.5 py-2 text-[13px] font-medium text-text-muted transition hover:bg-paper-2 hover:text-cobalt"
             >
               {t(item.key)}
             </Link>
@@ -46,7 +49,7 @@ export function Header() {
           <LanguageSwitcher />
           <Link
             href="/contact"
-            className="inline-flex h-10 items-center whitespace-nowrap bg-amber px-4 text-sm font-semibold text-ink hover:bg-amber-strong"
+            className="kiln-stamp inline-flex h-10 items-center whitespace-nowrap bg-amber px-4 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-amber-strong hover:text-white"
           >
             {t("quote")}
           </Link>

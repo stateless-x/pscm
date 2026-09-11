@@ -12,7 +12,13 @@ type Locale = (typeof LOCALES)[number];
 // This replaces the old single toggle whose label showed the *target*
 // language — ambiguous, since "EN" could read as "you're on EN" or "switch
 // to EN". Here there's no guessing: the highlighted segment is where you are.
-export function LanguageSwitcher({ className }: { className?: string }) {
+export function LanguageSwitcher({
+  className,
+  inverted = false,
+}: {
+  className?: string;
+  inverted?: boolean;
+}) {
   const active = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -23,7 +29,8 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       role="group"
       aria-label="Language"
       className={cn(
-        "mono inline-flex items-center rounded-sm border border-line-dark p-0.5 text-xs font-medium tracking-wider",
+        "mono inline-flex items-center border p-0.5 text-xs font-medium tracking-wider",
+        inverted ? "border-line-dark" : "border-line",
         className,
       )}
     >
@@ -45,7 +52,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               "inline-flex h-7 min-w-[2.25rem] items-center justify-center rounded-[3px] px-2.5 transition",
               isActive
                 ? "bg-amber text-ink"
-                : "text-text-invert-muted hover:text-amber",
+                : inverted
+                  ? "text-text-invert-muted hover:text-amber"
+                  : "text-text-muted hover:text-cobalt",
             )}
           >
             {loc.toUpperCase()}

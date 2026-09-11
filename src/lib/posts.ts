@@ -177,7 +177,13 @@ function loadAll(): Post[] {
       },
     });
 
-    const fullHtml = marked.parser(tokens) as string;
+    // The article template already renders the frontmatter title as the page
+    // H1. Authoring files also begin with that title for readability, so drop
+    // only a leading Markdown H1 to keep one semantic H1 in the built page.
+    const fullHtml = (marked.parser(tokens) as string).replace(
+      /^<h1[^>]*>[\s\S]*?<\/h1>\s*/,
+      "",
+    );
 
     // Split off the trailing italic-only paragraph (the brand/CTA outro)
     // so the page can render it as a distinct visual card instead of a

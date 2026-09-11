@@ -1,21 +1,17 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Section } from "./Section";
 import { Link } from "@/i18n/navigation";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Factory, GraduationCap, Landmark, Palette } from "lucide-react";
 
-// Customers / social-proof section. The real logos aren't ready yet — we
-// have the customers but still need their permission before putting names
-// on the site. So instead of faking logos or hiding the section, we show
-// honest "coming soon" placeholder tiles. That still does the trust job
-// ("they have customers, plural") without claiming anything untrue, and
-// it gives a clear slot to drop real logos into later.
-//
-// To go live: replace the placeholder tiles with real <Image> logos and
-// drop the comingSoon line.
 export async function CustomersSection({ number }: { number?: string }) {
   const t = await getTranslations("home");
-
-  const PLACEHOLDER_COUNT = 6;
+  const locale = (await getLocale()) as "th" | "en";
+  const categories = [
+    { icon: Factory, th: "โรงงานเซรามิก", en: "Ceramic factories" },
+    { icon: GraduationCap, th: "มหาวิทยาลัยและอาชีวะ", en: "Universities & colleges" },
+    { icon: Palette, th: "สตูดิโองานปั้น", en: "Ceramic studios" },
+    { icon: Landmark, th: "หน่วยงานราชการ", en: "Government agencies" },
+  ];
 
   return (
     <Section
@@ -25,22 +21,24 @@ export async function CustomersSection({ number }: { number?: string }) {
       subtitle={t("customersSub")}
       variant="alt"
     >
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-        {Array.from({ length: PLACEHOLDER_COUNT }).map((_, i) => (
+      <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {categories.map(({ icon: Icon, ...label }, i) => (
           <li
-            key={i}
-            aria-hidden="true"
-            className="flex aspect-[3/2] items-center justify-center border border-dashed border-line bg-paper/50"
+            key={label.en}
+            className="job-sheet flex min-h-36 flex-col justify-between p-5"
           >
-            <span className="h-8 w-8 rounded-full border border-line/80 opacity-60" />
+            <div className="relative z-[1] flex items-start justify-between">
+              <Icon size={24} className="text-cobalt" aria-hidden />
+              <span className="mono text-[10px] text-amber-strong">0{i + 1}</span>
+            </div>
+            <span className="relative z-[1] text-base font-bold leading-snug text-text">
+              {label[locale]}
+            </span>
           </li>
         ))}
       </ul>
 
-      <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <span className="mono text-[11px] uppercase tracking-[0.18em] text-text-muted">
-          {t("customersComingSoon")}
-        </span>
+      <div className="mt-8 flex justify-end">
         <Link
           href="/contact"
           className="group inline-flex items-center gap-1.5 text-sm font-medium text-text hover:text-amber-strong"

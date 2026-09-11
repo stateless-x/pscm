@@ -156,7 +156,7 @@ export function ArticleJsonLd({
       name: SITE.name[locale],
       logo: {
         "@type": "ImageObject",
-        url: `${SITE.url}/logo.png`,
+        url: `${SITE.url}/logo.svg`,
       },
     },
   };

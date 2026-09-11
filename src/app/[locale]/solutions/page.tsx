@@ -71,9 +71,9 @@ export default async function SolutionsPage({
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-lg font-semibold leading-snug text-text md:text-xl">
+                  <h2 className="text-lg font-semibold leading-snug text-text md:text-xl">
                     {tList(s.painKey)}
-                  </h3>
+                  </h2>
                   <p className="text-base leading-relaxed text-text-muted">
                     {tList(s.solKey)}
                   </p>

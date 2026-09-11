@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T08:50:30Z",
+  "title": "Design System: Petkasem Ceramic Machine",
+  "extensions": {
+    "colorMeta": {
+      "blueprint-ink": { "role": "neutral", "displayName": "Blueprint Ink", "canonical": "#102a3b", "tonalRamp": ["oklch(15% 0.045 239.9)", "oklch(27% 0.045 239.9)", "oklch(39% 0.045 239.9)", "oklch(51% 0.045 239.9)", "oklch(63% 0.045 239.9)", "oklch(75% 0.045 239.9)", "oklch(87% 0.045 239.9)", "oklch(95% 0.045 239.9)"] },
+      "blueprint-surface": { "role": "neutral", "displayName": "Blueprint Surface", "canonical": "#17394d", "tonalRamp": ["oklch(15% 0.053 237.2)", "oklch(27% 0.053 237.2)", "oklch(39% 0.053 237.2)", "oklch(51% 0.053 237.2)", "oklch(63% 0.053 237.2)", "oklch(75% 0.053 237.2)", "oklch(87% 0.053 237.2)", "oklch(95% 0.045 237.2)"] },
+      "blueprint-surface-raised": { "role": "neutral", "displayName": "Raised Blueprint Surface", "canonical": "#245064", "tonalRamp": ["oklch(15% 0.059 230.2)", "oklch(27% 0.059 230.2)", "oklch(39% 0.059 230.2)", "oklch(51% 0.059 230.2)", "oklch(63% 0.059 230.2)", "oklch(75% 0.059 230.2)", "oklch(87% 0.059 230.2)", "oklch(95% 0.045 230.2)"] },
+      "near-black-ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "#111d24", "tonalRamp": ["oklch(15% 0.022 234.7)", "oklch(27% 0.022 234.7)", "oklch(39% 0.022 234.7)", "oklch(51% 0.022 234.7)", "oklch(63% 0.022 234.7)", "oklch(75% 0.022 234.7)", "oklch(87% 0.022 234.7)", "oklch(95% 0.022 234.7)"] },
+      "ceramic-paper": { "role": "neutral", "displayName": "Ceramic Paper", "canonical": "#f5efe3", "tonalRamp": ["oklch(15% 0.017 84.6)", "oklch(27% 0.017 84.6)", "oklch(39% 0.017 84.6)", "oklch(51% 0.017 84.6)", "oklch(63% 0.017 84.6)", "oklch(75% 0.017 84.6)", "oklch(87% 0.017 84.6)", "oklch(95% 0.017 84.6)"] },
+      "ceramic-paper-aged": { "role": "neutral", "displayName": "Aged Ceramic Paper", "canonical": "#e9dfcd", "tonalRamp": ["oklch(15% 0.026 82.4)", "oklch(27% 0.026 82.4)", "oklch(39% 0.026 82.4)", "oklch(51% 0.026 82.4)", "oklch(63% 0.026 82.4)", "oklch(75% 0.026 82.4)", "oklch(87% 0.026 82.4)", "oklch(95% 0.026 82.4)"] },
+      "paper-rule": { "role": "neutral", "displayName": "Paper Rule", "canonical": "#cbbda7", "tonalRamp": ["oklch(15% 0.034 79.2)", "oklch(27% 0.034 79.2)", "oklch(39% 0.034 79.2)", "oklch(51% 0.034 79.2)", "oklch(63% 0.034 79.2)", "oklch(75% 0.034 79.2)", "oklch(87% 0.034 79.2)", "oklch(95% 0.034 79.2)"] },
+      "blueprint-rule": { "role": "neutral", "displayName": "Blueprint Rule", "canonical": "#416071", "tonalRamp": ["oklch(15% 0.046 233)", "oklch(27% 0.046 233)", "oklch(39% 0.046 233)", "oklch(51% 0.046 233)", "oklch(63% 0.046 233)", "oklch(75% 0.046 233)", "oklch(87% 0.046 233)", "oklch(95% 0.045 233)"] },
+      "body-ink": { "role": "neutral", "displayName": "Body Ink", "canonical": "#17242b", "tonalRamp": ["oklch(15% 0.022 232.3)", "oklch(27% 0.022 232.3)", "oklch(39% 0.022 232.3)", "oklch(51% 0.022 232.3)", "oklch(63% 0.022 232.3)", "oklch(75% 0.022 232.3)", "oklch(87% 0.022 232.3)", "oklch(95% 0.022 232.3)"] },
+      "body-ink-muted": { "role": "neutral", "displayName": "Muted Body Ink", "canonical": "#526169", "tonalRamp": ["oklch(15% 0.022 231.1)", "oklch(27% 0.022 231.1)", "oklch(39% 0.022 231.1)", "oklch(51% 0.022 231.1)", "oklch(63% 0.022 231.1)", "oklch(75% 0.022 231.1)", "oklch(87% 0.022 231.1)", "oklch(95% 0.022 231.1)"] },
+      "warm-white": { "role": "neutral", "displayName": "Warm White", "canonical": "#fff9ed", "tonalRamp": ["oklch(15% 0.017 84.6)", "oklch(27% 0.017 84.6)", "oklch(39% 0.017 84.6)", "oklch(51% 0.017 84.6)", "oklch(63% 0.017 84.6)", "oklch(75% 0.017 84.6)", "oklch(87% 0.017 84.6)", "oklch(95% 0.017 84.6)"] },
+      "cool-white-muted": { "role": "neutral", "displayName": "Muted Cool White", "canonical": "#b9cad1", "tonalRamp": ["oklch(15% 0.021 224.4)", "oklch(27% 0.021 224.4)", "oklch(39% 0.021 224.4)", "oklch(51% 0.021 224.4)", "oklch(63% 0.021 224.4)", "oklch(75% 0.021 224.4)", "oklch(87% 0.021 224.4)", "oklch(95% 0.021 224.4)"] },
+      "kiln-coral": { "role": "primary", "displayName": "Kiln Coral", "canonical": "#ff7148", "tonalRamp": ["oklch(15% 0.135 36.8)", "oklch(27% 0.183 36.8)", "oklch(39% 0.183 36.8)", "oklch(51% 0.183 36.8)", "oklch(63% 0.183 36.8)", "oklch(75% 0.183 36.8)", "oklch(87% 0.117 36.8)", "oklch(95% 0.045 36.8)"] },
+      "kiln-red": { "role": "primary", "displayName": "Kiln Red", "canonical": "#b83920", "tonalRamp": ["oklch(15% 0.135 33.1)", "oklch(27% 0.168 33.1)", "oklch(39% 0.168 33.1)", "oklch(51% 0.168 33.1)", "oklch(63% 0.168 33.1)", "oklch(75% 0.168 33.1)", "oklch(87% 0.117 33.1)", "oklch(95% 0.045 33.1)"] },
+      "kiln-wash": { "role": "primary", "displayName": "Kiln Wash", "canonical": "#f6d2c3", "tonalRamp": ["oklch(15% 0.045 43.9)", "oklch(27% 0.045 43.9)", "oklch(39% 0.045 43.9)", "oklch(51% 0.045 43.9)", "oklch(63% 0.045 43.9)", "oklch(75% 0.045 43.9)", "oklch(87% 0.045 43.9)", "oklch(95% 0.045 43.9)"] },
+      "blueprint-cobalt": { "role": "secondary", "displayName": "Blueprint Cobalt", "canonical": "#146b94", "tonalRamp": ["oklch(15% 0.100 235.6)", "oklch(27% 0.100 235.6)", "oklch(39% 0.100 235.6)", "oklch(51% 0.100 235.6)", "oklch(63% 0.100 235.6)", "oklch(75% 0.100 235.6)", "oklch(87% 0.100 235.6)", "oklch(95% 0.045 235.6)"] },
+      "cobalt-wash": { "role": "secondary", "displayName": "Cobalt Wash", "canonical": "#d1e3e8", "tonalRamp": ["oklch(15% 0.020 216.2)", "oklch(27% 0.020 216.2)", "oklch(39% 0.020 216.2)", "oklch(51% 0.020 216.2)", "oklch(63% 0.020 216.2)", "oklch(75% 0.020 216.2)", "oklch(87% 0.020 216.2)", "oklch(95% 0.020 216.2)"] },
+      "fired-clay": { "role": "tertiary", "displayName": "Fired Clay", "canonical": "#b96f50", "tonalRamp": ["oklch(15% 0.104 43.2)", "oklch(27% 0.104 43.2)", "oklch(39% 0.104 43.2)", "oklch(51% 0.104 43.2)", "oklch(63% 0.104 43.2)", "oklch(75% 0.104 43.2)", "oklch(87% 0.104 43.2)", "oklch(95% 0.045 43.2)"] },
+      "available-green": { "role": "tertiary", "displayName": "Available Green", "canonical": "#27775d", "tonalRamp": ["oklch(15% 0.088 167.7)", "oklch(27% 0.088 167.7)", "oklch(39% 0.088 167.7)", "oklch(51% 0.088 167.7)", "oklch(63% 0.088 167.7)", "oklch(75% 0.088 167.7)", "oklch(87% 0.088 167.7)", "oklch(95% 0.045 167.7)"] },
+      "order-orange": { "role": "tertiary", "displayName": "Made-to-Order Orange", "canonical": "#ee5b32", "tonalRamp": ["oklch(15% 0.135 36.1)", "oklch(27% 0.190 36.1)", "oklch(39% 0.190 36.1)", "oklch(51% 0.190 36.1)", "oklch(63% 0.190 36.1)", "oklch(75% 0.190 36.1)", "oklch(87% 0.117 36.1)", "oklch(95% 0.045 36.1)"] },
+      "request-grey": { "role": "neutral", "displayName": "On-Request Grey", "canonical": "#617078", "tonalRamp": ["oklch(15% 0.022 231)", "oklch(27% 0.022 231)", "oklch(39% 0.022 231)", "oklch(51% 0.022 231)", "oklch(63% 0.022 231)", "oklch(75% 0.022 231)", "oklch(87% 0.022 231)", "oklch(95% 0.022 231)"] },
+      "line-green": { "role": "tertiary", "displayName": "LINE Green", "canonical": "#06c755", "tonalRamp": ["oklch(15% 0.135 148.6)", "oklch(27% 0.205 148.6)", "oklch(39% 0.205 148.6)", "oklch(51% 0.205 148.6)", "oklch(63% 0.205 148.6)", "oklch(75% 0.205 148.6)", "oklch(87% 0.117 148.6)", "oklch(95% 0.045 148.6)"] },
+      "line-green-hover": { "role": "tertiary", "displayName": "LINE Green Hover", "canonical": "#05b94e", "tonalRamp": ["oklch(15% 0.135 148.5)", "oklch(27% 0.195 148.5)", "oklch(39% 0.195 148.5)", "oklch(51% 0.195 148.5)", "oklch(63% 0.195 148.5)", "oklch(75% 0.195 148.5)", "oklch(87% 0.117 148.5)", "oklch(95% 0.045 148.5)"] },
+      "line-green-ink": { "role": "neutral", "displayName": "LINE Green Ink", "canonical": "#062b16", "tonalRamp": ["oklch(15% 0.057 154.1)", "oklch(27% 0.057 154.1)", "oklch(39% 0.057 154.1)", "oklch(51% 0.057 154.1)", "oklch(63% 0.057 154.1)", "oklch(75% 0.057 154.1)", "oklch(87% 0.057 154.1)", "oklch(95% 0.045 154.1)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Thai-Safe Display", "purpose": "Primary hero claims, balanced to roughly 15 characters without clipping Thai marks." },
+      "headline": { "displayName": "Section Headline", "purpose": "Major section and CTA-band titles." },
+      "title": { "displayName": "Component Title", "purpose": "Cards and secondary content hierarchy." },
+      "body": { "displayName": "Reading Body", "purpose": "Thai-first paragraphs and interface copy." },
+      "label": { "displayName": "Thai-Safe Label", "purpose": "Eyebrows, chips, and compact bilingual labels without uppercase dependence." },
+      "code": { "displayName": "Equipment Data", "purpose": "Latin model codes, dates, counts, phone numbers, and section indices." }
+    },
+    "shadows": [
+      { "name": "job-sheet-offset", "value": "6px 6px 0 rgba(16, 42, 59, 0.08)", "purpose": "Slight stock-registration offset under job-sheet cards." },
+      { "name": "kiln-stamp", "value": "2px 2px 0 currentColor", "purpose": "Crisp physical press under kiln-stamp labels and primary actions." },
+      { "name": "selected-filter-mark", "value": "3px 3px 0 var(--amber)", "purpose": "Marks the selected production-stage filter." },
+      { "name": "drawer-ambient", "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)", "purpose": "Separates the mobile navigation drawer from its dimmed overlay." }
+    ],
+    "motion": [
+      { "name": "ease-workshop", "value": "cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Default easing for rise and stamp-settle reveals." },
+      { "name": "stamp-in", "value": "360ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Quick scale-and-settle entrance for equipment-plate moments." },
+      { "name": "rise-in", "value": "500ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Subtle 8px rise and fade for hero content." },
+      { "name": "scroll-reveal", "value": "600ms cubic-bezier(0.2, 0.7, 0.2, 1); view entry 0% to cover 30%", "purpose": "Progressive enhancement for content entering the viewport; static content remains visible when unsupported." },
+      { "name": "hero-stagger", "value": "80ms steps", "purpose": "Sequences hero headline, supporting copy, and actions without delaying access." },
+      { "name": "card-media", "value": "300ms", "purpose": "Moves or scales documentary card imagery by 2–4px on hover." },
+      { "name": "reduced-motion", "value": "0.001ms; one iteration", "purpose": "Collapses all animation and transition durations when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Kiln-Stamp Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The default high-emphasis workshop action.",
+      "html": "<button class=\"ds-btn-primary\">ขอคำปรึกษา</button>",
+      "css": ".ds-btn-primary { min-height: 44px; padding: 0 20px; border: 1px solid currentColor; border-radius: 0; background: var(--amber); color: var(--ink); box-shadow: 2px 2px 0 currentColor; font-family: var(--font-sans-thai), system-ui, sans-serif; font-size: 14px; font-weight: 600; transition: background-color 150ms, color 150ms, transform 150ms; } .ds-btn-primary:hover { background: var(--amber-strong); color: var(--text-invert); transform: translateY(-2px); } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Blueprint Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A grounded secondary action on light paper.",
+      "html": "<button class=\"ds-btn-secondary\">ดูเครื่องจักร</button>",
+      "css": ".ds-btn-secondary { min-height: 44px; padding: 0 20px; border: 0; border-radius: 0; background: var(--surface); color: var(--text-invert); font-family: var(--font-sans-thai), system-ui, sans-serif; font-size: 14px; font-weight: 600; transition: background-color 150ms, transform 150ms; } .ds-btn-secondary:hover { background: var(--surface-2); } .ds-btn-secondary:active { transform: translateY(1px); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "A low-emphasis paper action bounded by a technical rule.",
+      "html": "<button class=\"ds-btn-outline\">ดูทั้งหมด</button>",
+      "css": ".ds-btn-outline { min-height: 44px; padding: 0 20px; border: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--text); font-family: var(--font-sans-thai), system-ui, sans-serif; font-size: 14px; font-weight: 500; transition: background-color 150ms, border-color 150ms, color 150ms, transform 150ms; } .ds-btn-outline:hover { border-color: var(--amber); background: var(--paper-2); color: var(--amber-strong); } .ds-btn-outline:active { transform: translateY(1px); } .ds-btn-outline:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    },
+    {
+      "name": "LINE Contact Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "The dedicated external-channel action; LINE green is reserved for this use.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">LINE</a>",
+      "css": ".ds-btn-line { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: 0 20px; border: 0; border-radius: 0; background: #06c755; color: #062b16; text-decoration: none; font-family: var(--font-sans-thai), system-ui, sans-serif; font-size: 14px; font-weight: 700; transition: background-color 150ms, transform 150ms; } .ds-btn-line:hover { background: #05b94e; } .ds-btn-line:active { transform: translateY(1px); } .ds-btn-line:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    },
+    {
+      "name": "Production-Stage Filter Chip",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "A square stage filter shown in both inactive and selected states.",
+      "html": "<div class=\"ds-chip-row\"><button class=\"ds-chip\">ทั้งหมด</button><button class=\"ds-chip ds-chip-selected\" aria-pressed=\"true\">เตรียมวัตถุดิบ</button></div>",
+      "css": ".ds-chip-row { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; background: var(--paper); } .ds-chip { min-height: 44px; padding: 0 16px; border: 1px solid var(--line); border-radius: 0; background: var(--paper); color: var(--text); font-family: var(--font-sans-thai), system-ui, sans-serif; font-size: 12px; font-weight: 600; transition: border-color 150ms, color 150ms; } .ds-chip:hover { border-color: var(--cobalt); color: var(--cobalt); } .ds-chip:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; } .ds-chip-selected { border-color: var(--cobalt); background: var(--cobalt); color: white; box-shadow: 3px 3px 0 var(--amber); } .ds-chip-selected:hover { color: white; }"
+    },
+    {
+      "name": "Job-Sheet Card",
+      "kind": "card",
+      "refersTo": "job-sheet-card",
+      "description": "The recurring paper-stock container for machinery, audience, and process content.",
+      "html": "<article class=\"ds-job-sheet\"><div class=\"ds-job-code\">PSCM / 01</div><h3>เครื่องจักรที่ทีมผู้สร้างดูแลต่อ</h3><p>ข้อมูลสั้น กระชับ และเชื่อมไปยังหลักฐานหรือการสนทนาที่มีประโยชน์</p></article>",
+      "css": ".ds-job-sheet { position: relative; width: min(100%, 360px); padding: 20px; border: 1px solid var(--line); border-radius: 0; background: rgba(255, 249, 237, 0.66); color: var(--text); box-shadow: 6px 6px 0 rgba(16, 42, 59, 0.08); font-family: var(--font-sans-thai), system-ui, sans-serif; } .ds-job-sheet::before { content: ''; position: absolute; inset: 6px; border: 1px solid rgba(20, 107, 148, 0.18); pointer-events: none; } .ds-job-sheet > * { position: relative; z-index: 1; } .ds-job-code { color: var(--cobalt); font-family: var(--font-mono), ui-monospace, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; } .ds-job-sheet h3 { margin: 16px 0 6px; font-size: 18px; line-height: 1.35; } .ds-job-sheet p { margin: 0; color: var(--text-muted); font-size: 14px; line-height: 1.6; } .ds-job-sheet:focus-within { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    },
+    {
+      "name": "Sticky Workshop Navigation",
+      "kind": "nav",
+      "description": "The warm-paper desktop header with a kiln-stamp quote action.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"หลัก\"><a class=\"ds-nav-mark\" href=\"#\">PSCM</a><div class=\"ds-nav-links\"><a href=\"#\">เครื่องจักร</a><a href=\"#\">บริการ</a><a href=\"#\">เกี่ยวกับเรา</a></div><a class=\"ds-nav-cta\" href=\"#\">ขอใบเสนอราคา</a></nav>",
+      "css": ".ds-nav { display: flex; min-height: 72px; align-items: center; gap: 16px; padding: 0 20px; border-bottom: 2px solid var(--bg); background: color-mix(in srgb, var(--paper) 95%, transparent); color: var(--text); font-family: var(--font-sans-thai), system-ui, sans-serif; backdrop-filter: blur(8px); } .ds-nav-mark { margin-right: auto; color: var(--amber-strong); font-family: var(--font-mono), ui-monospace, monospace; font-weight: 500; letter-spacing: 0.08em; text-decoration: none; } .ds-nav-links { display: flex; gap: 4px; } .ds-nav-links a { padding: 8px 10px; color: var(--text-muted); font-size: 13px; text-decoration: none; transition: background-color 150ms, color 150ms; } .ds-nav-links a:hover { background: var(--paper-2); color: var(--cobalt); } .ds-nav-cta { min-height: 40px; display: inline-flex; align-items: center; padding: 0 16px; border: 1px solid currentColor; background: var(--amber); color: var(--ink); box-shadow: 2px 2px 0 currentColor; font-size: 14px; font-weight: 700; text-decoration: none; } .ds-nav a:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    },
+    {
+      "name": "Equipment Nameplate",
+      "kind": "custom",
+      "description": "The signature evidence plate used on machine-detail surfaces.",
+      "html": "<section class=\"ds-nameplate\"><i class=\"ds-rivet ds-rivet-tl\"></i><i class=\"ds-rivet ds-rivet-tr\"></i><i class=\"ds-rivet ds-rivet-bl\"></i><i class=\"ds-rivet ds-rivet-br\"></i><div class=\"ds-nameplate-code\">PSCM / BM-01</div><strong>เครื่องบดบอลมิลล์</strong><div class=\"ds-nameplate-rule\"><span>MADE IN THAILAND</span><span>PSCM</span></div></section>",
+      "css": ".ds-nameplate { position: relative; width: min(100%, 420px); padding: 20px 24px; border-radius: 0; background: var(--surface); color: var(--text-invert); box-shadow: inset 0 0 0 1px var(--line-dark), inset 0 0 0 8px var(--surface), inset 0 0 0 9px color-mix(in srgb, var(--line-dark) 60%, transparent); font-family: var(--font-sans-thai), system-ui, sans-serif; } .ds-nameplate-code, .ds-nameplate-rule { font-family: var(--font-mono), ui-monospace, monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; } .ds-nameplate-code { color: var(--text-invert-muted); } .ds-nameplate strong { display: block; margin-top: 4px; font-size: 18px; line-height: 1.3; } .ds-nameplate-rule { display: flex; justify-content: space-between; margin-top: 12px; padding-top: 8px; border-top: 1px solid color-mix(in srgb, var(--line-dark) 60%, transparent); color: var(--text-invert-muted); } .ds-nameplate-rule span:last-child { color: color-mix(in srgb, var(--amber) 80%, transparent); } .ds-rivet { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #6b7178, #2a2f35 60%, #0f1113); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06); } .ds-rivet-tl { top: 8px; left: 8px; } .ds-rivet-tr { top: 8px; right: 8px; } .ds-rivet-bl { bottom: 8px; left: 8px; } .ds-rivet-br { bottom: 8px; right: 8px; }"
+    },
+    {
+      "name": "Machine Status Badge",
+      "kind": "chip",
+      "description": "A compact semantic state marker used on equipment data plates.",
+      "html": "<span class=\"ds-status\"><i></i>พร้อมสั่งผลิต</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border: 1px solid color-mix(in srgb, var(--amber) 40%, transparent); border-radius: 4px; background: color-mix(in srgb, var(--amber) 15%, transparent); color: var(--amber-strong); font-family: var(--font-sans-thai), system-ui, sans-serif; font-size: 11px; font-weight: 500; } .ds-status i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; } .ds-status:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Glaze-Lab Job Traveller",
+    "overview": "This interface feels like the paperwork, test marks, machine plates, and blueprints of an established ceramic-machinery workshop. Warm ceramic stock carries the reading experience; blueprint ink creates large structural fields; kiln coral behaves like an inspection stamp. The result is capable and specific rather than sleek, luxurious, or software-like.\n\nThe system is deliberately square, ruled, and information-forward. Oversized Thai-safe headlines make confident claims, while mono codes, numbered sections, internal rules, rivets, and workshop photography supply the evidence. Density is moderate: generous section spacing separates stages of the story, but components remain compact enough for engineers and factory owners to scan.\n\nMotion is a light finishing layer, never a prerequisite. The static HTML remains complete and legible, imagery is treated as documentary evidence, and every conversion path stays direct and thumb-reachable.",
+    "keyCharacteristics": [
+      "Warm ceramic paper against deep blueprint fields.",
+      "Kiln-coral stamps and rules used as operational signals.",
+      "Square job-sheet cards with inset construction lines and offset shadows.",
+      "Thai-first IBM Plex Sans Thai paired with IBM Plex Mono for codes and figures.",
+      "Honest workshop photography with restrained saturation and contrast.",
+      "Strong hierarchy, visible focus, and mobile contact actions within reach."
+    ],
+    "rules": [
+      { "name": "The Kiln-Mark Rule", "body": "Kiln coral denotes action, inspection, or structural emphasis; it is not ambient decoration.", "section": "colors" },
+      { "name": "The Two-Stock Rule", "body": "Build light sections from ceramic paper and aged paper, and dark sections from blueprint ink and its surface steps; do not introduce unrelated neutral greys.", "section": "colors" },
+      { "name": "The Channel-Color Rule", "body": "LINE green appears only on LINE actions and identity details.", "section": "colors" },
+      { "name": "The Thai-First Type Rule", "body": "Thai labels stay in IBM Plex Sans Thai; never force Thai through the mono stack or rely on uppercase for hierarchy.", "section": "typography" },
+      { "name": "The Marks-Need-Air Rule", "body": "Large Thai display copy keeps at least 1.08–1.1 line-height so vowels and tone marks cannot clip.", "section": "typography" },
+      { "name": "The Mono-Is-Data Rule", "body": "IBM Plex Mono is for codes, numerals, dates, and terse Latin metadata—not paragraphs or Thai copy.", "section": "typography" },
+      { "name": "The Traveller-Grid Rule", "body": "Responsive changes simplify the same ordered job sheet; they do not reorder proof, machinery, and contact into a different story.", "section": "layout" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces remain flat at rest; offset shadows belong only to paper stock, stamps, selected filters, and the modal drawer.", "section": "elevation" },
+      { "name": "The Hard-Shadow Rule", "body": "Workshop objects use crisp positional offsets, not diffuse SaaS glows.", "section": "elevation" },
+      { "name": "The Fabricated-Edge Rule", "body": "Default to square corners; a rounded silhouette must communicate status, segmented selection, a rivet, or a branded channel.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do begin new surfaces with ceramic paper, blueprint ink, and kiln coral before reaching for any additional hue.",
+      "Do use exact 1px rules, inset construction lines, mono codes, and numbered stamps to communicate workshop precision.",
+      "Do keep Thai in IBM Plex Sans Thai with sufficient line-height and use IBM Plex Mono only for Latin data.",
+      "Do keep primary contact targets at least 44px high, stack them on narrow screens, and retain the mobile call/LINE bar with safe-area padding.",
+      "Do preserve visible 2px kiln-coral focus treatment and reduced-motion behavior.",
+      "Do show useful machinery and workshop photography with restrained ink treatment and legibility overlays."
+    ],
+    "donts": [
+      "Don't round every card or control, add pill-shaped navigation, or soften the system into a generic SaaS interface.",
+      "Don't use diffuse glows, glossy gradients, or decorative drop shadows where a rule, tonal step, or crisp offset will do.",
+      "Don't use kiln coral as ambient filler or LINE green outside a LINE action.",
+      "Don't set Thai in IBM Plex Mono, uppercase Thai labels, or tighten Thai display leading below the implemented safe range.",
+      "Don't hide important product, service, or contact facts behind motion, client-only effects, or interaction.",
+      "Don't invent an input form, pricing, certifications, customer marks, or performance claims to fill visual space."
+    ]
+  }
+}

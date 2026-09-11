@@ -15,7 +15,7 @@ export function InterestedInBanner({ locale }: { locale: "th" | "en" }) {
   if (!machine) return null;
 
   return (
-    <div className="border-l-4 border-amber bg-[var(--amber-soft)] px-4 py-3 text-[#5b4307]">
+    <div className="job-sheet border-2 border-amber bg-[var(--amber-soft)] px-5 py-4 text-text">
       <div className="mono text-[10px] uppercase tracking-[0.18em] text-amber-strong">
         {t("interestedIn")}
       </div>

@@ -56,7 +56,7 @@ export function MobileNav() {
         <button
           type="button"
           aria-label={t("openMenu")}
-          className="inline-flex h-11 w-11 items-center justify-center text-text-invert hover:text-amber lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center border border-line text-text hover:border-cobalt hover:text-cobalt lg:hidden"
         >
           <Menu size={24} />
         </button>
@@ -106,7 +106,7 @@ export function MobileNav() {
               <span className="label-th text-xs font-semibold tracking-[0.08em] text-text-invert-muted">
                 {t("language")}
               </span>
-              <LanguageSwitcher />
+              <LanguageSwitcher inverted />
             </div>
           </nav>
 
@@ -125,7 +125,7 @@ export function MobileNav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="inline-flex h-12 items-center justify-center gap-2 bg-[#06C755] text-sm font-semibold text-white hover:bg-[#05a648]"
+                className="inline-flex h-12 items-center justify-center gap-2 bg-[#06C755] text-sm font-bold text-[#062b16] hover:bg-[#05b94e]"
               >
                 <MessageCircle size={18} />
                 {t("line")}

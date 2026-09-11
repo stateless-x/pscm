@@ -4,12 +4,12 @@ export function ProcessSteps({ steps }: { steps: string[] }) {
       {steps.map((step, i) => (
         <li
           key={i}
-          className="relative flex flex-col gap-2 border border-line bg-paper p-4"
+          className="job-sheet relative flex min-h-36 flex-col justify-between gap-4 p-5"
         >
-          <span className="mono text-[10px] uppercase tracking-[0.18em] text-amber-strong">
+          <span className="mono text-3xl font-medium tracking-tight text-amber-strong">
             {String(i + 1).padStart(2, "0")}
           </span>
-          <span className="text-sm font-medium leading-snug text-text">
+          <span className="text-sm font-semibold leading-snug text-text">
             {step}
           </span>
         </li>

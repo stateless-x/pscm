@@ -16,14 +16,14 @@ export function CTABand({
   const headline = title ?? t("home.ctaTitle");
 
   return (
-    <section className="bg-bg text-text-invert">
+    <section className="blueprint-grid border-y-[10px] border-amber bg-bg text-text-invert">
       <Container className="py-14 md:py-20">
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="eyebrow text-amber">
               {t("nav.contact")}
             </p>
-            <h2 className="mt-3 text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-tight text-text-invert">
+            <h2 className="mt-4 max-w-3xl text-[clamp(2rem,4.5vw,4rem)] font-bold leading-[1.08] tracking-tight text-text-invert">
               {headline}
             </h2>
             {subtitle && (
@@ -38,7 +38,7 @@ export function CTABand({
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/contact"
-              className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-amber px-6 text-sm font-semibold text-ink hover:bg-amber-strong"
+              className="kiln-stamp inline-flex min-h-[52px] items-center justify-center gap-2 bg-amber px-6 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-amber-strong hover:text-white"
             >
               {t("nav.quote")}
               <ArrowRight size={18} />
@@ -54,7 +54,7 @@ export function CTABand({
               href={SITE.lineUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-[#06C755] px-5 text-sm font-semibold text-white hover:bg-[#05a648]"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-[#06C755] px-5 text-sm font-bold text-[#062b16] hover:bg-[#05b94e]"
             >
               <MessageCircle size={18} />
               {t("nav.line")}

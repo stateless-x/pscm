@@ -16,25 +16,25 @@ export function TrustBar() {
   const t = useTranslations("trust");
 
   return (
-    <section className="border-y border-line bg-paper py-14 md:py-20">
+    <section className="border-y-2 border-bg bg-amber py-12 text-ink md:py-16">
       <Container>
-        <div className="reveal-stagger grid grid-cols-1 divide-y divide-line md:grid-cols-4 md:divide-y-0 md:divide-x">
+        <div className="reveal-stagger grid grid-cols-2 divide-x divide-y divide-ink/25 md:grid-cols-4 md:divide-y-0">
           {ITEMS.map((item, i) => (
             <div
               key={item.labelKey}
-              className="flex flex-col gap-3 py-6 md:py-2 md:px-7 md:first:pl-0 md:last:pr-0"
+              className="flex flex-col gap-3 p-5 md:px-7 md:py-2 md:first:pl-0 md:last:pr-0"
             >
-              <span className="mono text-[10px] uppercase tracking-[0.22em] text-text-muted">
+              <span className="mono text-[10px] uppercase tracking-[0.22em] text-ink/60">
                 {String(i + 1).padStart(2, "0")} / 04
               </span>
-              <span className="mono text-[clamp(2.25rem,4.5vw,3.5rem)] font-medium leading-none tracking-tight text-text">
+              <span className="mono text-[clamp(2.25rem,4.5vw,4rem)] font-medium leading-none tracking-tight text-ink">
                 {item.stat}
               </span>
               <div className="mt-1">
-                <div className="text-base font-semibold leading-snug text-text">
+                <div className="text-base font-bold leading-snug text-ink">
                   {t(item.labelKey)}
                 </div>
-                <div className="mt-1 text-sm text-text-muted leading-snug">
+                <div className="mt-1 text-sm text-ink/65 leading-snug">
                   {t(item.subKey)}
                 </div>
               </div>

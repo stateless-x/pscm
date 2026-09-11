@@ -37,7 +37,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("py-14 md:py-28 lg:py-32", bg, className)}
+      className={cn("relative overflow-hidden py-16 md:py-28 lg:py-32", bg, className)}
     >
       <Container className={containerClassName}>
         {(number || eyebrow) && (
@@ -48,7 +48,7 @@ export function Section({
             )}
           >
             {number && (
-              <span className="section-no">§ {number}</span>
+              <span className="section-no kiln-stamp bg-amber px-2.5 py-1.5 text-ink">{number}</span>
             )}
             {number && eyebrow && (
               <span className={cn("h-px w-8", muted, "bg-current opacity-40")} />
@@ -66,7 +66,7 @@ export function Section({
           </div>
         )}
         {title && (
-          <h2 className={cn("display-h2 mt-5", main)}>{title}</h2>
+          <h2 className={cn("display-h2 mt-6 max-w-4xl", main)}>{title}</h2>
         )}
         {subtitle && (
           <p

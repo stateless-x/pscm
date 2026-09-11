@@ -78,7 +78,7 @@ export default async function ContactPage({
               href={SITE.lineUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-4 bg-[#06C755] p-4 text-white transition hover:bg-[#05a648] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2"
+              className="group flex items-center gap-4 bg-[#06C755] p-4 font-semibold text-[#062b16] transition hover:bg-[#05b94e] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2"
             >
               <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white/15">
                 <LineIcon size={26} className="text-white" />
@@ -87,7 +87,7 @@ export default async function ContactPage({
                 <div className="text-base font-semibold leading-tight">
                   {tCommon("chatOnLine")}
                 </div>
-                <div className="mono mt-0.5 text-[12px] tracking-wider text-white/85">
+                <div className="mono mt-0.5 text-[12px] tracking-wider text-[#0b4a27]">
                   {tCommon("lineHandle")}: {SITE.lineId}
                 </div>
               </div>

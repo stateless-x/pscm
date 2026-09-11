@@ -62,7 +62,8 @@ export function ProductsExplorer({
               key={m.slug}
               machine={m}
               locale={locale}
-              priority={i < 3}
+              priority={i === 0}
+              headingLevel="h2"
             />
           ))}
         </CardGrid>
@@ -85,10 +86,10 @@ function FilterChip({
       type="button"
       onClick={onClick}
       className={cn(
-        "inline-flex h-9 items-center px-3 text-xs font-medium ring-1 transition",
+        "inline-flex min-h-11 items-center border px-4 text-xs font-semibold transition",
         active
-          ? "bg-bg text-text-invert ring-bg"
-          : "bg-paper text-text ring-line hover:ring-amber",
+          ? "border-cobalt bg-cobalt text-white shadow-[3px_3px_0_var(--amber)]"
+          : "border-line bg-paper text-text hover:border-cobalt hover:text-cobalt",
       )}
     >
       {label}

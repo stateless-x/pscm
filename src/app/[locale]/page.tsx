@@ -70,12 +70,11 @@ export default async function HomePage({
         variant="light"
       >
         <CardGrid className="reveal-stagger">
-          {featuredMachines.map((m, i) => (
+          {featuredMachines.map((m) => (
             <MachineCard
               key={m.slug}
               machine={m}
               locale={loc}
-              priority={i < 3}
             />
           ))}
         </CardGrid>

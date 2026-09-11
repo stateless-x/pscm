@@ -60,6 +60,11 @@ public/                         # static assets
 scripts/postbuild.mjs           # writes out/index.html root-redirect
 ```
 
+## Product and design context
+
+- [`PRODUCT.md`](./PRODUCT.md) records the audience, conversion goal, proof boundaries, and durable product constraints.
+- [`DESIGN.md`](./DESIGN.md) is the source of truth for the visual system, reusable patterns, and interface guardrails.
+
 ## Adding a machine
 
 Append one object to `machines` in `src/data/machines.ts`. Set `status`

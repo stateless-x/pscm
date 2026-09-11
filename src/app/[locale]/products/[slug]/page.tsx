@@ -109,7 +109,7 @@ export default async function ProductDetailPage({
       <section className="bg-paper">
         <Container className="py-10 md:py-14">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
-            <div>
+            <div className="order-2 lg:order-1">
               <MachineImage
                 machine={machine}
                 locale={loc}
@@ -117,7 +117,7 @@ export default async function ProductDetailPage({
                 showDisclaimer
               />
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="order-1 flex flex-col gap-5 lg:order-2">
               <Nameplate machine={machine} locale={loc} size="hero" />
 
               <div className="flex items-center gap-3 text-xs">
@@ -179,7 +179,7 @@ export default async function ProductDetailPage({
                   href={SITE.lineUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-[#06C755] px-5 text-sm font-semibold text-white hover:bg-[#05a648]"
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 bg-[#06C755] px-5 text-sm font-bold text-[#062b16] hover:bg-[#05b94e]"
                 >
                   <MessageCircle size={18} />
                   LINE

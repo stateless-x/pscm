@@ -19,14 +19,14 @@ export function Footer() {
   const locale = useLocale() as "th" | "en";
 
   return (
-    <footer className="mt-20 bg-bg text-text-invert">
+    <footer className="mt-20 border-t-[10px] border-amber bg-bg text-text-invert">
       {/* Extra bottom padding on mobile clears the fixed StickyMobileCTA bar
           (≈52px + safe-area), which is md:hidden — so the gap is mobile-only.
           Without this the copyright line sits behind the call/LINE bar. */}
       <div className="mx-auto max-w-[1200px] px-5 pt-12 pb-[calc(env(safe-area-inset-bottom)+72px)] md:px-8 md:py-16 md:pb-16">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 border-b border-line-dark pb-12 md:grid-cols-[1.25fr_0.8fr_1fr]">
           <div>
-            <PscmMark className="h-8 w-auto text-amber" />
+            <PscmMark className="h-10 w-auto text-amber" />
             <div className="mt-3 text-base font-semibold">
               {SITE.name[locale]}
             </div>

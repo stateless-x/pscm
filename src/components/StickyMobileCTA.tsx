@@ -20,7 +20,7 @@ export function StickyMobileCTA() {
           href={SITE.lineUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-[52px] items-center justify-center gap-2 bg-[#06C755] text-sm font-semibold text-white active:bg-[#05a648]"
+          className="inline-flex min-h-[52px] items-center justify-center gap-2 bg-[#06C755] text-sm font-bold text-[#062b16] active:bg-[#05b94e]"
         >
           <MessageCircle size={18} />
           {t("line")}

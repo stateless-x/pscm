@@ -19,7 +19,7 @@ export function OrganizationJsonLd({ locale }: { locale: "th" | "en" }) {
     name: SITE.name[locale],
     alternateName: locale === "th" ? SITE.name.en : SITE.name.th,
     url: SITE.url,
-    description: `${SITE.marketPositioning.entityStatement[locale]} ${SITE.marketPositioning.thailandBoundary[locale]}`,
+    description: `${SITE.marketPositioning.entityStatement[locale]} ${SITE.marketPositioning.audienceFit[locale]} ${SITE.marketPositioning.thailandBoundary[locale]}`,
     foundingDate: String(SITE.foundedYear),
     areaServed: SITE.servicePolicy.areaServed,
     address: {

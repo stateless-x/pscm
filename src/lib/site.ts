@@ -42,6 +42,10 @@ export const SITE = {
       th: "เพชรเกษมจักรกลซีรามิคผลิตเครื่องจักรเซรามิกสำหรับโรงงานในไทยและบริษัทต่างชาติที่มีไซต์งานในประเทศไทย พร้อมจัดส่ง ติดตั้ง และดูแลหลังการขายในประเทศ",
       en: "Petkasem builds ceramic machinery for Thai factories and international companies operating in Thailand, with local delivery, installation, and aftercare.",
     },
+    audienceFit: {
+      th: "เพชรเกษมจักรกลซีรามิคสร้างเครื่องจักรให้โรงงาน สตูดิโอ และสถานศึกษาในไทย ตั้งแต่เครื่องขนาดกะทัดรัดสำหรับงานแบตช์เล็ก ไปจนถึงเครื่องผลิตตามสเปกสำหรับไลน์ผลิต",
+      en: "Petkasem builds ceramic machinery for factories, studios, schools, and international teams with sites in Thailand, from compact equipment for small batches to custom machines for production lines.",
+    },
     thailandBoundary: {
       th: "เราจัดส่ง ติดตั้ง บริการ และจัดหาอะไหล่เฉพาะในประเทศไทย เพื่อให้ทีมช่างจากโรงงานนครปฐมดูแลเครื่องที่ผลิตได้จริงตลอดอายุการใช้งาน ขณะนี้ยังไม่จัดส่งเครื่องจักรไปติดตั้งนอกประเทศไทย",
       en: "Delivery, installation, service, and spare parts support stay within Thailand. Remaining within reach of our Nakhon Pathom workshop lets the builders provide practical aftercare. We do not currently ship machines for installation outside Thailand.",

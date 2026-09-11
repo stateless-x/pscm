@@ -24,6 +24,7 @@ export function GET() {
 ## Verified service boundaries
 
 - Market: ${SITE.marketPositioning.foreignCustomerFit.en}
+- Customers: ${SITE.marketPositioning.audienceFit.en}
 - Manufacturing: design, build, and installation of ceramic-production machinery and custom/OEM machinery.
 - Repair: ${SITE.servicePolicy.repair.en}
 - Spare parts: ${SITE.servicePolicy.parts.en}
